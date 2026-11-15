@@ -246,6 +246,7 @@ button { cursor: pointer; }
 .g-media img, .c-media img { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: contain; }
 .g-media.own img, .c-media.own img { inset: 10%; width: 80%; height: 80%; border-radius: 0; }      /* 흰 배경 사진을 바탕색에 자연스럽게 얹는다 */
 .g-media { aspect-ratio: 1 / 1; border-radius: 14px; }
+.g-media.none { display: grid; place-items: center; background: var(--s-photo); color: var(--s-muted); font-size: 13px; }
 .g-media img { transition: transform .5s var(--ease); }
 .g-link:hover .g-media img, .g-link:focus-visible .g-media img { transform: scale(1.045); }
 .g-text { padding: 14px 52px 0 2px; }

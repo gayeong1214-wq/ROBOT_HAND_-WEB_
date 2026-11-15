@@ -255,9 +255,9 @@
       .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
     // 전체 수와 사진 수를 탭·버튼에 그대로 적어, 사진 갤러리만 보고 전체로 오해하지 않게 한다
     $('#tab-wiki').textContent = `전체 목록 · ${DATA.meta.count}`;
-    $('#tab-cards').textContent = `사진 탐색 · ${DATA.meta.photos}`;
+    $('#tab-cards').textContent = `Graphical Explorer · ${DATA.meta.count}`;
     $('#ctaAll').textContent = `전체 ${DATA.meta.count}개 보기`;
-    $('#ctaPhoto').textContent = `사진으로 보기 · ${DATA.meta.photos}종`;
+    $('#ctaPhoto').textContent = `갤러리 보기 · ${DATA.meta.count}종`;
     const kc = new Map(count((h) => h.kind));
     $('#kindChips').innerHTML = KINDS.map((k) => `<button type="button" class="chip" data-kind="${k}" aria-pressed="false">${k.replace(' 로봇핸드', '')}<span class="n">${kc.get(k) || 0}</span></button>`).join('');
     $('#fCountry').insertAdjacentHTML('beforeend', count((h) => h.countries).map(([k, n]) => `<option value="${esc(k)}">${esc(k)} (${n})</option>`).join(''));
@@ -331,13 +331,8 @@
     return `<div class="photo ${cls} ${k}"><img src="${p.src}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" alt="${esc(h.maker)} ${esc(h.model)} 제품 사진"></div>`;
   }
   const cmpBtn = (h) => { const on = S.cmp.includes(h.id); return `<button type="button" class="cmp-btn" data-cmp="${h.id}" aria-pressed="${on}" aria-label="${esc(cmpLabel(h, on))}"></button>`; };
-  function dofLine(h) {
-    if (h.activeDof != null || h.totalDof != null) return `능동 ${h.activeDof != null ? activeText(h) : '미확인'} · 총 ${h.totalDof != null ? h.totalDof : '미확인'}`;
-    return h.dofStated ? `표기 ${short(h.dofStated)}` : null;
-  }
   function renderCards(list) {
-    const withPhoto = list.filter((h) => h.photo), rest = list.filter((h) => !h.photo);
-    $('#cardGrid').innerHTML = withPhoto.map((h) => {
+    $('#cardGrid').innerHTML = list.map((h) => {
       const spec = [h.activeDof != null ? `능동 ${h.activeDof} DoF` : h.totalDof != null ? `총 ${h.totalDof} DoF` : h.dofStated ? `표기 ${short(h.dofStated)} DoF` : null, short(h.weight)].filter(Boolean).join(' · ');
       return `<li class="g-card">
         <a class="g-link" href="#/hand/${h.id}">
@@ -346,15 +341,7 @@
         </a>${cmpBtn(h)}
       </li>`;
     }).join('');
-    $('#cardGrid').hidden = withPhoto.length === 0;
-    $('#rowBlock').hidden = rest.length === 0;
-    $('#rowTitle').textContent = withPhoto.length ? `사진 미확보 모델 ${rest.length}개` : `모델 ${rest.length}개 · 사진 미확보`;
-    $('#rowList').innerHTML = rest.map((h) => `<li class="row">
-        <a class="row-link" href="#/hand/${h.id}">
-          <span class="r-model">${esc(h.model)}</span><span class="r-maker">${esc(h.maker)}</span><span class="r-country">${esc(h.countries.join(' · '))}</span>
-          <span class="r-kind">${esc(h.kind.replace(' 로봇핸드', ''))}</span><span class="r-dof">${dofLine(h) ? esc(dofLine(h)) : '자유도 미확인'}</span><span class="r-weight">${h.weight ? esc(short(h.weight)) : '무게 미확인'}</span>
-        </a>${cmpBtn(h)}
-      </li>`).join('');
+    $('#cardGrid').hidden = list.length === 0;
   }
   const COLS = [
     ['model', '모델'], ['maker', '제조사'], ['country', '국가'], ['kind', '유형'], ['fingers', '손가락', 1], ['activeDof', '능동 DoF', 1], ['totalDof', '총 DoF', 1],
@@ -440,7 +427,7 @@
     const siblings = HANDS.filter((x) => x.makerGroup === h.makerGroup && x.id !== h.id);
     const k = p ? photoKind(p) : 'none';
     const media = p
-      ? `<figure><img src="${p.src}" width="${p.w}" height="${p.h}" alt="${esc(h.maker)} ${esc(h.model)} 제품 사진"></figure><p class="detail-credit">사진 출처 · <a href="${esc(p.credit)}" target="_blank" rel="noopener">${esc(host(p.credit))}</a> (저작권은 제조사에 있습니다)</p>`
+      ? `<figure><img src="${p.src}" width="${p.w}" height="${p.h}" alt="${esc(h.maker)} ${esc(h.model)} 제품 사진"></figure><p class="detail-credit">사진 출처 · ${p.credit ? `<a href="${esc(p.credit)}" target="_blank" rel="noopener noreferrer">${esc(host(p.credit))}</a>` : 'HANDSLab 조사표 첨부 이미지'}</p>`
       : `<div class="ph">확인된 제품 사진이 아직 없습니다.</div>`;
     return `<article class="detail">
       <div class="detail-media photo ${k}">${media}</div>
@@ -459,7 +446,8 @@
         <ul class="src-list">
           <li><span>사양</span><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></li>
           ${h.priceSource ? `<li><span>가격</span><a href="${esc(h.priceSource)}" target="_blank" rel="noopener">${esc(host(h.priceSource))}</a></li>` : ''}
-          ${p ? `<li><span>사진</span><a href="${esc(p.credit)}" target="_blank" rel="noopener">${esc(host(p.credit))}</a></li>` : ''}
+          ${p?.credit ? `<li><span>사진</span><a href="${esc(p.credit)}" target="_blank" rel="noopener noreferrer">${esc(host(p.credit))}</a></li>` : ''}
+          ${(h.research || []).map(url => `<li><span>관련 연구</span><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(host(url))}</a></li>`).join('')}
         </ul>
         ${siblings.length ? `<h3>같은 제조사의 다른 모델</h3><div class="rel-list">${siblings.map((x) => `<a href="#/hand/${x.id}">${esc(x.model)}</a>`).join('')}</div>` : ''}
         <h3>이어서 탐색</h3>

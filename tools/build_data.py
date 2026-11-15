@@ -6,6 +6,8 @@ import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 src = json.load(open(os.path.join(ROOT, 'data/source/handslab-public-data.json'), encoding='utf-8'))
 photos = json.load(open(os.path.join(ROOT, 'data/photos.json'), encoding='utf-8'))
+research_path = os.path.join(ROOT, 'data/research.json')
+research = json.load(open(research_path, encoding='utf-8')) if os.path.exists(research_path) else {}
 
 # 사양 문장에서 옮긴 값. j=관절, a=구동기, d=능동/총 구분 없이 적힌 자유도, w=무게,
 # tip=손끝 힘(N), grip=파지력(N), pay=가반·권장 하중(kg), f=유형이 불분명한 힘 표기, hz=제어·통신 주기, an=능동 DoF 주석
@@ -140,7 +142,8 @@ for i, x in enumerate(src):
         "weight": e.get('w'), "weightG": weight_g(e.get('w')), "rate": e.get('hz'),
         "specs": specs, "source": clean_url(x['source']),
         "price": x['price'] or None, "priceSource": clean_url(x['priceSource']) or None,
-        "photo": ({"src": ph['file'], "w": ph['w'], "h": ph['h'], "alpha": ph['alpha'], "bg": ph['bg'], "credit": ph['imageUrl']} if ph else None),
+        "research": research.get(x['model'], []),
+        "photo": ({"src": ph['file'], "w": ph['w'], "h": ph['h'], "alpha": ph['alpha'], "bg": ph['bg'], "credit": ph['imageUrl'], "origin": ph.get('origin')} if ph else None),
     })
 missing = set(EXTRA) - {x['model'] for x in src}; assert not missing, missing
 missing = set(photos) - {x['model'] for x in src}; assert not missing, missing

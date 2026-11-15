@@ -5,7 +5,7 @@ window.HANDSLAB_DATA = {
   "count": 100,
   "makers": 51,
   "countries": 14,
-  "photos": 17
+  "photos": 100
  },
  "hands": [
   {
@@ -36,7 +36,16 @@ window.HANDSLAB_DATA = {
    "source": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/pgn-plus-p-380-2-notion.webp",
+    "w": 600,
+    "h": 324,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "shadow-hand-plus",
@@ -66,7 +75,18 @@ window.HANDSLAB_DATA = {
    "source": "https://shadowrobot.com/dexterous-hand-series/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2310.15599"
+   ],
+   "photo": {
+    "src": "assets/img/hands/shadow-hand-plus-notion.webp",
+    "w": 960,
+    "h": 478,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dg-5f-s",
@@ -96,7 +116,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.tesollo.com/ko/products/grippers/dg-5f-s",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2603.05687"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dg-5f-s-notion.webp",
+    "w": 584,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "sharpa-wave-w01",
@@ -126,13 +157,17 @@ window.HANDSLAB_DATA = {
    "source": "https://www.sharpa.com/pages/w01",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://arxiv.org/pdf/2609.07002"
+   ],
    "photo": {
-    "src": "assets/img/hands/sharpa-wave-w01.webp",
-    "w": 856,
-    "h": 1100,
-    "alpha": true,
+    "src": "assets/img/hands/sharpa-wave-w01-notion.webp",
+    "w": 360,
+    "h": 360,
+    "alpha": false,
     "bg": null,
-    "credit": "https://www.sharpa.com/cdn/shop/t/53/assets/sharpa-nav-product-fallback.png?v=178235694775404050771790560473"
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -163,7 +198,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.robotis.com/shop/item.php?it_id=905-0058-000",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2609.31323"
+   ],
+   "photo": {
+    "src": "assets/img/hands/hx5-d20-mrt-notion.webp",
+    "w": 500,
+    "h": 500,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dg-5f-m",
@@ -193,7 +239,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.tesollo.com/ko/products/grippers/dg-5f-m",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2603.12243"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dg-5f-m-notion.webp",
+    "w": 533,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "3fg25",
@@ -223,7 +280,18 @@ window.HANDSLAB_DATA = {
    "source": "https://onrobot.com/en/products/3fg25",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2508.06295"
+   ],
+   "photo": {
+    "src": "assets/img/hands/3fg25-notion.webp",
+    "w": 354,
+    "h": 436,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "svh",
@@ -253,7 +321,18 @@ window.HANDSLAB_DATA = {
    "source": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/c/PGR_3161",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/1910.10900"
+   ],
+   "photo": {
+    "src": "assets/img/hands/svh-notion.webp",
+    "w": 338,
+    "h": 600,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "rh56dfx",
@@ -283,13 +362,17 @@ window.HANDSLAB_DATA = {
    "source": "https://en.inspire-robots.com/product/rh56dfx/",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://arxiv.org/pdf/2505.21864v2"
+   ],
    "photo": {
-    "src": "assets/img/hands/rh56dfx.webp",
-    "w": 1100,
-    "h": 1100,
+    "src": "assets/img/hands/rh56dfx-notion.webp",
+    "w": 960,
+    "h": 960,
     "alpha": false,
-    "bg": "#f9fbfa",
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/Products_DFX.jpg"
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -320,7 +403,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=4",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2506.19212"
+   ],
+   "photo": {
+    "src": "assets/img/hands/allegro-hand-v5-plus-notion.webp",
+    "w": 717,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "aidin-hand",
@@ -350,7 +444,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.aidinrobotics.co.kr/robotic-hand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/aidin-hand-notion.webp",
+    "w": 819,
+    "h": 647,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "artus-lite",
@@ -380,7 +483,16 @@ window.HANDSLAB_DATA = {
    "source": "https://sarcomeredynamics.com/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/artus-lite-notion.webp",
+    "w": 354,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://store.indrorobotics.com/cdn/shop/files/Artus_Lite_Robot_Hand_Back_View.png?v=1770654158&width=1946",
+    "origin": "notion"
+   }
   },
   {
    "id": "aero-hand",
@@ -410,7 +522,16 @@ window.HANDSLAB_DATA = {
    "source": "https://chestnut.bot/aero-hand.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/aero-hand-notion.webp",
+    "w": 960,
+    "h": 660,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dg-4f",
@@ -440,7 +561,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.tesollo.com/ko/products/grippers/dg-4f",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dg-4f-notion.webp",
+    "w": 571,
+    "h": 925,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "gecko-sp5",
@@ -470,7 +600,16 @@ window.HANDSLAB_DATA = {
    "source": "https://onrobot.com/en/products/gecko-gripper",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/gecko-sp5-notion.webp",
+    "w": 347,
+    "h": 480,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "sharpa-wave-w01-se",
@@ -500,7 +639,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.sharpa.com/pages/w01",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2609.07002"
+   ],
+   "photo": {
+    "src": "assets/img/hands/sharpa-wave-w01-se-notion.webp",
+    "w": 360,
+    "h": 360,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "orcahand-touch",
@@ -530,7 +680,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.orcahand.com/hardware/touch",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/orcahand-touch-notion.webp",
+    "w": 336,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://www.orcahand.com/images/products/orcahand-2100-pose-pinky.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "vgp30",
@@ -560,7 +719,16 @@ window.HANDSLAB_DATA = {
    "source": "https://onrobot.com/en/products/vgp30-vacuum-gripper",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/vgp30-notion.webp",
+    "w": 404,
+    "h": 206,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "agile-hand",
@@ -590,7 +758,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.agile-robots.com/en/products/agile-hand/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/agile-hand-notion.webp",
+    "w": 634,
+    "h": 585,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "mygripper-h100",
@@ -620,7 +797,16 @@ window.HANDSLAB_DATA = {
    "source": "https://shop.elephantrobotics.com/products/mygripper-h100",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/mygripper-h100-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://shop.elephantrobotics.com/cdn/shop/files/H100-4.png?v=1737443871",
+    "origin": "notion"
+   }
   },
   {
    "id": "omnihand-3",
@@ -650,7 +836,16 @@ window.HANDSLAB_DATA = {
    "source": "https://store.agibot.com/products/omnihand-2025-w-tactile",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/omnihand-3-notion.webp",
+    "w": 706,
+    "h": 942,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://store.agibot.com/cdn/shop/files/550-_M.png?v=1766125783&width=960",
+    "origin": "notion"
+   }
   },
   {
    "id": "linker-hand-l20",
@@ -680,7 +875,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.linkerhand.com/details/LinkerHandL20/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2601.08246"
+   ],
+   "photo": {
+    "src": "assets/img/hands/linker-hand-l20-notion.webp",
+    "w": 960,
+    "h": 937,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "ctdh4f08d",
@@ -710,7 +916,16 @@ window.HANDSLAB_DATA = {
    "source": "https://en.changingtek.com/fuhe/257",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/ctdh4f08d-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dheb-22-e-u-s-l",
@@ -740,7 +955,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.festo.com/nl/nl/a/1320803/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dheb-22-e-u-s-l-notion.webp",
+    "w": 143,
+    "h": 400,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "mark-7",
@@ -770,7 +994,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.ot-world.com/exhibitors-products/product/otworld/7005/2860",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.nature.com/articles/s41467-026-73678-w?utm_source"
+   ],
+   "photo": {
+    "src": "assets/img/hands/mark-7-notion.webp",
+    "w": 900,
+    "h": 600,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "cr-hand",
@@ -800,7 +1035,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.curious-robotics.com/home-en",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/cr-hand-notion.webp",
+    "w": 960,
+    "h": 635,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dexh13-gen2",
@@ -830,7 +1074,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.paxini.com/product/dex/gen2",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://openaccess.thecvf.com/content/CVPR2026/papers/Jiang_Cross-Hand_Latent_Representation_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dexh13-gen2-notion.webp",
+    "w": 960,
+    "h": 540,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://cdn-cn.paxini.com/official/images/dex/dex-h13-1.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "dex3-1",
@@ -860,7 +1115,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.unitree.com/mobile/Dex3-1/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2510.08807"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dex3-1-notion.webp",
+    "w": 779,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "revo-2-basic",
@@ -891,7 +1157,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.brainco-hz.com/docs/revolimb-hand/en/revo2/parameters.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/revo-2-basic-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.australiasatellite.com/pub/media/catalog/product/b/r/brainco-revo-2-gray-2_2_1.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "rh56e2",
@@ -921,13 +1196,17 @@ window.HANDSLAB_DATA = {
    "source": "https://en.inspire-robots.com/product/rh56e2/",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://openreview.net/pdf?id=UvQOcw2oCD"
+   ],
    "photo": {
-    "src": "assets/img/hands/rh56e2.webp",
-    "w": 1100,
-    "h": 1100,
+    "src": "assets/img/hands/rh56e2-notion.webp",
+    "w": 700,
+    "h": 700,
     "alpha": false,
-    "bg": "#f9fbfa",
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/Products_E2.jpg"
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -958,7 +1237,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/sng-v-6-1-5-v-hp-25-notion.webp",
+    "w": 600,
+    "h": 400,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "rh8d",
@@ -988,7 +1276,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.seedrobotics.com/rh8d-adult-robot-hand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1735467/pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/rh8d-notion.webp",
+    "w": 594,
+    "h": 618,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://images.squarespace-cdn.com/content/v1/5db846da1bb60d0407fed0ac/1622562227456-JK3RSR2U2QRVC0IR40R3/Human-inspired-hand.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "pxdex-iii",
@@ -1018,7 +1317,16 @@ window.HANDSLAB_DATA = {
    "source": "https://paxini.com/cn/ax/pxdex3",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/pxdex-iii-notion.webp",
+    "w": 960,
+    "h": 726,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "qb-softhand-industry",
@@ -1048,13 +1356,15 @@ window.HANDSLAB_DATA = {
    "source": "https://qbrobotics.com/product/qb-softhand-industry/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/qb-softhand-industry.webp",
-    "w": 1100,
-    "h": 578,
+    "src": "assets/img/hands/qb-softhand-industry-notion.webp",
+    "w": 960,
+    "h": 640,
     "alpha": false,
-    "bg": "#bebdb9",
-    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/SHI_original.jpg"
+    "bg": null,
+    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/IMG_0170-scaled.jpg",
+    "origin": "notion"
    }
   },
   {
@@ -1085,7 +1395,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.oymotion.com/product61/189",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/roh-a002-notion.webp",
+    "w": 585,
+    "h": 362,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "rh56h1",
@@ -1115,13 +1434,15 @@ window.HANDSLAB_DATA = {
    "source": "https://en.inspire-robots.com/product/rh56h1/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/rh56h1.webp",
-    "w": 1100,
-    "h": 1100,
+    "src": "assets/img/hands/rh56h1-notion.webp",
+    "w": 960,
+    "h": 960,
     "alpha": false,
-    "bg": "#f9fbfa",
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/Products_H1.jpg"
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -1152,7 +1473,18 @@ window.HANDSLAB_DATA = {
    "source": "https://robotiq.com/products/adaptive-grippers",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02933.pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/2f-85-notion.webp",
+    "w": 960,
+    "h": 772,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "aero-hand-open",
@@ -1182,7 +1514,16 @@ window.HANDSLAB_DATA = {
    "source": "https://chestnut.bot/aero-hand-open-lite.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/aero-hand-open-notion.webp",
+    "w": 960,
+    "h": 660,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "ctmg3f60",
@@ -1212,7 +1553,16 @@ window.HANDSLAB_DATA = {
    "source": "https://en.changingtek.com/fuhe/176",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/ctmg3f60-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dh116-l1",
@@ -1242,7 +1592,16 @@ window.HANDSLAB_DATA = {
    "source": "https://store.leadshine.com/blogs/news/leadshine-dh116-dexterous-hand-high-performance-grip-for-robotic-manipulation",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dh116-l1-notion.webp",
+    "w": 533,
+    "h": 631,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "wuji-hand-2",
@@ -1272,7 +1631,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.wuji.tech/en/hand2",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2606.16272"
+   ],
+   "photo": {
+    "src": "assets/img/hands/wuji-hand-2-notion.webp",
+    "w": 602,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "ehand-6",
@@ -1302,7 +1672,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.hitbot.cc/dexterous-hand/e-hand-6.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/ehand-6-notion.webp",
+    "w": 831,
+    "h": 483,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "roh-ap003",
@@ -1332,7 +1711,16 @@ window.HANDSLAB_DATA = {
    "source": "https://oymotion.com/en/product62",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/roh-ap003-notion.webp",
+    "w": 340,
+    "h": 283,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.oymotion.com/upload/images/20260511/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A11928484.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "rh-p12-rn",
@@ -1362,7 +1750,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.robotis.com/shop/item.php?it_id=905-0022-000",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.mdpi.com/2076-3417/15/22/12077/pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/rh-p12-rn-notion.webp",
+    "w": 500,
+    "h": 500,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "mg10",
@@ -1392,7 +1791,16 @@ window.HANDSLAB_DATA = {
    "source": "https://onrobot.com/en/products/mg10-magnetic-gripper",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/mg10-notion.webp",
+    "w": 254,
+    "h": 369,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "mht2-32dz",
@@ -1422,7 +1830,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.smcworld.com/webcatalog/s3s/en-jp/detail/?partNumber=MHT2-32DZ",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/mht2-32dz-notion.webp",
+    "w": 300,
+    "h": 300,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "qb-softhand2-research",
@@ -1452,13 +1869,17 @@ window.HANDSLAB_DATA = {
    "source": "https://qbrobotics.com/product/qb-softhand-2-research/",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://www.researchgate.net/publication/397027837_The_Challenges_of_Using_Robots_to_Automate_the_Recycling_of_Electronic_Devices_A_New_Approach_Incorporating_AI_Modularity_and_Soft_Robotics"
+   ],
    "photo": {
-    "src": "assets/img/hands/qb-softhand2-research.webp",
-    "w": 1100,
-    "h": 730,
+    "src": "assets/img/hands/qb-softhand2-research-notion.webp",
+    "w": 960,
+    "h": 640,
     "alpha": false,
-    "bg": "#ffffff",
-    "credit": "https://qbrobotics.com/wp-content/uploads/2022/05/Posa1-1.jpg"
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -1489,7 +1910,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.unitree.com/Dex5-S/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dex5-s-notion.webp",
+    "w": 960,
+    "h": 484,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "d-hand-5mt",
@@ -1519,7 +1949,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.j-d.co.jp/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/d-hand-5mt-notion.webp",
+    "w": 387,
+    "h": 396,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "rh56bfx",
@@ -1549,7 +1988,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.inspire-robots.com/dexterous%20hands/rh56bfx-series/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2604.02820"
+   ],
+   "photo": {
+    "src": "assets/img/hands/rh56bfx-notion.webp",
+    "w": 960,
+    "h": 326,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "covvi-robotic-hand",
@@ -1579,7 +2029,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.covvi-robotics.com/robotic-hand/product-overview/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/covvi-robotic-hand-notion.webp",
+    "w": 400,
+    "h": 615,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dexhand021-mass-production",
@@ -1609,7 +2068,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.dex-robot.com/en/productionDexhand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2603.09121"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dexhand021-mass-production-notion.webp",
+    "w": 306,
+    "h": 246,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "barretthand-bh8-282",
@@ -1639,7 +2109,18 @@ window.HANDSLAB_DATA = {
    "source": "https://barrett.com/barretthand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2204.06343"
+   ],
+   "photo": {
+    "src": "assets/img/hands/barretthand-bh8-282-notion.webp",
+    "w": 960,
+    "h": 749,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "pisoftgrip-100-4",
@@ -1669,7 +2150,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.piab.com/en-us/news/pisoftgrip-100-4-piab-launching-largest-gripper-of-series",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/pisoftgrip-100-4-notion.webp",
+    "w": 960,
+    "h": 343,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "linker-hand-l10",
@@ -1699,7 +2189,16 @@ window.HANDSLAB_DATA = {
    "source": "https://cdn.robotshop.com/rbm/790bbab7-d10c-4803-a563-eb90579ac7e8/d/d357702e-8a19-43d3-933f-8c36739eda03/db365cbe_l10-product-manual.pdf",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/linker-hand-l10-notion.webp",
+    "w": 800,
+    "h": 800,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://aifitlab.com/cdn/shop/files/L10-main-1-1.jpg?v=1763086531&width=800",
+    "origin": "notion"
+   }
   },
   {
    "id": "xhand-1",
@@ -1729,7 +2228,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.robotera.com/en/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://arxiv.org/pdf/2505.21864v2"
+   ],
+   "photo": {
+    "src": "assets/img/hands/xhand-1-notion.webp",
+    "w": 800,
+    "h": 800,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "sandia-hand",
@@ -1759,7 +2269,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.sandia.gov/research/sandia-hand/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/sandia-hand-notion.webp",
+    "w": 960,
+    "h": 305,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.sandia.gov/app/uploads/sites/156/2021/09/sandia_hand-1.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "hey5",
@@ -1789,7 +2308,18 @@ window.HANDSLAB_DATA = {
    "source": "https://docs.pal-robotics.com/edge/hardware/end-effectors/end-effector-hey5",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.researchgate.net/publication/334639849_Long_Time_Sequential_Task_Learning_From_Unstructured_Demonstrations"
+   ],
+   "photo": {
+    "src": "assets/img/hands/hey5-notion.webp",
+    "w": 753,
+    "h": 509,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://docs.pal-robotics.com/sdk/24.09/_images/hey5_hand.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "allegro-hand-v6-f",
@@ -1819,13 +2349,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=25",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/allegro-hand-v6-f.webp",
-    "w": 1091,
-    "h": 1100,
+    "src": "assets/img/hands/allegro-hand-v6-f-notion.webp",
+    "w": 960,
+    "h": 922,
     "alpha": true,
     "bg": null,
-    "credit": "https://www.allegrohand.com/upload/prod/V6.26_a09e2.png"
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -1856,7 +2388,18 @@ window.HANDSLAB_DATA = {
    "source": "https://weiss-robotics.com/servo-electric/wsg-series/?cid=4248",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://openreview.net/pdf/f4356c4300ca2cd867c5188e0eabd8f129f21816.pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/wsg-50-110-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "dhef-20-a",
@@ -1886,7 +2429,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.festo.com/media/catalog/202805_documentation.pdf",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dhef-20-a-notion.webp",
+    "w": 159,
+    "h": 400,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "ih2-azzurra",
@@ -1916,7 +2468,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.prensilia.com/ih2-azzurra-hand/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.iris.unicampus.it/handle/20.500.12610/72946"
+   ],
+   "photo": {
+    "src": "assets/img/hands/ih2-azzurra-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.prensilia.com/wp-content/uploads/2023/03/ih2-azzurra-hand-prensilia.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "dh116-r1-m",
@@ -1946,7 +2509,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.leadshine.com/robot-detail/DH116-R1-M.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dh116-r1-m-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://store.leadshine.com/cdn/shop/files/2_abe8fd87-bbc9-4252-8a2d-24767e3d513c.jpg?v=1787540546&width=2048",
+    "origin": "notion"
+   }
   },
   {
    "id": "uhand",
@@ -1976,7 +2548,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.hiwonder.com/products/uhand?variant=32473888587863",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://dr.ntu.edu.sg/server/api/core/bitstreams/9453ace1-8349-4966-bc6e-43f9856245a4/content"
+   ],
+   "photo": {
+    "src": "assets/img/hands/uhand-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "allegro-hand-v6-v",
@@ -2006,13 +2589,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=26",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/allegro-hand-v6-v.webp",
-    "w": 1100,
-    "h": 684,
-    "alpha": false,
-    "bg": "#707980",
-    "credit": "https://www.allegrohand.com/upload/editor/V6_V.141_763a0.png"
+    "src": "assets/img/hands/allegro-hand-v6-v-notion.webp",
+    "w": 713,
+    "h": 677,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
    }
   },
   {
@@ -2043,7 +2628,18 @@ window.HANDSLAB_DATA = {
    "source": "https://shadowrobot.com/dexterous-hand-series/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.roboticsproceedings.org/rss20/p122.pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/shadow-dexterous-hand-lite-notion.webp",
+    "w": 800,
+    "h": 800,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.mybotshop.de/media/image/product/6990/lg/shadow-dexterous-hand-lite.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "roh-ap002",
@@ -2073,7 +2669,16 @@ window.HANDSLAB_DATA = {
    "source": "https://oymotion.com/en/product62",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/roh-ap002-notion.webp",
+    "w": 700,
+    "h": 430,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://oymotion.com/upload/images/20260306/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1%2830%293007781.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "leap-hand-v1",
@@ -2103,7 +2708,16 @@ window.HANDSLAB_DATA = {
    "source": "https://v1.leaphand.com/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/leap-hand-v1-notion.webp",
+    "w": 900,
+    "h": 506,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.cs.cmu.edu/files/images/robot-hand-web.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "dex2-5",
@@ -2133,13 +2747,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.unitree.com/Dex2-5/",
    "price": "약 209만원 (해외 공개가 환산)",
    "priceSource": "https://futurology.tech/products/unitree-dex-2-5-dexterous-hand-for-humanoid-robots",
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/dex2-5.webp",
-    "w": 235,
-    "h": 363,
-    "alpha": true,
+    "src": "assets/img/hands/dex2-5-notion.webp",
+    "w": 960,
+    "h": 554,
+    "alpha": false,
     "bg": null,
-    "credit": "https://www.unitree.com/images/9f93e969ad89464ba3f0a44a54ca4bde_576x476.png"
+    "credit": "https://www.unitree.com/images/35429049b2514a229d2808332af0e092_1560x900.jpg",
+    "origin": "notion"
    }
   },
   {
@@ -2170,7 +2786,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.prensilia.com/mia-hand-research/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/mia-hand-r-d-notion.webp",
+    "w": 732,
+    "h": 960,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.prensilia.com/wp-content/uploads/2023/04/Mia-Hand-piattaforma-di-ricerca-prensilia.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "bionicsofthand",
@@ -2200,7 +2825,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.festo.com/us/en/e/about-festo/research-and-development/bionic-learning-network/bionic-grippers-and-soft-robots/bionicsofthand-id_68106",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/bionicsofthand-notion.webp",
+    "w": 960,
+    "h": 693,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.therobotreport.com/wp-content/uploads/2019/02/190123_Festo_Bionic_SoftHand_0372_13x18_rgb.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "dh-5-6",
@@ -2230,7 +2864,16 @@ window.HANDSLAB_DATA = {
    "source": "https://en.dh-robotics.com/product/dh-5-6",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dh-5-6-notion.webp",
+    "w": 396,
+    "h": 400,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.gongboshi-robot.com/photo/pt215115868-five_finger_robot_gripper_dh_robotics_dh_5_6_multi_finger_robotic_ai_robot_hand.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "dex5-1",
@@ -2260,13 +2903,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.unitree.com/Dex5-1/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/dex5-1.webp",
-    "w": 252,
-    "h": 371,
-    "alpha": true,
+    "src": "assets/img/hands/dex5-1-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
     "bg": null,
-    "credit": "https://www.unitree.com/images/0ff4336003954a35ba969762670a0fbf_576x476.png"
+    "credit": "https://robostore.com/cdn/shop/files/unitree-dex5-1-robotic-hands-4377616.jpg?v=1764083171&width=2000",
+    "origin": "notion"
    }
   },
   {
@@ -2297,13 +2942,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/hand-ii",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/dlr-hand-ii.webp",
-    "w": 1000,
-    "h": 562,
+    "src": "assets/img/hands/dlr-hand-ii-notion.webp",
+    "w": 960,
+    "h": 960,
     "alpha": false,
-    "bg": "#ffffff",
-    "credit": "https://www.dlr.de/en/rm/images/roboter_und_systeme/hand/hand_ii/hand_2_freigestellt_1456x819.jpg/@@images/image-1000-fe0eca87bcdd601867c743d5938bdc71.jpeg"
+    "bg": null,
+    "credit": "https://www.dlr.de/en/rm/images/roboter_und_systeme/hand/hand_ii/hand_2_greift_kolben_bg_black_3200x3200.jpg/@@images/image-1000-91f880d15491eee62be6b055577332ff.jpeg",
+    "origin": "notion"
    }
   },
   {
@@ -2334,7 +2981,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.worldrobotconference.com/expo/company/706.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/adh-5-6-p1-notion.webp",
+    "w": 960,
+    "h": 773,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.worldrobotconference.com/profile/robot/download/2026/07/27/20260727142357000806_20260727142357A591.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "aidin-hand-gen2",
@@ -2364,7 +3020,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.aidinrobotics.co.kr/robotic-hand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/aidin-hand-gen2-notion.webp",
+    "w": 960,
+    "h": 540,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://i.ytimg.com/vi/4TkrscF5Bbk/maxresdefault.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "omnihand-pro-2025-o12",
@@ -2394,7 +3059,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.agibot.com/products/OmniHand_O12",
    "price": "약 1,780~2,240만원 (해외 공개가 환산)",
    "priceSource": "https://aifitlab.com/collections/agibot-robotic-hand/products/agibot-omnihand-pro-2025",
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/omnihand-pro-2025-o12-notion.webp",
+    "w": 581,
+    "h": 934,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://store.agibot.com/cdn/shop/files/AgiBot_OmniHand_Pro.png?v=1764049508&width=1200",
+    "origin": "notion"
+   }
   },
   {
    "id": "qb-softhand-research",
@@ -2424,13 +3098,15 @@ window.HANDSLAB_DATA = {
    "source": "https://qbrobotics.com/product/qb-softhand-research/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/qb-softhand-research.webp",
-    "w": 882,
-    "h": 1100,
-    "alpha": true,
+    "src": "assets/img/hands/qb-softhand-research-notion.webp",
+    "w": 960,
+    "h": 640,
+    "alpha": false,
     "bg": null,
-    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/SHR_mano_scontornata.png"
+    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/qb_softhand_research_003.jpg",
+    "origin": "notion"
    }
   },
   {
@@ -2462,13 +3138,15 @@ window.HANDSLAB_DATA = {
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand-ii",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/dlr-hit-hand-ii.webp",
-    "w": 1000,
-    "h": 562,
+    "src": "assets/img/hands/dlr-hit-hand-ii-notion.webp",
+    "w": 960,
+    "h": 638,
     "alpha": false,
-    "bg": "#ffffff",
-    "credit": "https://www.dlr.de/en/rm/images/roboter_und_systeme/hand/hit_ii/ffh_2010_stehend_freigestellt_4569x2570_orig.jpg/@@images/image-1000-bf1a113731cd6bb1488fc3e023d804d6.jpeg"
+    "bg": null,
+    "credit": "https://www.automate.org/userAssets/Image/robotic_hands.jpg",
+    "origin": "notion"
    }
   },
   {
@@ -2499,7 +3177,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.joyson.com/index.php/esg/info/1426.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/telehand-pro-p20-notion.webp",
+    "w": 943,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://humanoid.guide/wp-content/uploads/2026/09/TeleHand-robotic-hand-by-Joyson-Electronics-humanoid-guide.webp",
+    "origin": "notion"
+   }
   },
   {
    "id": "rh56f2",
@@ -2529,13 +3216,15 @@ window.HANDSLAB_DATA = {
    "source": "https://en.inspire-robots.com/product/rh56f2/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/rh56f2.webp",
-    "w": 1100,
-    "h": 1100,
-    "alpha": false,
-    "bg": "#f9fbfa",
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/Products_F1.jpg"
+    "src": "assets/img/hands/rh56f2-notion.webp",
+    "w": 960,
+    "h": 540,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5_F2%E5%B0%BA%E5%AF%B8%E5%9B%BE.png",
+    "origin": "notion"
    }
   },
   {
@@ -2566,7 +3255,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.futuretakt.com/sys-pd/30.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/fthand-21-notion.webp",
+    "w": 960,
+    "h": 540,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://29912541.s21i.faiusr.com/2/ABUIABACGAAgyZK4zgYo5b7w-gMwgBA4-wg.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "allegro-hand-v4",
@@ -2596,13 +3294,17 @@ window.HANDSLAB_DATA = {
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=1",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://arxiv.org/pdf/2503.07989"
+   ],
    "photo": {
-    "src": "assets/img/hands/allegro-hand-v4.webp",
-    "w": 348,
-    "h": 279,
-    "alpha": true,
+    "src": "assets/img/hands/allegro-hand-v4-notion.webp",
+    "w": 960,
+    "h": 960,
+    "alpha": false,
     "bg": null,
-    "credit": "https://www.allegrohand.com/upload/prod/product_hand_v4_04_4db10.png"
+    "credit": "https://www.knoxlabs.com/cdn/shop/files/wonik-robotics-allegro-hand-v4-featured-white-square_e97d5e59-2384-4f45-9d6d-b07c320de01a.webp?v=1786689864&width=1200",
+    "origin": "notion"
    }
   },
   {
@@ -2633,7 +3335,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.dex-robot.com/en/dexhand021Pro",
    "price": "약 7,980만원 (해외 공개가 환산)",
    "priceSource": "https://aifitlab.com/products/dexrobot-dexhand021-pro",
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/dexhand021-pro-notion.webp",
+    "w": 960,
+    "h": 601,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.worldrobotconference.com/profile/robot/download/2026/07/24/20260724193814000438_20260724193814A299.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "gifu-hand-iii",
@@ -2663,7 +3374,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www1.gifu-u.ac.jp/~kawalab/research/research_hand.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://www.jstage.jst.go.jp/article/kikaic1979/71/705/71_705_1646/_article/-char/ja"
+   ],
+   "photo": {
+    "src": "assets/img/hands/gifu-hand-iii-notion.webp",
+    "w": 283,
+    "h": 203,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www1.gifu-u.ac.jp/~kawalab/research/Hand/gifuhand3.PNG",
+    "origin": "notion"
+   }
   },
   {
    "id": "rh6d",
@@ -2693,7 +3415,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.seedrobotics.com/rh5d-rh7d-childsize-robot-hand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/rh6d-notion.webp",
+    "w": 550,
+    "h": 510,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://images.squarespace-cdn.com/content/v1/5db846da1bb60d0407fed0ac/1622567103659-RSA8SAF045YYEEX8DOWQ/childs-hand1.png?format=2500w",
+    "origin": "notion"
+   }
   },
   {
    "id": "rh5dg2",
@@ -2723,13 +3454,15 @@ window.HANDSLAB_DATA = {
    "source": "https://en.inspire-robots.com/product/rh5dg2/",
    "price": null,
    "priceSource": null,
+   "research": [],
    "photo": {
-    "src": "assets/img/hands/rh5dg2.webp",
-    "w": 1100,
-    "h": 1100,
+    "src": "assets/img/hands/rh5dg2-notion.webp",
+    "w": 800,
+    "h": 800,
     "alpha": false,
-    "bg": "#f9fbfa",
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/Products_G2.jpg"
+    "bg": null,
+    "credit": "https://www.mybotshop.de/media/image/product/8959/lg/inspire-robots-dexterous-hand-rh5dg2.jpg",
+    "origin": "notion"
    }
   },
   {
@@ -2761,7 +3494,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.brainco.cn/en-US/products/revo3",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/revo-3-basic-notion.webp",
+    "w": 900,
+    "h": 900,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://www.usrobotstore.com/cdn/shop/files/Untitleddesign-262.png?v=1779081282&width=900",
+    "origin": "notion"
+   }
   },
   {
    "id": "linker-hand-o30",
@@ -2791,7 +3533,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.linkerhand.com/details/LinkerHandO30/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/linker-hand-o30-notion.webp",
+    "w": 960,
+    "h": 897,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://botdata.oss-cn-beijing.aliyuncs.com/afterSales/linkerbot_img/products/linkerhand-o30/detail-2.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "wuji-hand-v1",
@@ -2821,7 +3572,16 @@ window.HANDSLAB_DATA = {
    "source": "https://docs.wuji.tech/docs/en/wuji-hand/v1/overview/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/wuji-hand-v1-notion.webp",
+    "w": 354,
+    "h": 428,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://wuji.tech/assets/images/hand/C_2_6_03.webp",
+    "origin": "notion"
+   }
   },
   {
    "id": "d-hand-5st",
@@ -2851,7 +3611,16 @@ window.HANDSLAB_DATA = {
    "source": "https://j-d.co.jp/dhand-5finger.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/d-hand-5st-notion.webp",
+    "w": 560,
+    "h": 560,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://image.mono.ipros.com/public/product/image/ef9/2000614336/IPROS25363202109332052972.png?w=560&h=560",
+    "origin": "notion"
+   }
   },
   {
    "id": "linker-hand-l30-pro",
@@ -2881,7 +3650,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.linkerhand.com/details/LinkerHandL30/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/linker-hand-l30-pro-notion.webp",
+    "w": 960,
+    "h": 959,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://botdata.oss-cn-beijing.aliyuncs.com/afterSales/linkerbot_img/products/linkerhand-l30pro/detail-2.png",
+    "origin": "notion"
+   }
   },
   {
    "id": "dlr-hit-hand-i-schunk-sah",
@@ -2912,7 +3690,18 @@ window.HANDSLAB_DATA = {
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [
+    "https://elib.dlr.de/55334/1/DLR-HIT-Hand-Liu-MeuselTransactions.pdf"
+   ],
+   "photo": {
+    "src": "assets/img/hands/dlr-hit-hand-i-schunk-sah-notion.webp",
+    "w": 200,
+    "h": 298,
+    "alpha": false,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "linker-hand-o6",
@@ -2942,7 +3731,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.linkerhand.com/details/LinkerHandO6/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/linker-hand-o6-notion.webp",
+    "w": 372,
+    "h": 521,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://robotopian.com/cdn/shop/files/O6-main-1.png?v=1774237213&width=1214",
+    "origin": "notion"
+   }
   },
   {
    "id": "fthand-12",
@@ -2972,7 +3770,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.futuretakt.com/sys-pd/38.html",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/fthand-12-notion.webp",
+    "w": 960,
+    "h": 528,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://29912541.s21i.faiusr.com/2/ABUIABACGAAgo-3t0QYowPHJlgcwoB84mBE.jpg.webp",
+    "origin": "notion"
+   }
   },
   {
    "id": "cdh-mo-5-16-e0",
@@ -3002,7 +3809,16 @@ window.HANDSLAB_DATA = {
    "source": "https://cobotglobal.com/product-detail/agile-hand-series/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/cdh-mo-5-16-e0-notion.webp",
+    "w": 483,
+    "h": 483,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://cobotglobal.com/wp-content/uploads/2025/04/Agile-Hand-Series-Intelligent-bionic-five-finger-dexterous-hand.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "leap-hand-v2-standard",
@@ -3032,13 +3848,17 @@ window.HANDSLAB_DATA = {
    "source": "https://v2.leaphand.com/",
    "price": null,
    "priceSource": null,
+   "research": [
+    "https://www.roboticsproceedings.org/rss21/p132.html"
+   ],
    "photo": {
-    "src": "assets/img/hands/leap-hand-v2-standard.webp",
-    "w": 1100,
-    "h": 990,
+    "src": "assets/img/hands/leap-hand-v2-standard-notion.webp",
+    "w": 777,
+    "h": 960,
     "alpha": false,
-    "bg": "#a9937c",
-    "credit": "https://v2.leaphand.com/static/figures/size_comparison.jpg"
+    "bg": null,
+    "credit": "https://v2.leaphand.com/static/figures/v2_anatomy.png",
+    "origin": "notion"
    }
   },
   {
@@ -3069,7 +3889,16 @@ window.HANDSLAB_DATA = {
    "source": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/d-hand-5pt-notion.webp",
+    "w": 960,
+    "h": 640,
+    "alpha": false,
+    "bg": null,
+    "credit": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/img/08857312bc233d60513d6e66b9d33b821479de5f.jpg",
+    "origin": "notion"
+   }
   },
   {
    "id": "xiaoyao-dexterous-hand",
@@ -3099,7 +3928,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/xiaoyao-dexterous-hand-notion.webp",
+    "w": 214,
+    "h": 403,
+    "alpha": true,
+    "bg": null,
+    "credit": null,
+    "origin": "notion"
+   }
   },
   {
    "id": "orcahand-lite",
@@ -3129,7 +3967,16 @@ window.HANDSLAB_DATA = {
    "source": "https://www.orcahand.com/models/lite",
    "price": null,
    "priceSource": null,
-   "photo": null
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/orcahand-lite-notion.webp",
+    "w": 249,
+    "h": 800,
+    "alpha": true,
+    "bg": null,
+    "credit": "https://www.orcahand.com/images/ability-hand-lite.png",
+    "origin": "notion"
+   }
   }
  ]
 };
