@@ -17,11 +17,15 @@
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } };
   const activeText = (h) => (h.activeDof == null ? null : h.activeDof + (h.activeDofNote ? ' (' + h.activeDofNote + ')' : ''));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  // 노션 '특징'을 항목별로 나눈 목록은 문장 대신 짧은 태그로 보여 준다
+  const tags = (list) => (list && list.length ? `<ul class="tags">${list.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : NA);
+  const FEATURE_GROUPS = [['drive', '구동 방식'], ['sensors', '센서'], ['io', '통신·SW'], ['control', '제어'], ['notes', '주요 특징']];
+  const creditHTML = (h, cls) => (h.photo ? `<p class="${cls}">사진 출처 · <a href="${esc(h.photo.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(h.photo.creditName)}<span class="sr-only"> 제조사 페이지, 새 창</span></a> <span class="host">${esc(host(h.photo.creditUrl))} ↗</span></p>` : '');
 
   /* ── 상태 ─────────────────────────────────────────── */
   const MAX_CMP = 4;
-  const S = { view: 'wiki', q: '', kinds: new Set(), country: '', maker: '', photo: false, price: false, sort: 'model', dir: 1, cmp: [], basis: 'maker' };
-  const SORT_DIR = { model: 1, maker: 1, country: 1, kind: 1, activeDof: -1, totalDof: -1, joints: -1, actuators: -1, fingers: -1, weightG: 1 };
+  const S = { view: 'wiki', q: '', kinds: new Set(), country: '', maker: '', sort: 'model', dir: 1, cmp: [], basis: 'maker' };
+  const SORT_DIR = { model: 1, maker: 1, country: 1, kind: 1, activeDof: -1, passiveDof: -1, totalDof: -1, joints: -1, actuators: -1, fingers: -1, weightG: 1 };
   const KINDS = ['5지형 로봇핸드', '4지형 로봇핸드', '3지형 로봇핸드', '비교용 그리퍼'];
 
   function readUrl() {
@@ -31,8 +35,6 @@
     (p.get('k') || '').split(',').forEach((k) => { if (KINDS.includes(k)) S.kinds.add(k); });
     S.country = p.get('c') || '';
     S.maker = p.get('m') || '';
-    S.photo = p.get('photo') === '1';
-    S.price = p.get('price') === '1';
     if (p.get('s') in SORT_DIR) { S.sort = p.get('s'); S.dir = p.get('d') === 'desc' ? -1 : p.get('d') === 'asc' ? 1 : SORT_DIR[S.sort]; }
     S.cmp = (p.get('cmp') || '').split(',').filter((id) => byId.has(id)).slice(0, MAX_CMP);
     if (['maker', 'country', 'both', 'kind'].includes(p.get('b'))) S.basis = p.get('b');
@@ -44,8 +46,6 @@
     if (S.kinds.size) p.set('k', [...S.kinds].join(','));
     if (S.country) p.set('c', S.country);
     if (S.maker) p.set('m', S.maker);
-    if (S.photo) p.set('photo', '1');
-    if (S.price) p.set('price', '1');
     if (S.sort !== 'model' || S.dir !== 1) { p.set('s', S.sort); if (S.dir !== SORT_DIR[S.sort]) p.set('d', S.dir === 1 ? 'asc' : 'desc'); }
     if (S.cmp.length) p.set('cmp', S.cmp.join(','));
     if (S.basis !== 'maker') p.set('b', S.basis);
@@ -54,7 +54,7 @@
   }
 
   /* ── 검색·필터·정렬 ───────────────────────────────── */
-  HANDS.forEach((h) => { h._text = [h.model, h.maker, h.makerGroup, h.location, h.countries.join(' '), h.kind, h.specs].join(' ').toLowerCase(); });
+  HANDS.forEach((h) => { h._text = [h.model, h.maker, h.makerGroup, h.location, h.countries.join(' '), h.kind, h.specs, ...FEATURE_GROUPS.flatMap(([k]) => h[k])].join(' ').toLowerCase(); });
   const sortVal = (h, key) => (key === 'country' ? h.countries[0] : key === 'maker' ? h.makerGroup : h[key]);
   function filtered() {
     const terms = S.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
@@ -62,8 +62,7 @@
       terms.every((t) => h._text.includes(t)) &&
       (!S.kinds.size || S.kinds.has(h.kind)) &&
       (!S.country || h.countries.includes(S.country)) &&
-      (!S.maker || h.makerGroup === S.maker) &&
-      (!S.photo || h.photo) && (!S.price || h.price));
+      (!S.maker || h.makerGroup === S.maker));
     const key = S.sort, dir = S.dir;
     const cmpText = (a, b) => String(a).localeCompare(String(b), 'ko', { numeric: true, sensitivity: 'base' });
     list.sort((a, b) => {
@@ -75,7 +74,7 @@
     });
     return list;
   }
-  const hasFilters = () => S.q || S.kinds.size || S.country || S.maker || S.photo || S.price;
+  const hasFilters = () => S.q || S.kinds.size || S.country || S.maker;
 
   /* ── 히어로 ───────────────────────────────────────── */
   // 100개 모델 슬라이더. 검증된 사진은 그대로 쓰고 사진이 없는 모델은 정보 카드로 보여 준다.
@@ -105,13 +104,17 @@
         </div>
         <a class="feature-cap" id="featureCap" href="#/hand/${list[0].id}"><span class="maker"></span><b></b><span class="go" aria-hidden="true">→</span></a>
       </div>
-      <p class="feature-hint" aria-hidden="true">Drag to explore · 100 models</p>
+      <p class="feature-hint" aria-hidden="true">Drag to explore · ${n} models</p>
       <p class="sr-only" aria-live="polite" id="featureLive"></p>
     </div>`;
     $('#heroStrip').innerHTML = list.slice(1, 6).map((h, i) => `<li class="strip-item" data-feature="${i + 1}"><a class="strip-link" href="#/hand/${h.id}">
         <span class="strip-photo" data-depth="${STRIP_DEPTH[i % STRIP_DEPTH.length]}"><img src="${h.photo.src}" width="${h.photo.w}" height="${h.photo.h}" alt="" decoding="async"></span>
         <span class="strip-cap"><span class="idx">${two(i + 2)}</span><span class="model">${esc(h.model)}</span><span class="maker">${esc(h.makerGroup.replace(/\s*\(.*\)$/, ''))}</span><span class="sr-only"> 상세 보기</span></span>
       </a></li>`).join('') + `<li class="strip-more"><a href="#explore" data-view-link="wiki"><span>전체 ${DATA.meta.count}종 <span class="arrow" aria-hidden="true">↓</span></span><small>전체 목록에서 보기</small></a></li>`;
+    // 흐르는 띠: 모델명이 끊김 없이 이어지도록 같은 목록을 두 번 붙인다(장식용이라 화면낭독기에서는 숨김)
+    const run = HANDS.map((h) => `<span>${esc(h.model)}</span><i aria-hidden="true">✦</i>`).join('');
+    const ticker = $('#heroTicker');
+    if (ticker) ticker.innerHTML = `<div class="ticker-track">${run}${run}</div>`;
     initCarousel(list);
     initParallax();
   }
@@ -252,7 +255,7 @@
   function count(fn) { const m = new Map(); HANDS.forEach((h) => [].concat(fn(h)).forEach((k) => m.set(k, (m.get(k) || 0) + 1))); return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko')); }
   function initToolbar() {
     $('#catalogFacts').innerHTML = [['모델', DATA.meta.count], ['제조사·기관', DATA.meta.makers], ['국가', DATA.meta.countries]]
-      .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+      .map(([k, v]) => `<div><dt>${k}</dt><dd data-count="${v}">${v}</dd></div>`).join('');
     // 전체 수와 사진 수를 탭·버튼에 그대로 적어, 사진 갤러리만 보고 전체로 오해하지 않게 한다
     $('#tab-wiki').textContent = `전체 목록 · ${DATA.meta.count}`;
     $('#tab-cards').textContent = `Graphical Explorer · ${DATA.meta.count}`;
@@ -276,7 +279,7 @@
       else if (b.dataset.toggle) S[b.dataset.toggle] = !S[b.dataset.toggle];
       apply();
     });
-    const reset = () => { S.q = ''; S.kinds.clear(); S.country = ''; S.maker = ''; S.photo = false; S.price = false; apply(); };
+    const reset = () => { S.q = ''; S.kinds.clear(); S.country = ''; S.maker = ''; apply(); };
     $('#resetBtn').addEventListener('click', reset);
     $('#emptyReset').addEventListener('click', reset);
 
@@ -332,36 +335,61 @@
   }
   const cmpBtn = (h) => { const on = S.cmp.includes(h.id); return `<button type="button" class="cmp-btn" data-cmp="${h.id}" aria-pressed="${on}" aria-label="${esc(cmpLabel(h, on))}"></button>`; };
   function renderCards(list) {
-    $('#cardGrid').innerHTML = list.map((h) => {
+    // 사진 → 사진 출처(제조사 링크) → 모델 정보 순서. 링크 안에 링크를 넣지 않도록 사진 링크와 글 링크를 나눈다.
+    $('#cardGrid').innerHTML = list.map((h, i) => {
       const spec = [h.activeDof != null ? `능동 ${h.activeDof} DoF` : h.totalDof != null ? `총 ${h.totalDof} DoF` : h.dofStated ? `표기 ${short(h.dofStated)} DoF` : null, short(h.weight)].filter(Boolean).join(' · ');
-      return `<li class="g-card">
+      return `<li class="g-card" style="--i:${i % 8}">
+        <a class="g-link g-photo-link" href="#/hand/${h.id}" tabindex="-1" aria-hidden="true">
+          ${mediaHTML(h, 'g-media')}<span class="g-index">H${two(HANDS.indexOf(h) + 1)}</span>
+        </a>
+        ${creditHTML(h, 'g-credit')}
         <a class="g-link" href="#/hand/${h.id}">
-          ${mediaHTML(h, 'g-media')}
           <div class="g-text"><h3>${esc(h.model)}</h3><p>${esc(h.maker)}</p><p class="g-spec">${esc(spec || h.kind)}</p></div>
         </a>${cmpBtn(h)}
       </li>`;
     }).join('');
     $('#cardGrid').hidden = list.length === 0;
+    revealIn($('#cardGrid'));
   }
+  // 표 열: [정렬 키, 제목, 칸 종류(num=숫자, wrap=줄바꿈 허용, tags=태그 목록), 값]
+  // 노션 '특징' 문장에 있던 자유도·무게·주기·힘·하중·범위·속도는 각자의 열로, 나머지는 구동·센서·통신·제어·주요 특징 태그로 나눈다.
   const COLS = [
-    ['model', '모델'], ['maker', '제조사'], ['country', '국가'], ['kind', '유형'], ['fingers', '손가락', 1], ['activeDof', '능동 DoF', 1], ['totalDof', '총 DoF', 1],
-    [null, '표기 DoF'], ['joints', '관절', 1], ['actuators', '구동기', 1], [null, 'Tip force (N)'], [null, 'Grip force (N)'], [null, 'Payload (kg)'], ['weightG', '무게'], [null, '가격'], [null, '출처'],
+    ['maker', '제조사', '', (h) => val(h.maker)],
+    ['country', '국가', 'nw', (h) => esc(h.countries.join(', '))],
+    ['kind', '유형', 'nw', (h) => esc(h.kind.replace(' 로봇핸드', ''))],
+    ['fingers', '손가락', 'num', (h) => val(h.fingers)],
+    ['activeDof', '능동 DoF', 'num', (h) => val(activeText(h))],
+    ['passiveDof', '수동 DoF', 'num', (h) => val(h.passiveDof)],
+    ['totalDof', '총 DoF', 'num', (h) => val(h.totalDof)],
+    [null, '표기 DoF', 'nw', (h) => val(h.dofStated)],
+    ['joints', '관절', 'num', (h) => val(h.joints)],
+    ['actuators', '구동기', 'num', (h) => val(h.actuators)],
+    ['weightG', '무게', 'nw', (h) => val(short(h.weight))],
+    [null, '제어·통신 주기', 'nw', (h) => val(h.rate)],
+    [null, 'Tip force (N)', 'wrap', (h) => val(h.tipForce)],
+    [null, 'Grip force (N)', 'wrap', (h) => val(h.gripForce)],
+    [null, 'Payload (kg)', 'wrap', (h) => val(h.payload)],
+    [null, '기타 힘 표기', 'wrap', (h) => val(h.forceOther)],
+    [null, '스트로크·파지 범위', 'wrap', (h) => val(h.stroke)],
+    [null, '동작 속도', 'wrap', (h) => val(h.speed)],
+    [null, '구동 방식', 'tc', (h) => tags(h.drive)],
+    [null, '센서', 'tc', (h) => tags(h.sensors)],
+    [null, '통신·SW', 'tc', (h) => tags(h.io)],
+    [null, '제어', 'tc', (h) => tags(h.control)],
+    [null, '주요 특징', 'tc wide', (h) => tags(h.notes)],
+    [null, '출처', 'nw', (h) => `<a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}<span class="sr-only"> (${esc(h.model)} 사양 출처, 새 창)</span></a>`],
   ];
   function renderWiki(list) {
-    $('#wikiHead').innerHTML = '<tr>' + COLS.map(([key, label, num]) => {
+    const th = (key, label, cls) => {
       const sorted = key && S.sort === key ? ` aria-sort="${S.dir === 1 ? 'ascending' : 'descending'}"` : '';
-      return `<th scope="col"${num ? ' class="num"' : ''}${sorted}>${key ? `<button type="button" data-sort="${key}">${label}</button>` : label}</th>`;
-    }).join('') + '</tr>';
+      return `<th scope="col"${cls ? ` class="${cls}"` : ''}${sorted}>${key ? `<button type="button" data-sort="${key}">${label}</button>` : label}</th>`;
+    };
+    $('#wikiHead').innerHTML = '<tr>' + th('model', '모델', '') + COLS.map(([key, label, cls]) => th(key, label, cls)).join('') + '</tr>';
     $('#wikiBody').innerHTML = list.map((h) => {
       const on = S.cmp.includes(h.id);
       return `<tr>
         <th scope="row"><div class="row-head"><input type="checkbox" data-cmp="${h.id}"${on ? ' checked' : ''} aria-label="${esc(cmpLabel(h, on))}"><a class="model-link" href="#/hand/${h.id}">${esc(h.model)}</a></div></th>
-        <td>${esc(h.maker)}</td><td>${esc(h.countries.join(', '))}</td><td>${esc(h.kind.replace(' 로봇핸드', ''))}</td>
-        <td class="num">${val(h.fingers)}</td><td class="num">${val(activeText(h))}</td><td class="num">${val(h.totalDof)}</td>
-        <td>${val(h.dofStated)}</td><td class="num">${val(h.joints)}</td><td class="num">${val(h.actuators)}</td>
-        <td class="wrap">${val(h.tipForce)}</td><td class="wrap">${val(h.gripForce)}</td><td class="wrap">${val(h.payload)}</td>
-        <td>${val(short(h.weight))}</td><td class="wrap">${h.price ? esc(h.price) : NA}</td>
-        <td><a href="${esc(h.source)}" target="_blank" rel="noopener">사양<span class="sr-only"> 출처 (${esc(h.model)}, 새 창)</span></a>${h.priceSource ? ` · <a href="${esc(h.priceSource)}" target="_blank" rel="noopener">가격<span class="sr-only"> 출처 (새 창)</span></a>` : ''}</td>
+        ${COLS.map(([, , cls, get]) => `<td${cls ? ` class="${cls}"` : ''}>${get(h)}</td>`).join('')}
       </tr>`;
     }).join('');
   }
@@ -392,19 +420,23 @@
     $('#compareGo').textContent = `비교하기 ${S.cmp.length}/${MAX_CMP}`;
   }
   const CMP_ROWS = [
-    ['소재지', (h) => h.location], ['유형', (h) => h.kind], ['손가락 수', (h) => h.fingers], ['능동 DoF', activeText], ['총 DoF', (h) => h.totalDof], ['표기 DoF', (h) => h.dofStated],
-    ['관절', (h) => h.joints], ['구동기', (h) => h.actuators], ['Tip force (N)', (h) => h.tipForce], ['Grip force (N)', (h) => h.gripForce], ['Payload (kg)', (h) => h.payload],
-    ['기타 힘 표기', (h) => h.forceOther], ['무게', (h) => h.weight], ['제어·통신 주기', (h) => h.rate], ['가격', (h) => h.price], ['조사표 요약', (h) => h.specs],
+    ['소재지', (h) => h.location], ['유형', (h) => h.kind], ['손가락 수', (h) => h.fingers], ['능동 DoF', activeText], ['수동 DoF', (h) => h.passiveDof], ['총 DoF', (h) => h.totalDof], ['표기 DoF', (h) => h.dofStated],
+    ['관절', (h) => h.joints], ['구동기', (h) => h.actuators], ['무게', (h) => h.weight], ['제어·통신 주기', (h) => h.rate],
+    ['Tip force (N)', (h) => h.tipForce], ['Grip force (N)', (h) => h.gripForce], ['Payload (kg)', (h) => h.payload], ['기타 힘 표기', (h) => h.forceOther],
+    ['스트로크·파지 범위', (h) => h.stroke], ['동작 속도', (h) => h.speed],
+    ...FEATURE_GROUPS.map(([k, label]) => [label, (h) => (h[k].length ? h[k] : null)]),
   ];
+  const OPTIONAL_ROWS = ['기타 힘 표기', '제어·통신 주기', '표기 DoF', '수동 DoF', '스트로크·파지 범위', '동작 속도', '제어'];
   function compareHTML() {
     const list = S.cmp.map((id) => byId.get(id));
     if (!list.length) return `<div class="compare"><h2 id="sheetTitle">모델 비교</h2><p>비교할 모델이 없습니다. 카드나 표에서 ‘비교’를 눌러 최대 ${MAX_CMP}개까지 담아 보세요.</p></div>`;
     const head = list.map((h) => `<th scope="col">${mediaHTML(h, 'c-media')}<a href="#/hand/${h.id}">${esc(h.model)}</a><small>${esc(h.maker)}</small><button type="button" class="rm" data-cmp="${h.id}" aria-pressed="true" aria-label="${esc(cmpLabel(h, true))}">빼기</button></th>`).join('');
     const rows = CMP_ROWS.map(([label, get]) => {
       const vals = list.map(get);
-      if (vals.every((v) => v == null) && ['기타 힘 표기', '제어·통신 주기', '표기 DoF'].includes(label)) return '';
-      const differs = list.length > 1 && new Set(vals.map((v) => String(v))).size > 1 && label !== '조사표 요약' && label !== '소재지';
-      return `<tr><th scope="row">${label}</th>${vals.map((v) => `<td${differs && v != null ? ' class="diff"' : ''}>${val(v)}</td>`).join('')}</tr>`;
+      if (vals.every((v) => v == null) && OPTIONAL_ROWS.includes(label)) return '';
+      const isList = vals.some(Array.isArray);
+      const differs = !isList && list.length > 1 && new Set(vals.map((v) => String(v))).size > 1 && label !== '소재지';
+      return `<tr><th scope="row">${label}</th>${vals.map((v) => `<td${differs && v != null ? ' class="diff"' : ''}>${Array.isArray(v) ? tags(v) : val(v)}</td>`).join('')}</tr>`;
     }).join('');
     const src = `<tr><th scope="row">출처</th>${list.map((h) => `<td><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></td>`).join('')}</tr>`;
     return `<div class="compare" style="--cols:${list.length}"><h2 id="sheetTitle">모델 비교</h2>
@@ -417,17 +449,20 @@
   function detailHTML(h) {
     const p = h.photo, on = S.cmp.includes(h.id);
     const specs = [
-      ['손가락 수', h.fingers], ['능동 DoF', activeText(h)], ['총 DoF', h.totalDof],
+      ['손가락 수', h.fingers], ['능동 DoF', activeText(h)],
+      h.passiveDof != null ? ['수동 DoF', h.passiveDof] : null, ['총 DoF', h.totalDof],
       h.dofStated ? ['표기 DoF', h.dofStated, '능동/총 구분 없이 적힌 값'] : null,
-      ['관절', h.joints], ['구동기', h.actuators],
+      ['관절', h.joints], ['구동기', h.actuators], ['무게', h.weight],
+      h.rate ? ['제어·통신 주기', h.rate] : null,
       ['Tip force (N)', h.tipForce], ['Grip force (N)', h.gripForce], ['Payload (kg)', h.payload],
       h.forceOther ? ['기타 힘 표기', h.forceOther, '유형이 분명하지 않은 값'] : null,
-      ['무게', h.weight], h.rate ? ['제어·통신 주기', h.rate] : null, ['가격', h.price],
+      h.stroke ? ['스트로크·파지 범위', h.stroke] : null, h.speed ? ['동작 속도', h.speed] : null,
     ].filter(Boolean);
+    const groups = FEATURE_GROUPS.filter(([key]) => h[key].length);
     const siblings = HANDS.filter((x) => x.makerGroup === h.makerGroup && x.id !== h.id);
     const k = p ? photoKind(p) : 'none';
     const media = p
-      ? `<figure><img src="${p.src}" width="${p.w}" height="${p.h}" alt="${esc(h.maker)} ${esc(h.model)} 제품 사진"></figure><p class="detail-credit">사진 출처 · ${p.credit ? `<a href="${esc(p.credit)}" target="_blank" rel="noopener noreferrer">${esc(host(p.credit))}</a>` : 'HANDSLab 조사표 첨부 이미지'}</p>`
+      ? `<figure><img src="${p.src}" width="${p.w}" height="${p.h}" alt="${esc(h.maker)} ${esc(h.model)} 제품 사진"></figure>${creditHTML(h, 'detail-credit')}`
       : `<div class="ph">확인된 제품 사진이 아직 없습니다.</div>`;
     return `<article class="detail">
       <div class="detail-media photo ${k}">${media}</div>
@@ -440,13 +475,12 @@
           <a class="btn" href="${esc(h.source)}" target="_blank" rel="noopener">제조사 자료 열기 ↗</a>
         </div>
         <dl class="spec-grid">${specs.map(([k, v, note]) => `<div><dt>${k}</dt><dd>${val(v)}${note && v != null ? `<small>${note}</small>` : ''}</dd></div>`).join('')}</dl>
-        <h3>조사표 요약</h3>
-        <p class="detail-specs">${esc(h.specs)}</p>
+        ${groups.length ? `<h3>특징 정리</h3><dl class="feat-list">${groups.map(([key, label]) => `<div><dt>${label}</dt><dd>${tags(h[key])}</dd></div>`).join('')}</dl>` : ''}
+        <details class="raw"><summary>노션 조사표 원문 보기</summary><p class="detail-specs">${esc(h.specs)}</p></details>
         <h3>출처</h3>
         <ul class="src-list">
           <li><span>사양</span><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></li>
-          ${h.priceSource ? `<li><span>가격</span><a href="${esc(h.priceSource)}" target="_blank" rel="noopener">${esc(host(h.priceSource))}</a></li>` : ''}
-          ${p?.credit ? `<li><span>사진</span><a href="${esc(p.credit)}" target="_blank" rel="noopener noreferrer">${esc(host(p.credit))}</a></li>` : ''}
+          ${p ? `<li><span>사진</span><a href="${esc(p.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(p.creditName)} · ${esc(host(p.creditUrl))}</a></li>` : ''}
           ${(h.research || []).map(url => `<li><span>관련 연구</span><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(host(url))}</a></li>`).join('')}
         </ul>
         ${siblings.length ? `<h3>같은 제조사의 다른 모델</h3><div class="rel-list">${siblings.map((x) => `<a href="#/hand/${x.id}">${esc(x.model)}</a>`).join('')}</div>` : ''}
@@ -525,7 +559,7 @@
     const set = t.closest('[data-set]');
     if (set) {
       e.preventDefault();
-      S.q = ''; S.kinds.clear(); S.photo = false; S.price = false; S.country = ''; S.maker = '';
+      S.q = ''; S.kinds.clear(); S.country = ''; S.maker = '';
       S[set.dataset.set] = set.dataset.value;
       if (sheetKind) closeSheet();
       apply();
@@ -671,6 +705,32 @@
     }).join('');
   }
 
+  /* ── 모션: 스크롤하면 나타나기, 숫자 올라가기 ─────── */
+  // 움직임 줄이기 설정이거나 IntersectionObserver가 없으면 처음부터 보이게 둔다.
+  const canAnimate = 'IntersectionObserver' in window && !reduceMotion.matches;
+  let revealObs = null;
+  if (canAnimate) {
+    document.documentElement.classList.add('motion');
+    revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in');
+        revealObs.unobserve(en.target);
+        if (en.target.matches('[data-count]')) countUp(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  }
+  function revealIn(root) {
+    const els = $$('[data-reveal], .g-card, [data-count]', root);
+    if (!revealObs) { els.forEach((el) => el.classList.add('in')); return; }
+    els.forEach((el) => { if (!el.classList.contains('in')) revealObs.observe(el); });
+  }
+  function countUp(el) {
+    const end = +el.dataset.count, t0 = performance.now(), dur = 900;
+    const step = (t) => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+
   /* ── 시작 ─────────────────────────────────────────── */
   readUrl();
   renderHero();
@@ -679,5 +739,6 @@
   $('#q').value = S.q;
   apply();
   initScrollTone();
+  revealIn(document);
   route();
 })();

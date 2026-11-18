@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>HANDSLab — A world of robotic hands</title>
-  <meta name="description" content="로봇핸드 100종을 실제 제품 사진과 사양으로 탐색합니다. HANDSLab 조사표 기준.">
+  <meta name="description" content="전 세계 로봇핸드를 실제 제품 사진과 사양으로 탐색합니다. HANDSLab 조사표 기준.">
   <meta name="theme-color" content="#050B20">
   <meta property="og:title" content="HANDSLab — A world of robotic hands">
-  <meta property="og:description" content="로봇핸드 100종을 실제 제품 사진과 사양으로 탐색합니다.">
+  <meta property="og:description" content="전 세계 로봇핸드를 실제 제품 사진과 사양으로 탐색합니다.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/fonts/pretendard/pretendard.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
 </head>
 <body>
   <a class="skip-link" href="#explore">탐색으로 건너뛰기</a>
@@ -33,11 +34,11 @@
       <div class="hero-main">
         <div class="hero-copy">
           <p class="hero-eyebrow">Robot Hand Atlas</p>
-          <h1 id="heroTitle">A world of<br>robotic hands.</h1>
-          <p class="hero-sub">로봇핸드 100종을 실제 제품 사진과 사양으로 탐색합니다. <br>조사표 기준 · 확인하지 못한 값은 미확인으로 둡니다.</p>
+          <h1 id="heroTitle"><span class="line"><span>A world of</span></span><span class="line"><span>robotic hands.</span></span></h1>
+          <p class="hero-sub"><span class="nb">전 세계 로봇핸드를</span> <span class="nb">실제 제품 사진과 사양으로</span> <span class="nb">탐색합니다.</span> <span class="nb">HANDSLab 조사표 기준이며,</span> <span class="nb">확인하지 못한 값은 미확인으로 둡니다.</span></p>
           <div class="hero-actions">
-            <a class="btn-primary" href="#explore" data-view-link="wiki" id="ctaAll">전체 100개 보기</a>
-            <a class="btn-text" href="#explore" data-view-link="cards" id="ctaPhoto">갤러리 보기 · 100종</a>
+            <a class="btn-primary" href="#explore" data-view-link="wiki" id="ctaAll">전체 목록 보기</a>
+            <a class="btn-text" href="#explore" data-view-link="cards" id="ctaPhoto">갤러리 보기</a>
           </div>
         </div>
         <div class="hero-feature" id="heroFeature"></div>
@@ -46,20 +47,21 @@
         <ul class="hero-strip" id="heroStrip" aria-label="대표 로봇핸드. 선택하면 상세 화면으로 이동합니다."></ul>
       </div>
     </section>
+    <div class="ticker" id="heroTicker" aria-hidden="true"></div>
 
     <section class="intro" id="intro" aria-labelledby="introTitle">
-      <p class="section-label">About HANDSLab</p>
+      <p class="section-label" data-reveal>About HANDSLab</p>
       <div class="intro-body">
-        <h2 id="introTitle">사람의 가능성을 넓히는,<br>차세대 로봇 지능.</h2>
-        <p>HANDS Lab은 영남대학교 로봇공학과의 <span lang="en">Human-centered AI &amp; Next-Generation Dexterous System Lab</span>입니다. 로봇핸드와 적응형 그리퍼, Physical AI, 웨어러블·소프트 로보틱스를 연구하며 기계 설계와 체화된 인공지능을 연결합니다.</p>
-        <ul class="lab-research" aria-label="HANDSLab 연구 분야">
+        <h2 id="introTitle" data-reveal><span class="nb">사람의 가능성을 넓히는,</span> <span class="nb">차세대 로봇 지능.</span></h2>
+        <p data-reveal>HANDS Lab은 영남대학교 로봇공학과의 <span lang="en">Human&#8209;centered AI &amp; Next&#8209;Generation Dexterous System Lab</span>입니다. 로봇핸드와 적응형 그리퍼, Physical AI, 웨어러블·소프트 로보틱스를 연구하며 기계 설계와 체화된 인공지능을 연결합니다.</p>
+        <ul class="lab-research" aria-label="HANDSLab 연구 분야" data-reveal>
           <li>Dexterous Hands &amp; Adaptive Grippers</li>
           <li>Physical AI &amp; Embodied Intelligence</li>
           <li>Wearable Robotics</li>
           <li>Soft Actuators &amp; Bioinspired Mechanisms</li>
           <li>Soft Tactile Sensing</li>
         </ul>
-        <a class="lab-link" href="https://sites.google.com/view/handslab/home" target="_blank" rel="noopener noreferrer">Visit HANDSLab <span aria-hidden="true">↗</span><span class="sr-only"> 공식 연구실 홈페이지, 새 창</span></a>
+        <a class="lab-link" data-reveal href="https://sites.google.com/view/handslab/home" target="_blank" rel="noopener noreferrer">Visit HANDSLab <span aria-hidden="true">↗</span><span class="sr-only"> 공식 연구실 홈페이지, 새 창</span></a>
       </div>
     </section>
 
@@ -71,8 +73,8 @@
           <p class="explore-note">조사표 기준 · 같은 검색·필터·비교 상태가 두 가지 보기에 함께 적용됩니다.</p>
         </div>
         <div class="view-switch" role="tablist" aria-label="보기 방식">
-          <button role="tab" id="tab-wiki" aria-controls="view-wiki" data-view="wiki" aria-selected="true">전체 목록 · 100</button>
-          <button role="tab" id="tab-cards" aria-controls="view-cards" data-view="cards" aria-selected="false" tabindex="-1">Graphical Explorer · 100</button>
+          <button role="tab" id="tab-wiki" aria-controls="view-wiki" data-view="wiki" aria-selected="true">전체 목록</button>
+          <button role="tab" id="tab-cards" aria-controls="view-cards" data-view="cards" aria-selected="false" tabindex="-1">Graphical Explorer</button>
         </div>
       </div>
 
@@ -105,10 +107,6 @@
         </div>
         <div class="toolbar-row chips" id="chipRow">
           <div class="chip-group" role="group" aria-label="유형" id="kindChips"></div>
-          <div class="chip-group" role="group" aria-label="추가 조건">
-            <button type="button" class="chip" data-toggle="photo" aria-pressed="false">사진 있음</button>
-            <button type="button" class="chip" data-toggle="price" aria-pressed="false">가격 공개</button>
-          </div>
           <button type="button" class="link-btn" id="resetBtn" hidden>조건 지우기</button>
         </div>
         <p class="result-count" id="resultCount" aria-live="polite"></p>
@@ -125,7 +123,7 @@
             <tbody id="wikiBody"></tbody>
           </table>
         </div>
-        <p class="table-hint">능동 DoF와 총 DoF는 서로 다른 열입니다. Tip force·Grip force·Payload도 따로 표시하며, 조사표에 없는 값은 미확인입니다.</p>
+        <p class="table-hint">노션 ‘특징’에 적힌 자유도·무게·주기·힘·하중·범위·속도는 각자의 열로, 나머지는 구동 방식·센서·통신·제어·주요 특징으로 나눠 정리했습니다. 조사표에 없는 값은 미확인입니다. 표는 좌우로 스크롤됩니다.</p>
       </div>
 
       <!-- 관계 보기는 화면에서 뺐다(탭·메뉴 없음). 다시 쓸 때를 위해 틀만 숨겨 둔다. -->
@@ -157,27 +155,67 @@
     </section>
 
     <section class="about" id="about" aria-labelledby="aboutTitle">
-      <h2 id="aboutTitle">데이터 기준</h2>
+      <h2 id="aboutTitle" data-reveal>데이터 기준</h2>
       <div class="about-grid">
-        <div>
+        <div data-reveal>
           <h3>조사표 기준</h3>
-          <p>HANDSLab 조사표에서 공개용으로 추린 100건입니다. 제조사·연구기관의 공개 자료를 근거로 했으며, 모델마다 사양 출처 링크를 함께 둡니다. 실제 사양은 제조사 최신 자료로 다시 확인해 주세요.</p>
+          <p>HANDSLab 노션 조사표에 등록된 로봇핸드·비교용 그리퍼를 그대로 옮겼습니다. 제조사·연구기관의 공개 자료를 근거로 하며, 모델마다 사양 출처 링크를 함께 둡니다. 실제 사양은 제조사 최신 자료로 다시 확인해 주세요.</p>
         </div>
-        <div>
+        <div data-reveal>
           <h3>자유도와 힘의 구분</h3>
-          <p><strong>능동 DoF</strong>는 독립 구동 축, <strong>총 DoF</strong>는 수동·연동 관절을 포함한 값입니다. <strong>관절</strong>과 <strong>구동기</strong> 수는 별도 항목이고, 구분 없이 적힌 자유도는 ‘표기 DoF’로 따로 둡니다. 힘은 <strong>Tip force(N)</strong>, <strong>Grip force(N)</strong>, <strong>Payload(kg)</strong>를 섞지 않습니다.</p>
+          <p><strong>능동 DoF</strong>는 독립 구동 축, <strong>수동 DoF</strong>는 연동·수동 관절, <strong>총 DoF</strong>는 둘을 합한 값입니다. 구분 없이 적힌 자유도는 ‘표기 DoF’로 따로 둡니다. 힘은 <strong>Tip force(N)</strong>, <strong>Grip force(N)</strong>, <strong>Payload(kg)</strong>를 섞지 않습니다.</p>
         </div>
-        <div>
-          <h3>사진과 가격</h3>
-          <p>제품 사진은 HANDSLab 조사표의 첨부 이미지와 제품 공개 자료를 바탕으로 정리했습니다. 이미지 저작권은 각 권리자에게 있습니다. 공개 가격은 출처를 함께 표시합니다.</p>
+        <div data-reveal>
+          <h3>사진 출처와 이용 원칙</h3>
+          <p>제품 사진의 저작권은 각 제조사·연구기관에 있으며, 사진마다 제조사 이름과 제품 페이지 링크를 함께 표시합니다. 비영리 연구·교육 목적의 비교 자료로서 출처를 밝혀 인용합니다(저작권법 제28조·제37조). 권리자가 삭제를 요청하면 즉시 내리겠습니다 — <a href="https://github.com/gayeong1214-wq/ROBOT_HAND__HANDSLAB/issues" target="_blank" rel="noopener noreferrer">요청하기</a>.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <img src="assets/img/handslab-logo.png" width="974" height="187" alt="HANDSLab">
-    <p>조사표 기준 · 누락 항목은 미확인으로 표시합니다.</p>
+  <footer class="site-footer" aria-labelledby="footerTitle">
+    <div class="footer-top">
+      <div class="footer-brand" data-reveal>
+        <img src="assets/img/handslab-logo-on-dark.png" width="974" height="187" alt="HANDSLab">
+        <p id="footerTitle" class="footer-name"><span lang="en" class="nb">Human-centered AI &amp;</span> <span lang="en" class="nb">Next&#8209;Generation Dexterous System Lab</span></p>
+        <p class="footer-dept">영남대학교 로봇공학과 · <span lang="en">Department of Robotics Engineering, Yeungnam University</span></p>
+      </div>
+      <div class="footer-col" data-reveal>
+        <h3>Research</h3>
+        <ul>
+          <li>Dexterous Robot Hands &amp; Adaptive Grippers</li>
+          <li>Physical AI &amp; Embodied Intelligence</li>
+          <li>Wearable Robots for Human Augmentation</li>
+          <li>Soft Actuators &amp; Bioinspired Mechanisms</li>
+          <li>Soft Tactile Sensing &amp; Contact Intelligence</li>
+        </ul>
+      </div>
+      <div class="footer-col" data-reveal>
+        <h3>Lab</h3>
+        <ul>
+          <li><a href="https://sites.google.com/view/handslab/team/principal-investigator" target="_blank" rel="noopener noreferrer">Principal Investigator</a></li>
+          <li><a href="https://sites.google.com/view/handslab/team/members" target="_blank" rel="noopener noreferrer">Members</a></li>
+          <li><a href="https://sites.google.com/view/handslab/research-areas" target="_blank" rel="noopener noreferrer">Research Areas</a></li>
+          <li><a href="https://sites.google.com/view/handslab/publications" target="_blank" rel="noopener noreferrer">Publications</a></li>
+          <li><a href="https://sites.google.com/view/handslab/news" target="_blank" rel="noopener noreferrer">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-reveal>
+        <h3>Contact</h3>
+        <address>
+          Prof. Junmo Yang, Ph.D.<br>
+          G13 Room 311, Yeungnam University<br>
+          280 Daehak-Ro, Gyeongsan,<br>
+          Gyeongbuk 38541, Republic of Korea<br>
+          <a href="mailto:jmyang@yu.ac.kr">jmyang@yu.ac.kr</a>
+        </address>
+        <p class="footer-recruit">석사과정·학부연구생 모집 중 · <a href="https://sites.google.com/view/handslab/contact" target="_blank" rel="noopener noreferrer">Contact ↗</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 HANDS Lab, Yeungnam University</p>
+      <p><a href="https://sites.google.com/view/handslab/home" target="_blank" rel="noopener noreferrer">sites.google.com/view/handslab ↗</a> · <a href="https://github.com/gayeong1214-wq/ROBOT_HAND__HANDSLAB" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
+    </div>
   </footer>
 
   <div class="compare-tray" id="compareTray" hidden>

@@ -2,10 +2,10 @@
 window.HANDSLAB_DATA = {
  "meta": {
   "basis": "HANDSLab 조사표(공개용) 기준",
-  "count": 100,
-  "makers": 51,
+  "count": 99,
+  "makers": 50,
   "countries": 14,
-  "photos": 100
+  "photos": 99
  },
  "hands": [
   {
@@ -21,6 +21,7 @@ window.HANDSLAB_DATA = {
    "fingers": 2,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -32,10 +33,21 @@ window.HANDSLAB_DATA = {
    "weight": "27.5 kg",
    "weightG": 27500,
    "rate": null,
+   "stroke": "죠당 스트로크 26 mm",
+   "speed": null,
+   "drive": [
+    "공압 쐐기식",
+    "평행 2지"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "공칭 6 bar 기준",
+    "중량 금속 부품용"
+   ],
    "specs": "공압 쐐기식 평행 2지. 권장 공작물 질량 97.5 kg, 공칭 6 bar 기준 닫힘 힘 19,500 N, 죠당 스트로크 26 mm, 본체 27.5 kg. 중량 금속 부품용.",
    "source": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/pgn-plus-p-380-2-notion.webp",
@@ -43,8 +55,8 @@ window.HANDSLAB_DATA = {
     "h": 324,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "SCHUNK",
+    "creditUrl": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019"
    }
   },
   {
@@ -60,6 +72,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -71,10 +84,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "연구용 정교 조작 핸드",
+    "강화학습·손안 조작 연구 사례 다수",
+    "손목 포함 구성"
+   ],
    "specs": "5지형 연구용 정교 조작 핸드. 강화학습·손안 조작 연구 사례가 많음. 손목 포함 견적 구성.",
    "source": "https://shadowrobot.com/dexterous-hand-series/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2310.15599"
    ],
@@ -84,8 +106,8 @@ window.HANDSLAB_DATA = {
     "h": 478,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Shadow Robot Company",
+    "creditUrl": "https://shadowrobot.com/dexterous-hand-series/"
    }
   },
   {
@@ -101,6 +123,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -112,10 +135,19 @@ window.HANDSLAB_DATA = {
    "weight": "약 880 g",
    "weightG": 880,
    "rate": "500 Hz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 (옵션)"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "거치대 등 옵션"
+   ],
    "specs": "능동 20자유도, 약 880g, 제어 500Hz, 감싸 쥐기 정격 7kg. 촉각 센서·거치대 등 옵션.",
    "source": "https://www.tesollo.com/ko/products/grippers/dg-5f-s",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2603.05687"
    ],
@@ -125,8 +157,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "테솔로 (TESOLLO)",
+    "creditUrl": "https://www.tesollo.com/ko/products/grippers/dg-5f-s"
    }
   },
   {
@@ -142,6 +174,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 22,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -153,10 +186,18 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.3 kg",
    "weightG": 1300,
    "rate": "500 Hz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 180 fps",
+    "원시 이미지 제공"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 22자유도, 약 1.3kg, 제어 500Hz, 촉각 180fps 및 원시 이미지 제공.",
    "source": "https://www.sharpa.com/pages/w01",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2609.07002"
    ],
@@ -166,8 +207,8 @@ window.HANDSLAB_DATA = {
     "h": 360,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Sharpa",
+    "creditUrl": "https://www.sharpa.com/pages/w01"
    }
   },
   {
@@ -183,6 +224,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -194,10 +236,24 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "DYNAMIXEL 기반"
+   ],
+   "sensors": [
+    "촉각 센서 배열 9개"
+   ],
+   "io": [
+    "ROS"
+   ],
+   "control": [],
+   "notes": [
+    "오른손 모델",
+    "ROS 기반 연구 활용"
+   ],
    "specs": "능동 20자유도, DYNAMIXEL 기반 오른손 모델, 촉각 센서 배열 9개. ROS 기반 연구 활용.",
    "source": "https://www.robotis.com/shop/item.php?it_id=905-0058-000",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2609.31323"
    ],
@@ -207,8 +263,8 @@ window.HANDSLAB_DATA = {
     "h": 500,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "로보티즈 (ROBOTIS)",
+    "creditUrl": "https://www.robotis.com/shop/item.php?it_id=905-0058-000"
    }
   },
   {
@@ -224,6 +280,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -235,10 +292,20 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.763 kg",
    "weightG": 1763,
    "rate": "250 Hz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "힘·토크 센서 (옵션)",
+    "촉각 센서 (옵션)"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "진공 옵션"
+   ],
    "specs": "능동 20자유도, 약 1.763kg, 제어 250Hz, 감싸 쥐기 정격 10kg. 힘·토크/촉각 센서 및 진공 옵션.",
    "source": "https://www.tesollo.com/ko/products/grippers/dg-5f-m",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2603.12243"
    ],
@@ -248,8 +315,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "테솔로 (TESOLLO)",
+    "creditUrl": "https://www.tesollo.com/ko/products/grippers/dg-5f-m"
    }
   },
   {
@@ -265,6 +332,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -276,10 +344,22 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "전동",
+    "3지 중심정렬"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "IP67",
+    "정전 시 브레이크로 유지",
+    "CNC 원통 부품에 적합"
+   ],
    "specs": "전동 3지 중심정렬. 형상구속 최대 25 kg, 마찰파지 최대 15 kg. 전체 파지력 50–450 N, IP67, 정전 시 브레이크로 유지. CNC 원통 부품에 적합.",
    "source": "https://onrobot.com/en/products/3fg25",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2508.06295"
    ],
@@ -289,8 +369,8 @@ window.HANDSLAB_DATA = {
     "h": 436,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "OnRobot",
+    "creditUrl": "https://onrobot.com/en/products/3fg25"
    }
   },
   {
@@ -306,6 +386,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 20,
@@ -317,10 +398,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.3 kg",
    "weightG": 1300,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "구동 9축 · 연동 20관절"
+   ],
+   "sensors": [],
+   "io": [
+    "RS485"
+   ],
+   "control": [],
+   "notes": [
+    "사람 손 형상의 다관절 연구용 핸드"
+   ],
    "specs": "구동 9축으로 연동 20개 관절 동작, 약 1.3kg, RS485. 사람 손 형상의 다관절 연구용 핸드.",
    "source": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/c/PGR_3161",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/1910.10900"
    ],
@@ -330,8 +422,8 @@ window.HANDSLAB_DATA = {
     "h": 600,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "SCHUNK",
+    "creditUrl": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/c/PGR_3161"
    }
   },
   {
@@ -347,6 +439,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 12,
@@ -358,10 +451,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 540 g",
    "weightG": 540,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "연동 12관절"
+   ],
+   "sensors": [
+    "힘 피드백"
+   ],
+   "io": [
+    "RS485"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 6자유도·연동 12관절, 약 540g, 엄지 15N/기타 10N, RS485 및 힘 피드백.",
    "source": "https://en.inspire-robots.com/product/rh56dfx/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2505.21864v2"
    ],
@@ -371,8 +475,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://en.inspire-robots.com/product/rh56dfx/"
    }
   },
   {
@@ -388,6 +492,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -399,10 +504,19 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.024 kg",
    "weightG": 1024,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손끝 촉각 센서"
+   ],
+   "io": [],
+   "control": [
+    "관절 전류 기반 제어"
+   ],
+   "notes": [],
    "specs": "능동 16자유도, 약 1.024kg, 관절 전류 기반 제어, 손끝 촉각 센서",
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=4",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2506.19212"
    ],
@@ -412,8 +526,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "원익로보틱스 (Wonik Robotics)",
+    "creditUrl": "https://www.allegrohand.com/sub/product/p.php?idx=4"
    }
   },
   {
@@ -429,6 +543,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "15",
    "joints": null,
@@ -440,10 +555,20 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.3 kg",
    "weightG": 1300,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손끝 5곳 6축 힘·토크 센서"
+   ],
+   "io": [
+    "TCP/IP",
+    "JSON"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "15자유도, 약 1.3kg, 5개 손끝 6축 힘·토크 센서, TCP/IP·JSON 통신.",
    "source": "https://www.aidinrobotics.co.kr/robotic-hand",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/aidin-hand-notion.webp",
@@ -451,47 +576,8 @@ window.HANDSLAB_DATA = {
     "h": 647,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
-   }
-  },
-  {
-   "id": "artus-lite",
-   "model": "ARTUS Lite",
-   "maker": "Sarcomere Dynamics",
-   "makerGroup": "Sarcomere Dynamics",
-   "location": "캐나다·앨버타주 세인트앨버트",
-   "countries": [
-    "캐나다"
-   ],
-   "kind": "5지형 로봇핸드",
-   "fingers": 5,
-   "activeDof": 16,
-   "activeDofNote": null,
-   "totalDof": 20,
-   "dofStated": null,
-   "joints": null,
-   "actuators": null,
-   "tipForce": null,
-   "gripForce": null,
-   "payload": null,
-   "forceOther": null,
-   "weight": "약 1.4 kg",
-   "weightG": 1400,
-   "rate": null,
-   "specs": "능동 16자유도·총 20자유도, 약 1.4kg. 손가락 위치·힘 감지.",
-   "source": "https://sarcomeredynamics.com/",
-   "price": null,
-   "priceSource": null,
-   "research": [],
-   "photo": {
-    "src": "assets/img/hands/artus-lite-notion.webp",
-    "w": 354,
-    "h": 960,
-    "alpha": true,
-    "bg": null,
-    "credit": "https://store.indrorobotics.com/cdn/shop/files/Artus_Lite_Robot_Hand_Back_View.png?v=1770654158&width=1946",
-    "origin": "notion"
+    "creditName": "에이딘로보틱스 (AIDIN Robotics)",
+    "creditUrl": "https://www.aidinrobotics.co.kr/robotic-hand"
    }
   },
   {
@@ -507,6 +593,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 15,
    "activeDofNote": null,
+   "passiveDof": 3,
    "totalDof": 18,
    "dofStated": null,
    "joints": null,
@@ -518,10 +605,26 @@ window.HANDSLAB_DATA = {
    "weight": "800 g 이하",
    "weightG": 800,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손끝·손바닥 촉각"
+   ],
+   "io": [
+    "CAN FD",
+    "ROS2"
+   ],
+   "control": [
+    "위치",
+    "속도",
+    "전류",
+    "토크",
+    "임피던스 제어"
+   ],
+   "notes": [],
    "specs": "총 18자유도(능동 15+수동 3), 800g 이하, 손끝·손바닥 촉각, 위치/속도/전류/토크/임피던스 제어, CAN FD·ROS2.",
    "source": "https://chestnut.bot/aero-hand.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/aero-hand-notion.webp",
@@ -529,8 +632,8 @@ window.HANDSLAB_DATA = {
     "h": 660,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Chestnut Robotics",
+    "creditUrl": "https://chestnut.bot/aero-hand.html"
    }
   },
   {
@@ -546,6 +649,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 18,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -557,10 +661,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.494 kg",
    "weightG": 1494,
    "rate": "333 Hz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "힘·토크 센서 (옵션)",
+    "촉각 센서 (옵션)"
+   ],
+   "io": [
+    "ROS2",
+    "SDK"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 18자유도, 약 1.494kg, 제어 333Hz, ROS2·SDK. 힘·토크/촉각 센서 옵션.",
    "source": "https://www.tesollo.com/ko/products/grippers/dg-4f",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dg-4f-notion.webp",
@@ -568,8 +683,8 @@ window.HANDSLAB_DATA = {
     "h": 925,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "테솔로 (TESOLLO)",
+    "creditUrl": "https://www.tesollo.com/ko/products/grippers/dg-4f"
    }
   },
   {
@@ -585,6 +700,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -596,10 +712,21 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "건식 접착 (도마뱀 발 모사)",
+    "전기·공압 공급 불필요"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "접촉으로 부착 · 박리 동작으로 해제",
+    "유리처럼 평평·매끈한 강성 판재용"
+   ],
    "specs": "도마뱀 발을 모사한 건식 접착 그리퍼. 전기·공압 공급 없이 접촉으로 붙이고 박리 동작으로 해제. SP5 최대 5 kg. 유리처럼 평평·매끈한 강성 판재용.",
    "source": "https://onrobot.com/en/products/gecko-gripper",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/gecko-sp5-notion.webp",
@@ -607,8 +734,8 @@ window.HANDSLAB_DATA = {
     "h": 480,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "OnRobot",
+    "creditUrl": "https://onrobot.com/en/products/gecko-gripper"
    }
   },
   {
@@ -624,6 +751,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 22,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -635,10 +763,20 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.3 kg",
    "weightG": 1300,
    "rate": "500 Hz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 30 fps",
+    "원시 이미지 미제공"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "W01 대비 힘·속도 제한"
+   ],
    "specs": "능동 22자유도, 약 1.3kg, 제어 500Hz, 촉각 30fps·원시 이미지 미제공. W01 대비 힘·속도 제한.",
    "source": "https://www.sharpa.com/pages/w01",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2609.07002"
    ],
@@ -648,8 +786,8 @@ window.HANDSLAB_DATA = {
     "h": 360,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Sharpa",
+    "creditUrl": "https://www.sharpa.com/pages/w01"
    }
   },
   {
@@ -665,6 +803,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 17,
    "dofStated": null,
    "joints": null,
@@ -676,10 +815,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손끝 5곳 힘·토크 촉각 센서"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손가락 16축 + 손목 1축"
+   ],
    "specs": "손가락 16축·손목 1축으로 총 17자유도. 다섯 손끝에 힘·토크 촉각 센서.",
    "source": "https://www.orcahand.com/hardware/touch",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/orcahand-touch-notion.webp",
@@ -687,8 +835,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": "https://www.orcahand.com/images/products/orcahand-2100-pose-pinky.png",
-    "origin": "notion"
+    "creditName": "ORCA Dexterity",
+    "creditUrl": "https://www.orcahand.com/hardware/touch"
    }
   },
   {
@@ -704,6 +852,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -715,10 +864,22 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "공압 진공 흡착",
+    "3–7 bar 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "독립 진공 2채널 · 흡착컵 20개",
+    "총 공기 유량 440 L/min (채널당 220)",
+    "중량 상자 팔레타이징용"
+   ],
    "specs": "공압 진공 흡착 그리퍼. 골판지 상자 최대 30 kg, 총 공기 유량 440 L/min(채널당 220), 독립 진공 2채널·흡착컵 20개, 3–7 bar 구동. 중량 상자 팔레타이징용.",
    "source": "https://onrobot.com/en/products/vgp30-vacuum-gripper",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/vgp30-notion.webp",
@@ -726,8 +887,8 @@ window.HANDSLAB_DATA = {
     "h": 206,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "OnRobot",
+    "creditUrl": "https://onrobot.com/en/products/vgp30-vacuum-gripper"
    }
   },
   {
@@ -743,6 +904,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "15 (대향 엄지 옵션 16)",
    "joints": null,
@@ -754,10 +916,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.5 kg",
    "weightG": 1500,
    "rate": "1 kHz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "구동 관절별 토크·위치 센싱"
+   ],
+   "io": [
+    "C++",
+    "Python",
+    "ROS"
+   ],
+   "control": [],
+   "notes": [
+    "대향 엄지 옵션 (16 DoF)"
+   ],
    "specs": "15자유도 (대향 엄지 옵션 16), 약 1.5kg, 구동 관절별 토크·위치 센싱, 1kHz, C++·Python·ROS.",
    "source": "https://www.agile-robots.com/en/products/agile-hand/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/agile-hand-notion.webp",
@@ -765,8 +940,8 @@ window.HANDSLAB_DATA = {
     "h": 585,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Agile Robots SE",
+    "creditUrl": "https://www.agile-robots.com/en/products/agile-hand/"
    }
   },
   {
@@ -782,6 +957,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 6,
@@ -793,10 +969,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 780 g",
    "weightG": 780,
    "rate": null,
+   "stroke": "최대 개방 폭 약 130 mm",
+   "speed": null,
+   "drive": [
+    "디지털 서보 모터 6개"
+   ],
+   "sensors": [],
+   "io": [
+    "Python",
+    "ROS"
+   ],
+   "control": [],
+   "notes": [
+    "산업·교육용",
+    "myCobot Pro630·Mercury 계열 응용"
+   ],
    "specs": "산업·교육용 3핑거 그리퍼. 6개의 디지털 서보 모터와 6개 구동 관절을 사용. 무게 약 780g, 최대 페이로드 500g, 최대 개방 폭 약 130mm. Python·ROS 연동을 지원하며 myCobot Pro630·Mercury 계열 응용에 활용 가능.",
    "source": "https://shop.elephantrobotics.com/products/mygripper-h100",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/mygripper-h100-notion.webp",
@@ -804,8 +993,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://shop.elephantrobotics.com/cdn/shop/files/H100-4.png?v=1737443871",
-    "origin": "notion"
+    "creditName": "Elephant Robotics",
+    "creditUrl": "https://shop.elephantrobotics.com/products/mygripper-h100"
    }
   },
   {
@@ -821,6 +1010,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 10,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 16,
    "dofStated": null,
    "joints": null,
@@ -832,10 +1022,20 @@ window.HANDSLAB_DATA = {
    "weight": "550 g 이하",
    "weightG": 550,
    "rate": "1 kHz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 400점 이상"
+   ],
+   "io": [
+    "CAN FD",
+    "RS485"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 10·총 16자유도, 550g 이하, 촉각 400점 이상, CAN FD·RS485, 통신 1kHz.",
    "source": "https://store.agibot.com/products/omnihand-2025-w-tactile",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/omnihand-3-notion.webp",
@@ -843,8 +1043,8 @@ window.HANDSLAB_DATA = {
     "h": 942,
     "alpha": false,
     "bg": null,
-    "credit": "https://store.agibot.com/cdn/shop/files/550-_M.png?v=1766125783&width=960",
-    "origin": "notion"
+    "creditName": "AGIBOT",
+    "creditUrl": "https://store.agibot.com/products/omnihand-2025-w-tactile"
    }
   },
   {
@@ -860,6 +1060,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": 5,
    "totalDof": 21,
    "dofStated": null,
    "joints": null,
@@ -871,10 +1072,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.2 kg",
    "weightG": 1200,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "링크",
+    "볼스크루"
+   ],
+   "sensors": [],
+   "io": [
+    "CAN",
+    "RS485"
+   ],
+   "control": [],
+   "notes": [
+    "무게는 제조사 기준"
+   ],
    "specs": "능동 16+수동 5=총 21자유도, 제조사 기준 약 1.2kg, 링크·볼스크루 구동, CAN·RS485.",
    "source": "https://www.linkerhand.com/details/LinkerHandL20/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2601.08246"
    ],
@@ -884,8 +1098,8 @@ window.HANDSLAB_DATA = {
     "h": 937,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Linkerbot",
+    "creditUrl": "https://www.linkerhand.com/details/LinkerHandL20/"
    }
   },
   {
@@ -901,6 +1115,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -912,10 +1127,18 @@ window.HANDSLAB_DATA = {
    "weight": "약 0.7 kg",
    "weightG": 700,
    "rate": null,
+   "stroke": "이동 범위 약 80 mm",
+   "speed": "최대 관절 속도 300°/s",
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "다관절 핸드",
+    "반복 정밀도 ±0.15 mm"
+   ],
    "specs": "4핑거 다관절 핸드. 약 80mm 이동 범위, 손가락당 6N 파지력, 무게 약 0.7kg. 권장 감싸기 파지 하중 약 2.5kg, 반복 정밀도 ±0.15mm. 최대 관절 속도 300°/s로 안내됨.",
    "source": "https://en.changingtek.com/fuhe/257",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/ctdh4f08d-notion.webp",
@@ -923,8 +1146,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "ChangingTek",
+    "creditUrl": "https://en.changingtek.com/fuhe/257"
    }
   },
   {
@@ -940,6 +1163,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -951,10 +1175,22 @@ window.HANDSLAB_DATA = {
    "weight": "약 50 g",
    "weightG": 50,
    "rate": null,
+   "stroke": "대상 내경 24–31.5 mm",
+   "speed": null,
+   "drive": [
+    "공압 피스톤",
+    "벨로즈 확장 (단동)"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "배기 시 벨로즈 복원력으로 해제",
+    "구멍 안쪽을 잡는 내경 그리퍼",
+    "병·컵 등 중공 부품용"
+   ],
    "specs": "공압 피스톤이 기구로 벨로즈 직경을 키워 구멍 안쪽을 잡는 단동 내경 그리퍼, 배기 시 벨로즈 복원력으로 해제. 병·컵 등 중공 부품용. 대상 내경 24–31.5 mm, 본체 약 50 g.",
    "source": "https://www.festo.com/nl/nl/a/1320803/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dheb-22-e-u-s-l-notion.webp",
@@ -962,8 +1198,8 @@ window.HANDSLAB_DATA = {
     "h": 400,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Festo",
+    "creditUrl": "https://www.festo.com/nl/nl/a/1320803/"
    }
   },
   {
@@ -979,6 +1215,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "5~7 (맞춤 구성)",
    "joints": null,
@@ -990,10 +1227,21 @@ window.HANDSLAB_DATA = {
    "weight": "400 g 미만",
    "weightG": 400,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "손가락별 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "의수형·바이오닉 로봇손",
+    "기능적 파지 동작 지원",
+    "엄지·검지·손목 관절 구성 조정 가능"
+   ],
    "specs": "5핑거 의수형·바이오닉 로봇손. 사용자 맞춤 구성에 따라 5~7 DoF 구성이 가능하고 손가락별 구동 및 기능적 파지 동작을 지원함. 무게 400g 미만으로 소개된 제품. 사용자 요구에 따라 엄지·검지·손목의 관절 구성을 조정할 수 있음.",
    "source": "https://www.ot-world.com/exhibitors-products/product/otworld/7005/2860",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.nature.com/articles/s41467-026-73678-w?utm_source"
    ],
@@ -1003,8 +1251,8 @@ window.HANDSLAB_DATA = {
     "h": 600,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Mand.ro",
+    "creditUrl": "https://www.ot-world.com/exhibitors-products/product/otworld/7005/2860"
    }
   },
   {
@@ -1020,6 +1268,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "6",
    "joints": 13,
@@ -1031,10 +1280,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 326 g",
    "weightG": 326,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "스프링 관절"
+   ],
+   "sensors": [],
+   "io": [
+    "USB",
+    "Python",
+    "ROS2 (베타)"
+   ],
+   "control": [],
+   "notes": [
+    "FDM 제작"
+   ],
    "specs": "6자유도·13관절, 약 326g, FDM 제작·스프링 관절, USB·Python·ROS2 베타.",
    "source": "https://www.curious-robotics.com/home-en",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/cr-hand-notion.webp",
@@ -1042,8 +1304,8 @@ window.HANDSLAB_DATA = {
     "h": 635,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Curious Robotics",
+    "creditUrl": "https://www.curious-robotics.com/home-en"
    }
   },
   {
@@ -1059,7 +1321,8 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 13,
    "activeDofNote": null,
-   "totalDof": null,
+   "passiveDof": 3,
+   "totalDof": 16,
    "dofStated": null,
    "joints": null,
    "actuators": null,
@@ -1070,10 +1333,21 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 유닛 1,140개",
+    "8MP 손바닥 카메라"
+   ],
+   "io": [
+    "EtherCAT",
+    "Modbus"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "4지형. 능동 13+수동 3자유도, 촉각 유닛 1,140개, 8MP 손바닥 카메라, EtherCAT·Modbus.",
    "source": "https://www.paxini.com/product/dex/gen2",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://openaccess.thecvf.com/content/CVPR2026/papers/Jiang_Cross-Hand_Latent_Representation_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf"
    ],
@@ -1083,8 +1357,8 @@ window.HANDSLAB_DATA = {
     "h": 540,
     "alpha": true,
     "bg": null,
-    "credit": "https://cdn-cn.paxini.com/official/images/dex/dex-h13-1.png",
-    "origin": "notion"
+    "creditName": "PaXini",
+    "creditUrl": "https://www.paxini.com/product/dex/gen2"
    }
   },
   {
@@ -1100,6 +1374,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": 7,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1111,10 +1386,20 @@ window.HANDSLAB_DATA = {
    "weight": "약 710 g",
    "weightG": 710,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 배열 9개 (감지점 33개)"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "엄지 3 · 검지 2 · 중지 2축",
+    "휴머노이드 조작 학습·접촉 피드백용"
+   ],
    "specs": "촉각형 3지 핸드. 능동 7자유도(엄지 3·검지 2·중지 2), 촉각 센서 배열 9개(감지점 33개), 약 710 g. 휴머노이드 조작 학습·접촉 피드백용.",
    "source": "https://www.unitree.com/mobile/Dex3-1/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2510.08807"
    ],
@@ -1124,8 +1409,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Unitree Robotics",
+    "creditUrl": "https://www.unitree.com/mobile/Dex3-1/"
    }
   },
   {
@@ -1142,6 +1427,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 11,
    "dofStated": null,
    "joints": null,
@@ -1153,10 +1439,19 @@ window.HANDSLAB_DATA = {
    "weight": "약 383 g",
    "weightG": 383,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [
+    "RS485",
+    "CAN FD",
+    "SDK"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "총 11자유도·능동 6축, 약 383g, RS485·CAN FD, SDK.",
    "source": "https://www.brainco-hz.com/docs/revolimb-hand/en/revo2/parameters.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/revo-2-basic-notion.webp",
@@ -1164,8 +1459,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.australiasatellite.com/pub/media/catalog/product/b/r/brainco-revo-2-gray-2_2_1.jpg",
-    "origin": "notion"
+    "creditName": "BrainCo",
+    "creditUrl": "https://www.brainco-hz.com/docs/revolimb-hand/en/revo2/parameters.html"
    }
   },
   {
@@ -1181,6 +1476,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "6",
    "joints": 12,
@@ -1192,10 +1488,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 770~790 g",
    "weightG": 790,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 구성 선택 가능"
+   ],
+   "io": [
+    "통신 인터페이스 선택 가능"
+   ],
+   "control": [],
+   "notes": [
+    "고출력 제품군"
+   ],
    "specs": "5핑거 다관절 핸드. 6 DoF, 12개 관절. 무게 약 770~790g. 엄지 끝단 힘 30N 이상, 나머지 손가락 28N 이상으로 안내되는 고출력 제품군. 촉각센서 구성과 통신 인터페이스 선택 가능",
    "source": "https://en.inspire-robots.com/product/rh56e2/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://openreview.net/pdf?id=UvQOcw2oCD"
    ],
@@ -1205,8 +1512,8 @@ window.HANDSLAB_DATA = {
     "h": 700,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://en.inspire-robots.com/product/rh56e2/"
    }
   },
   {
@@ -1222,6 +1529,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1233,10 +1541,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.14 kg",
    "weightG": 1140,
    "rate": null,
+   "stroke": "침투 스트로크 0–25 mm 가변",
+   "speed": null,
+   "drive": [
+    "공압 교차 바늘식",
+    "작동 압력 3–7 bar"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "바늘 6개 · 직경 1.5 mm",
+    "섬유·플리스·복합재 관통 파지"
+   ],
    "specs": "공압 교차 바늘식 그리퍼. 바늘 6개·직경 1.5 mm, 침투 스트로크 0–25 mm 가변, 작동 압력 3–7 bar, 본체 약 1.14 kg. 섬유·플리스·복합재를 관통해 파지.",
    "source": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/sng-v-6-1-5-v-hp-25-notion.webp",
@@ -1244,8 +1563,8 @@ window.HANDSLAB_DATA = {
     "h": 400,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Schmalz",
+    "creditUrl": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568"
    }
   },
   {
@@ -1261,6 +1580,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "19 (손목 포함)",
    "joints": null,
@@ -1272,10 +1592,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 620 g",
    "weightG": 620,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "위치·속도·전류 피드백",
+    "촉각 (옵션)"
+   ],
+   "io": [
+    "ROS",
+    "Python"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "손목 포함 19자유도·구동기 8개, 약 620g. ROS·Python, 위치·속도·전류 피드백, 촉각 옵션.",
    "source": "https://www.seedrobotics.com/rh8d-adult-robot-hand",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1735467/pdf"
    ],
@@ -1285,8 +1616,8 @@ window.HANDSLAB_DATA = {
     "h": 618,
     "alpha": true,
     "bg": null,
-    "credit": "https://images.squarespace-cdn.com/content/v1/5db846da1bb60d0407fed0ac/1622562227456-JK3RSR2U2QRVC0IR40R3/Human-inspired-hand.png",
-    "origin": "notion"
+    "creditName": "Seed Robotics",
+    "creditUrl": "https://www.seedrobotics.com/rh8d-adult-robot-hand"
    }
   },
   {
@@ -1302,6 +1633,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "4",
    "joints": null,
@@ -1313,10 +1645,24 @@ window.HANDSLAB_DATA = {
    "weight": "약 836 g",
    "weightG": 836,
    "rate": null,
+   "stroke": "최대 파지 직경 55 mm · 최소 핀치 직경 2 mm",
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "Hall-array 촉각 센서",
+    "1080p RGB 카메라 2개"
+   ],
+   "io": [
+    "EtherCAT",
+    "Modbus",
+    "USB"
+   ],
+   "control": [],
+   "notes": [
+    "산업용 3핑거 말단장치"
+   ],
    "specs": "산업용 3핑거 실행 말단장치. 4 DoF, 무게 약 836g. Hall-array 촉각센서, 1080p RGB 카메라 2개를 지원하는 구성. 최대 파지 하중 5kg, 최대 파지 직경 55mm, 최소 핀치 직경 2mm. EtherCAT·Modbus·USB 지원.",
    "source": "https://paxini.com/cn/ax/pxdex3",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/pxdex-iii-notion.webp",
@@ -1324,8 +1670,8 @@ window.HANDSLAB_DATA = {
     "h": 726,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "PaXini",
+    "creditUrl": "https://paxini.com/cn/ax/pxdex3"
    }
   },
   {
@@ -1341,6 +1687,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "19 (연동 구조)",
    "joints": null,
@@ -1352,10 +1699,23 @@ window.HANDSLAB_DATA = {
    "weight": "990 g",
    "weightG": 990,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 1개 연동 구동"
+   ],
+   "sensors": [],
+   "io": [
+    "EtherCAT",
+    "UDP",
+    "ROS/ROS2"
+   ],
+   "control": [],
+   "notes": [
+    "IP65"
+   ],
    "specs": "19자유도 구조를 모터 1개로 연동 구동. 990g, IP65, EtherCAT·UDP, ROS/ROS2.",
    "source": "https://qbrobotics.com/product/qb-softhand-industry/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/qb-softhand-industry-notion.webp",
@@ -1363,8 +1723,8 @@ window.HANDSLAB_DATA = {
     "h": 640,
     "alpha": false,
     "bg": null,
-    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/IMG_0170-scaled.jpg",
-    "origin": "notion"
+    "creditName": "qbrobotics",
+    "creditUrl": "https://qbrobotics.com/product/qb-softhand-industry/"
    }
   },
   {
@@ -1380,6 +1740,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 11,
@@ -1391,10 +1752,29 @@ window.HANDSLAB_DATA = {
    "weight": "545±5 g (일부 문서 580±5 g)",
    "weightG": 5,
    "rate": null,
+   "stroke": null,
+   "speed": "최대 개폐 0.7 s",
+   "drive": [],
+   "sensors": [],
+   "io": [
+    "UART",
+    "RS485",
+    "CAN",
+    "Modbus-RTU",
+    "SDK",
+    "ROS/ROS2",
+    "URDF"
+   ],
+   "control": [
+    "five-finger control"
+   ],
+   "notes": [
+    "반복 위치 정밀도 ±1 mm",
+    "아연합금·알루미늄 합금 구조",
+    "손가락·엄지 힘 및 정적 하중 사양 제공"
+   ],
    "specs": "인간형 ROHand. 11개 운동 관절과 6 active DOF, ±1mm 반복 위치 정밀도. 제조사 페이지에 five-finger control 방식, 아연합금·알루미늄 합금 구조, 545±5g 또는 일부 문서 버전 580±5g으로 표기 차이가 존재. 최대 개폐 시간 0.7s, 개별 손가락 및 엄지 힘·정적 하중 사양을 제공. UART/RS485/CAN, Modbus-RTU/CAN, SDK·ROS·ROS2·URDF 개발 지원",
    "source": "https://www.oymotion.com/product61/189",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/roh-a002-notion.webp",
@@ -1402,8 +1782,8 @@ window.HANDSLAB_DATA = {
     "h": 362,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "OYMotion",
+    "creditUrl": "https://www.oymotion.com/product61/189"
    }
   },
   {
@@ -1419,6 +1799,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 11,
@@ -1430,10 +1811,19 @@ window.HANDSLAB_DATA = {
    "weight": "약 470 g",
    "weightG": 470,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 (옵션)"
+   ],
+   "io": [
+    "통신 인터페이스 (옵션)"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "5핑거 다관절 로봇핸드. 6 active DoF, 11개 관절. 무게 약 470g. 엄지 끝단 힘 15N 이상, 나머지 손가락 10N 이상으로 안내됨. 촉각센서와 통신 인터페이스 구성은 옵션으로 제공됨.",
    "source": "https://en.inspire-robots.com/product/rh56h1/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/rh56h1-notion.webp",
@@ -1441,8 +1831,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://en.inspire-robots.com/product/rh56h1/"
    }
   },
   {
@@ -1458,6 +1848,7 @@ window.HANDSLAB_DATA = {
    "fingers": 2,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1469,10 +1860,20 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": "스트로크 85 mm",
+   "speed": null,
+   "drive": [
+    "전동 적응형"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "평행 집기·감싸기를 한 기구로 수행",
+    "협동로봇용 · 다품종 이송·조립 비교 기준"
+   ],
    "specs": "범용 협동로봇용 전동 적응형 2지. 평행 집기와 감싸기를 한 기구로 수행. 스트로크 85 mm, 파지력 20–235 N, 가반 5 kg. 다품종 이송·조립 비교 기준.",
    "source": "https://robotiq.com/products/adaptive-grippers",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02933.pdf"
    ],
@@ -1482,8 +1883,8 @@ window.HANDSLAB_DATA = {
     "h": 772,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Robotiq",
+    "creditUrl": "https://robotiq.com/products/adaptive-grippers"
    }
   },
   {
@@ -1499,6 +1900,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "7",
    "joints": null,
@@ -1510,10 +1912,22 @@ window.HANDSLAB_DATA = {
    "weight": "약 389 g",
    "weightG": 389,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "텐던 기반 저구동"
+   ],
+   "sensors": [],
+   "io": [
+    "Python",
+    "ROS2"
+   ],
+   "control": [],
+   "notes": [
+    "3D 프린트 오픈 하드웨어"
+   ],
    "specs": "7자유도, 약 389g, 텐던 기반 저구동·3D 프린트 오픈 하드웨어, Python·ROS2.",
    "source": "https://chestnut.bot/aero-hand-open-lite.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/aero-hand-open-notion.webp",
@@ -1521,8 +1935,8 @@ window.HANDSLAB_DATA = {
     "h": 660,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Chestnut Robotics",
+    "creditUrl": "https://chestnut.bot/aero-hand-open-lite.html"
    }
   },
   {
@@ -1538,6 +1952,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1549,10 +1964,27 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.1 kg",
    "weightG": 1100,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "3핑거 센터링"
+   ],
+   "sensors": [],
+   "io": [
+    "Modbus RTU",
+    "I/O"
+   ],
+   "control": [
+    "위치",
+    "속도",
+    "힘 제어"
+   ],
+   "notes": [
+    "반복 정밀도 ±0.03 mm",
+    "자동화 설비 연결용 산업 그리퍼"
+   ],
    "specs": "산업용 3핑거 센터링 그리퍼. 최대 그립력 50N, 반복 정밀도 ±0.03mm, 무게 약 1.1kg. 위치·속도·힘 제어를 지원하며 Modbus RTU 및 I/O를 통해 자동화 설비에 연결 가능.",
    "source": "https://en.changingtek.com/fuhe/176",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/ctmg3f60-notion.webp",
@@ -1560,8 +1992,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "ChangingTek",
+    "creditUrl": "https://en.changingtek.com/fuhe/176"
    }
   },
   {
@@ -1577,6 +2009,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "11",
    "joints": null,
@@ -1588,10 +2021,25 @@ window.HANDSLAB_DATA = {
    "weight": "545 g",
    "weightG": 545,
    "rate": null,
+   "stroke": null,
+   "speed": "그립 사이클 약 0.6 s",
+   "drive": [],
+   "sensors": [
+    "촉각 센서"
+   ],
+   "io": [
+    "CAN FD",
+    "RS485",
+    "EtherCAT"
+   ],
+   "control": [
+    "힘·위치 혼합 제어"
+   ],
+   "notes": [
+    "최대 100만 회 작동 수명"
+   ],
    "specs": "11자유도(11-DOF) 5지 구조로 사람 손처럼 다양한 물체를 잡고 조작. 무게 545g으로 가벼우면서, 손 전체 기준 최대 30kg 파지 하중. 촉각 센서와 힘·위치 혼합 제어로 섬세하고 적응적인 그립 지원. 그립 사이클 약 0.6초, 최대 100만 회 작동 수명. CAN FD, RS485, EtherCAT 통신 지원",
    "source": "https://store.leadshine.com/blogs/news/leadshine-dh116-dexterous-hand-high-performance-grip-for-robotic-manipulation",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dh116-l1-notion.webp",
@@ -1599,8 +2047,8 @@ window.HANDSLAB_DATA = {
     "h": 631,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Leadshine",
+    "creditUrl": "https://store.leadshine.com/blogs/news/leadshine-dh116-dexterous-hand-high-performance-grip-for-robotic-manipulation"
    }
   },
   {
@@ -1616,6 +2064,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1627,10 +2076,22 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": "1 kHz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [
+    "ROS2",
+    "MuJoCo",
+    "Isaac Sim"
+   ],
+   "control": [
+    "MIT 힘·위치 제어",
+    "역구동"
+   ],
+   "notes": [],
    "specs": "능동 20자유도, 제어 1kHz, MIT 힘·위치 제어 및 역구동, ROS2·MuJoCo·Isaac Sim 지원.",
    "source": "https://www.wuji.tech/en/hand2",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2606.16272"
    ],
@@ -1640,8 +2101,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Wuji Technology",
+    "creditUrl": "https://www.wuji.tech/en/hand2"
    }
   },
   {
@@ -1657,6 +2118,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "6",
    "joints": null,
@@ -1668,10 +2130,23 @@ window.HANDSLAB_DATA = {
    "weight": "800 g 미만",
    "weightG": 800,
    "rate": null,
+   "stroke": null,
+   "speed": "복잡 동작 1.1 s",
+   "drive": [],
+   "sensors": [
+    "5채널 촉각 센서 (옵션)"
+   ],
+   "io": [
+    "CAN FD"
+   ],
+   "control": [
+    "3–10 N 동적 힘 제어"
+   ],
+   "notes": [
+    "10 N은 손가락 팁 힘이 아닌 엄지/네 손가락 파지력"
+   ],
    "specs": "6 DoF, 800 g 미만, CAN-FD, 복잡 동작 1.1초 표기. 5채널 촉각 센서는 옵션이며 3–10 N 동적 힘 제어를 표기. 여기의 10 N은 손가락 하나의 팁 힘이 아니라 제조사의 엄지/네 손가락 파지력 수치",
    "source": "https://www.hitbot.cc/dexterous-hand/e-hand-6.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/ehand-6-notion.webp",
@@ -1679,8 +2154,8 @@ window.HANDSLAB_DATA = {
     "h": 483,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "HITBOT",
+    "creditUrl": "https://www.hitbot.cc/dexterous-hand/e-hand-6.html"
    }
   },
   {
@@ -1696,6 +2171,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1707,10 +2183,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "자기식 3D 촉각 센서"
+   ],
+   "io": [
+    "RS485"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 6자유도, RS485, 자기식 3D 촉각 센서.",
    "source": "https://oymotion.com/en/product62",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/roh-ap003-notion.webp",
@@ -1718,8 +2203,8 @@ window.HANDSLAB_DATA = {
     "h": 283,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.oymotion.com/upload/images/20260511/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A11928484.png",
-    "origin": "notion"
+    "creditName": "OYMotion",
+    "creditUrl": "https://oymotion.com/en/product62"
    }
   },
   {
@@ -1735,6 +2220,7 @@ window.HANDSLAB_DATA = {
    "fingers": 2,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "1",
    "joints": null,
@@ -1746,10 +2232,25 @@ window.HANDSLAB_DATA = {
    "weight": "약 500 g",
    "weightG": 500,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "10W급 DC 모터",
+    "Passive Joint 적응 구조"
+   ],
+   "sensors": [],
+   "io": [
+    "DYNAMIXEL 2.0 프로토콜"
+   ],
+   "control": [
+    "전류 기반 힘 제어",
+    "위치 제어"
+   ],
+   "notes": [
+    "하나의 구동 입력으로 물체 모양에 적응"
+   ],
    "specs": "2핑거 적응형 로봇핸드. 1 DoF와 Passive Joint 구조를 적용해 하나의 구동 입력으로 물체 모양에 맞춰 손가락이 적응적으로 움직임. 10W급 DC 모터, 최대 파지력 170N, 권장 페이로드 5kg, 무게 약 500g. 전류 기반 힘 제어와 위치 제어를 지원하고 DYNAMIXEL 2.0 프로토콜 사용.",
    "source": "https://www.robotis.com/shop/item.php?it_id=905-0022-000",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.mdpi.com/2076-3417/15/22/12077/pdf"
    ],
@@ -1759,8 +2260,8 @@ window.HANDSLAB_DATA = {
     "h": 500,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "로보티즈 (ROBOTIS)",
+    "creditUrl": "https://www.robotis.com/shop/item.php?it_id=905-0022-000"
    }
   },
   {
@@ -1776,6 +2277,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1787,10 +2289,23 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "전기 제어 자기식"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "자력 10단계 조절",
+    "정전 시 자기 유지",
+    "IP67",
+    "인장력 기준: 65.4 mm각 이상 공작물·4접점",
+    "철계 판금·천공 금속용"
+   ],
    "specs": "전기 제어 자기 그리퍼. 자력 10단계 조절, 정전 시 자기 유지, IP67. 패드 없이 평행 인양 시 최대 10 kg, 인장력 300 N(65.4 mm각 이상 공작물에 4접점 접촉 기준). 철계 판금·천공 금속용.",
    "source": "https://onrobot.com/en/products/mg10-magnetic-gripper",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/mg10-notion.webp",
@@ -1798,8 +2313,8 @@ window.HANDSLAB_DATA = {
     "h": 369,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "OnRobot",
+    "creditUrl": "https://onrobot.com/en/products/mg10-magnetic-gripper"
    }
   },
   {
@@ -1815,6 +2330,7 @@ window.HANDSLAB_DATA = {
    "fingers": 2,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1826,10 +2342,21 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "공압 토글 링크",
+    "앵글형 2지 (복동)"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "닫힘 끝부분에서 큰 유지력",
+    "압력 저하 시 토글로 유지"
+   ],
    "specs": "공압 토글 링크식 앵글형 2지(복동). 닫힘 끝부분에서 큰 유지력을 얻고 압력 저하 시에도 토글로 유지. 유효 파지 모멘트 12.4 N·m(0.5 MPa).",
    "source": "https://www.smcworld.com/webcatalog/s3s/en-jp/detail/?partNumber=MHT2-32DZ",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/mht2-32dz-notion.webp",
@@ -1837,8 +2364,8 @@ window.HANDSLAB_DATA = {
     "h": 300,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "SMC",
+    "creditUrl": "https://www.smcworld.com/webcatalog/s3s/en-jp/detail/?partNumber=MHT2-32DZ"
    }
   },
   {
@@ -1854,6 +2381,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "19 (연동 구조)",
    "joints": null,
@@ -1865,10 +2393,21 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 2개 (시너지 2개)",
+    "텐던 구동",
+    "언더액추에이티드 연성 핸드"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "파지 후 손안 조작 가능"
+   ],
    "specs": "5지·19개 의인화 자유도를 모터 2개(시너지 2개)로 구동하는 언더액추에이티드 연성 핸드. 텐던 구동, 파지 후 손안 조작 가능. 정격 집기 2 kg·감싸기 3 kg.",
    "source": "https://qbrobotics.com/product/qb-softhand-2-research/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.researchgate.net/publication/397027837_The_Challenges_of_Using_Robots_to_Automate_the_Recycling_of_Electronic_Devices_A_New_Approach_Incorporating_AI_Modularity_and_Soft_Robotics"
    ],
@@ -1878,8 +2417,8 @@ window.HANDSLAB_DATA = {
     "h": 640,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "qbrobotics",
+    "creditUrl": "https://qbrobotics.com/product/qb-softhand-2-research/"
    }
   },
   {
@@ -1895,6 +2434,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 22,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1906,10 +2446,25 @@ window.HANDSLAB_DATA = {
    "weight": "약 620 g",
    "weightG": 620,
    "rate": "1 kHz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "이중 엔코더"
+   ],
+   "io": [
+    "Ethernet",
+    "USB"
+   ],
+   "control": [
+    "역구동"
+   ],
+   "notes": [
+    "충격 보호",
+    "기본형 / Pro 구분"
+   ],
    "specs": "능동 22자유도, 약 620g, 제어 1kHz, Ethernet·USB, 역구동·이중 엔코더 및 충격 보호. 기본형과 Pro 구분.",
    "source": "https://www.unitree.com/Dex5-S/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dex5-s-notion.webp",
@@ -1917,8 +2472,8 @@ window.HANDSLAB_DATA = {
     "h": 484,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Unitree Robotics",
+    "creditUrl": "https://www.unitree.com/Dex5-S/"
    }
   },
   {
@@ -1934,6 +2489,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -1945,10 +2501,21 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "소형 모터 6개",
+    "기어 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "유연한 손가락 구조",
+    "구형 5ST·5PT와 구분"
+   ],
    "specs": "5손가락·소형 모터 6개 및 기어 구동, 유연한 손가락 구조. 구형 5ST·5PT와 구분.",
    "source": "https://www.j-d.co.jp/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/d-hand-5mt-notion.webp",
@@ -1956,8 +2523,8 @@ window.HANDSLAB_DATA = {
     "h": 396,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Double Giken",
+    "creditUrl": "https://www.j-d.co.jp/"
    }
   },
   {
@@ -1973,6 +2540,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 12,
@@ -1984,10 +2552,19 @@ window.HANDSLAB_DATA = {
    "weight": "약 540 g",
    "weightG": 540,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "연동 12관절"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "빠른 동작·제스처 지향"
+   ],
    "specs": "능동 6자유도·연동 12관절, 약 540g, 엄지 6N/기타 4N, 빠른 동작·제스처 지향.",
    "source": "https://www.inspire-robots.com/dexterous%20hands/rh56bfx-series/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2604.02820"
    ],
@@ -1997,8 +2574,8 @@ window.HANDSLAB_DATA = {
     "h": 326,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://www.inspire-robots.com/dexterous%20hands/rh56bfx-series/"
    }
   },
   {
@@ -2014,6 +2591,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2025,10 +2603,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.03 kg",
    "weightG": 1030,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "손가락별 구동"
+   ],
+   "sensors": [
+    "손끝 FSR"
+   ],
+   "io": [
+    "Ethernet",
+    "ROS2",
+    "Python"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "구동기 6개, 약 1.03kg, 손끝 FSR, Ethernet·ROS2·Python, 손가락별 구동·파지.",
    "source": "https://www.covvi-robotics.com/robotic-hand/product-overview/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/covvi-robotic-hand-notion.webp",
@@ -2036,8 +2627,8 @@ window.HANDSLAB_DATA = {
     "h": 615,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "COVVI Robotics",
+    "creditUrl": "https://www.covvi-robotics.com/robotic-hand/product-overview/"
    }
   },
   {
@@ -2053,6 +2644,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 12,
    "activeDofNote": null,
+   "passiveDof": 7,
    "totalDof": 19,
    "dofStated": null,
    "joints": null,
@@ -2064,10 +2656,23 @@ window.HANDSLAB_DATA = {
    "weight": "약 1 kg",
    "weightG": 1000,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "텐던 구동"
+   ],
+   "sensors": [
+    "힘·근접·온도 복합 센싱"
+   ],
+   "io": [
+    "CAN FD",
+    "Python/C++",
+    "ROS"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 12+수동 7=총 19자유도, 약 1kg, 텐던 구동, 힘·근접·온도 복합 센싱, CAN FD·Python/C++/ROS.",
    "source": "https://www.dex-robot.com/en/productionDexhand",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2603.09121"
    ],
@@ -2077,8 +2682,8 @@ window.HANDSLAB_DATA = {
     "h": 246,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "DexRobot",
+    "creditUrl": "https://www.dex-robot.com/en/productionDexhand"
    }
   },
   {
@@ -2094,6 +2699,7 @@ window.HANDSLAB_DATA = {
    "fingers": 3,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 8,
@@ -2105,10 +2711,22 @@ window.HANDSLAB_DATA = {
    "weight": "0.98 kg",
    "weightG": 980,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 4개 · 8관절 적응형"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "TorqueSwitch 브레이크어웨이 클러치",
+    "두 핑거 180° 벌림",
+    "비정형 물체 대응",
+    "공식 자료 기준"
+   ],
    "specs": "3지·8관절을 모터 4개로 구동하는 적응형 핸드. TorqueSwitch 브레이크어웨이 클러치와 두 핑거의 180° 벌림으로 비정형 물체에 대응. 질량 0.98 kg·가반 6 kg(공식 자료).",
    "source": "https://barrett.com/barretthand",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2204.06343"
    ],
@@ -2118,8 +2736,8 @@ window.HANDSLAB_DATA = {
     "h": 749,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Barrett Technology",
+    "creditUrl": "https://barrett.com/barretthand"
    }
   },
   {
@@ -2135,6 +2753,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2146,10 +2765,23 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": "대상 폭 최대 100 mm",
+   "speed": null,
+   "drive": [
+    "진공 구동 소프트 그리퍼",
+    "실리콘 핑거 4개 · 진공 공동 일체형"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [
+    "진공도로 파지력 조절"
+   ],
+   "notes": [
+    "검출 가능·식품 접촉 승인 실리콘",
+    "신선 식품·취약 부품용"
+   ],
    "specs": "4개 실리콘 핑거와 진공 공동이 일체형인 진공 구동 소프트 그리퍼, 진공도로 파지력 조절. 검출 가능·식품 접촉 승인 실리콘, 대상 폭 최대 100 mm. 신선 식품·취약 부품용.",
    "source": "https://www.piab.com/en-us/news/pisoftgrip-100-4-piab-launching-largest-gripper-of-series",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/pisoftgrip-100-4-notion.webp",
@@ -2157,8 +2789,8 @@ window.HANDSLAB_DATA = {
     "h": 343,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Piab",
+    "creditUrl": "https://www.piab.com/en-us/news/pisoftgrip-100-4-piab-launching-largest-gripper-of-series"
    }
   },
   {
@@ -2174,6 +2806,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 10,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2185,10 +2818,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "링크 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "O6보다 개별 제어축이 많음"
+   ],
    "specs": "능동 10자유도, 링크 구동 방식. O6보다 개별 제어축이 많음.",
    "source": "https://cdn.robotshop.com/rbm/790bbab7-d10c-4803-a563-eb90579ac7e8/d/d357702e-8a19-43d3-933f-8c36739eda03/db365cbe_l10-product-manual.pdf",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/linker-hand-l10-notion.webp",
@@ -2196,8 +2838,8 @@ window.HANDSLAB_DATA = {
     "h": 800,
     "alpha": false,
     "bg": null,
-    "credit": "https://aifitlab.com/cdn/shop/files/L10-main-1-1.jpg?v=1763086531&width=800",
-    "origin": "notion"
+    "creditName": "Linkerbot",
+    "creditUrl": "https://cdn.robotshop.com/rbm/790bbab7-d10c-4803-a563-eb90579ac7e8/d/d357702e-8a19-43d3-933f-8c36739eda03/db365cbe_l10-product-manual.pdf"
    }
   },
   {
@@ -2213,6 +2855,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 12,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2224,10 +2867,22 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.1 kg",
    "weightG": 1100,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 (옵션)"
+   ],
+   "io": [
+    "ROS",
+    "Linux SDK"
+   ],
+   "control": [],
+   "notes": [
+    "엄지·검지 각 3축 / 기타 각 2축"
+   ],
    "specs": "능동 12자유도, 약 1.1kg, 엄지·검지 각 3축/기타 각 2축, 촉각 옵션, ROS·Linux SDK.",
    "source": "https://www.robotera.com/en/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2505.21864v2"
    ],
@@ -2237,8 +2892,8 @@ window.HANDSLAB_DATA = {
     "h": 800,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "ROBOTERA (로보테라·星动纪元)",
+    "creditUrl": "https://www.robotera.com/en/"
    }
   },
   {
@@ -2254,6 +2909,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "손가락당 3",
    "joints": null,
@@ -2265,10 +2921,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "자석식 모듈로 손가락·도구 교체"
+   ],
    "specs": "손가락당 3자유도. 자석식 모듈로 손가락과 도구를 교체할 수 있음.",
    "source": "https://www.sandia.gov/research/sandia-hand/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/sandia-hand-notion.webp",
@@ -2276,8 +2939,8 @@ window.HANDSLAB_DATA = {
     "h": 305,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.sandia.gov/app/uploads/sites/156/2021/09/sandia_hand-1.png",
-    "origin": "notion"
+    "creditName": "Sandia National Laboratories",
+    "creditUrl": "https://www.sandia.gov/research/sandia-hand/"
    }
   },
   {
@@ -2293,6 +2956,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 19,
@@ -2304,10 +2968,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 720 g",
    "weightG": 720,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "엄지·검지·나머지 손가락 묶음 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "19관절·구동기 3개, 약 720g, 공칭 가반 1kg. 엄지·검지·나머지 손가락 묶음을 구분해 구동.",
    "source": "https://docs.pal-robotics.com/edge/hardware/end-effectors/end-effector-hey5",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.researchgate.net/publication/334639849_Long_Time_Sequential_Task_Learning_From_Unstructured_Demonstrations"
    ],
@@ -2317,8 +2988,8 @@ window.HANDSLAB_DATA = {
     "h": 509,
     "alpha": true,
     "bg": null,
-    "credit": "https://docs.pal-robotics.com/sdk/24.09/_images/hey5_hand.png",
-    "origin": "notion"
+    "creditName": "PAL Robotics",
+    "creditUrl": "https://docs.pal-robotics.com/edge/hardware/end-effectors/end-effector-hey5"
    }
   },
   {
@@ -2334,6 +3005,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2345,10 +3017,24 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.15 kg",
    "weightG": 1150,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손끝·관절·손바닥 압력 센서"
+   ],
+   "io": [
+    "RS485",
+    "Ethernet Modbus"
+   ],
+   "control": [
+    "전류",
+    "위치",
+    "강성 제어"
+   ],
+   "notes": [],
    "specs": "능동 20자유도, 약 1.15kg, 손끝·관절·손바닥 압력 센서, 전류/위치/강성 제어, RS485·Ethernet Modbus.",
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=25",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/allegro-hand-v6-f-notion.webp",
@@ -2356,8 +3042,8 @@ window.HANDSLAB_DATA = {
     "h": 922,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "원익로보틱스 (Wonik Robotics)",
+    "creditUrl": "https://www.allegrohand.com/sub/product/p.php?idx=25"
    }
   },
   {
@@ -2373,6 +3059,7 @@ window.HANDSLAB_DATA = {
    "fingers": 2,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2384,10 +3071,22 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": "스트로크 110 mm",
+   "speed": null,
+   "drive": [
+    "서보 전동",
+    "벨트 동기화 평행 2지"
+   ],
+   "sensors": [
+    "힘 측정 핑거용 센서 포트"
+   ],
+   "io": [
+    "Ethernet (TCP/IP)"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "서보 전동·벨트 동기화 방식의 평행 2지. 스트로크 110 mm, 파지력 5–80 N. 공작물 하중 형상구속 3 kg·마찰파지 0.8 kg. 힘 측정 핑거용 센서 포트·Ethernet(TCP/IP) 제어.",
    "source": "https://weiss-robotics.com/servo-electric/wsg-series/?cid=4248",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://openreview.net/pdf/f4356c4300ca2cd867c5188e0eabd8f129f21816.pdf"
    ],
@@ -2397,8 +3096,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Weiss Robotics",
+    "creditUrl": "https://weiss-robotics.com/servo-electric/wsg-series/?cid=4248"
    }
   },
   {
@@ -2414,6 +3113,7 @@ window.HANDSLAB_DATA = {
    "fingers": null,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2425,10 +3125,20 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": "대상 직경 12–38 mm",
+   "speed": null,
+   "drive": [
+    "공압 실리콘 캡 반전"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "일반 핑거 없는 형상적응 그리퍼",
+    "위치·형상이 일정하지 않거나 민감한 물체용"
+   ],
    "specs": "공압으로 실리콘 캡이 뒤집히며 물체를 감싸는 형상적응 그리퍼. 일반 핑거 없이 위치·형상이 일정하지 않거나 민감한 물체를 파지. 대상 직경 12–38 mm.",
    "source": "https://www.festo.com/media/catalog/202805_documentation.pdf",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dhef-20-a-notion.webp",
@@ -2436,8 +3146,8 @@ window.HANDSLAB_DATA = {
     "h": 400,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Festo",
+    "creditUrl": "https://www.festo.com/media/catalog/202805_documentation.pdf"
    }
   },
   {
@@ -2453,6 +3163,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 5,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 11,
    "dofStated": null,
    "joints": null,
@@ -2464,10 +3175,22 @@ window.HANDSLAB_DATA = {
    "weight": "약 640 g",
    "weightG": 640,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "텐던 구동"
+   ],
+   "sensors": [],
+   "io": [
+    "RS232",
+    "USB"
+   ],
+   "control": [],
+   "notes": [
+    "내장 제어기"
+   ],
    "specs": "총 11자유도·능동 5축, 약 640g. 텐던 구동, RS232·USB, 내장 제어기.",
    "source": "https://www.prensilia.com/ih2-azzurra-hand/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.iris.unicampus.it/handle/20.500.12610/72946"
    ],
@@ -2477,8 +3200,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.prensilia.com/wp-content/uploads/2023/03/ih2-azzurra-hand-prensilia.jpg",
-    "origin": "notion"
+    "creditName": "Prensilia",
+    "creditUrl": "https://www.prensilia.com/ih2-azzurra-hand/"
    }
   },
   {
@@ -2494,6 +3217,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 11,
    "dofStated": null,
    "joints": null,
@@ -2505,10 +3229,21 @@ window.HANDSLAB_DATA = {
    "weight": "545±10 g",
    "weightG": 10,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "복합 촉각"
+   ],
+   "io": [
+    "CAN FD"
+   ],
+   "control": [],
+   "notes": [
+    "오른손 촉각형"
+   ],
    "specs": "오른손 촉각형. 총 11자유도·능동 6축, 545±10g, 복합 촉각, CAN FD.",
    "source": "https://www.leadshine.com/robot-detail/DH116-R1-M.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dh116-r1-m-notion.webp",
@@ -2516,8 +3251,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://store.leadshine.com/cdn/shop/files/2_abe8fd87-bbc9-4252-8a2d-24767e3d513c.jpg?v=1787540546&width=2048",
-    "origin": "notion"
+    "creditName": "Leadshine",
+    "creditUrl": "https://www.leadshine.com/robot-detail/DH116-R1-M.html"
    }
   },
   {
@@ -2533,6 +3268,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2544,10 +3280,25 @@ window.HANDSLAB_DATA = {
    "weight": "191 g",
    "weightG": 191,
    "rate": null,
+   "stroke": null,
+   "speed": "6 V 기준 ≤0.11 s/60°",
+   "drive": [
+    "LFD-01 anti-blocking servo",
+    "손가락 5개 개별 구동"
+   ],
+   "sensors": [],
+   "io": [
+    "PWM (500–2500)"
+   ],
+   "control": [],
+   "notes": [
+    "크기 165×90 mm",
+    "아크릴·알루미늄 합금 브래킷",
+    "서보 4.8–6 V · stall torque ≥1.4 kg·cm",
+    "교육·개발용, 로봇 2차 개발"
+   ],
    "specs": "5개 손가락을 개별 구동하는 교육·개발용 바이오닉 로봇핸드. 제품 크기 165×90mm, 무게 191g, 아크릴·알루미늄 합금 브래킷, LFD-01 anti-blocking servo 구동. 서보는 PWM(500–2500s), 4.8–6V, 6V 기준 회전 속도 ≤0.11s/60°, stall torque ≥1.4kg·cm. 서로 다른 브래킷과 결합해 로봇 2차 개발에 사용.",
    "source": "https://www.hiwonder.com/products/uhand?variant=32473888587863",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://dr.ntu.edu.sg/server/api/core/bitstreams/9453ace1-8349-4966-bc6e-43f9856245a4/content"
    ],
@@ -2557,8 +3308,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Hiwonder",
+    "creditUrl": "https://www.hiwonder.com/products/uhand?variant=32473888587863"
    }
   },
   {
@@ -2574,6 +3325,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2585,10 +3337,24 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.15 kg",
    "weightG": 1150,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "GelSight 시각 촉각 손끝",
+    "손바닥 압력 센서"
+   ],
+   "io": [
+    "ROS2"
+   ],
+   "control": [
+    "전류",
+    "위치",
+    "강성 제어"
+   ],
+   "notes": [],
    "specs": "능동 20자유도, 약 1.15kg, GelSight 시각 촉각 손끝·손바닥 압력 센서, ROS2 및 전류/위치/강성 제어.",
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=26",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/allegro-hand-v6-v-notion.webp",
@@ -2596,8 +3362,8 @@ window.HANDSLAB_DATA = {
     "h": 677,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "원익로보틱스 (Wonik Robotics)",
+    "creditUrl": "https://www.allegrohand.com/sub/product/p.php?idx=26"
    }
   },
   {
@@ -2613,6 +3379,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 13,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2624,10 +3391,20 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "전완부 모터 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "엄지 + 손가락 3개",
+    "손목 없음"
+   ],
    "specs": "엄지와 손가락 3개, 능동 13자유도. 손목 없이 전완부 모터로 구동.",
    "source": "https://shadowrobot.com/dexterous-hand-series/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.roboticsproceedings.org/rss20/p122.pdf"
    ],
@@ -2637,8 +3414,8 @@ window.HANDSLAB_DATA = {
     "h": 800,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.mybotshop.de/media/image/product/6990/lg/shadow-dexterous-hand-lite.jpg",
-    "origin": "notion"
+    "creditName": "Shadow Robot Company",
+    "creditUrl": "https://shadowrobot.com/dexterous-hand-series/"
    }
   },
   {
@@ -2654,6 +3431,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2665,10 +3443,18 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "3D 정전용량식 촉각 센서",
+    "손바닥 센서 배열"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 6자유도, 3D 정전용량식 촉각 센서와 손바닥 센서 배열.",
    "source": "https://oymotion.com/en/product62",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/roh-ap002-notion.webp",
@@ -2676,8 +3462,8 @@ window.HANDSLAB_DATA = {
     "h": 430,
     "alpha": false,
     "bg": null,
-    "credit": "https://oymotion.com/upload/images/20260306/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1%2830%293007781.png",
-    "origin": "notion"
+    "creditName": "OYMotion",
+    "creditUrl": "https://oymotion.com/en/product62"
    }
   },
   {
@@ -2693,6 +3479,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2704,10 +3491,20 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "DYNAMIXEL 기반"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "오픈소스 연구용",
+    "손안 조작·로봇 학습용"
+   ],
    "specs": "능동 16자유도, DYNAMIXEL 기반 오픈소스 연구용 핸드. 손안 조작과 로봇 학습용.",
    "source": "https://v1.leaphand.com/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/leap-hand-v1-notion.webp",
@@ -2715,8 +3512,8 @@ window.HANDSLAB_DATA = {
     "h": 506,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.cs.cmu.edu/files/images/robot-hand-web.jpg",
-    "origin": "notion"
+    "creditName": "Carnegie Mellon University",
+    "creditUrl": "https://v1.leaphand.com/"
    }
   },
   {
@@ -2732,6 +3529,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 2,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 10,
    "dofStated": null,
    "joints": null,
@@ -2743,10 +3541,17 @@ window.HANDSLAB_DATA = {
    "weight": "365 g",
    "weightG": 365,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "엄지 / 네 손가락 2그룹 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 2축·총 10자유도, 365g. 엄지와 나머지 네 손가락을 두 그룹으로 구동.",
    "source": "https://www.unitree.com/Dex2-5/",
-   "price": "약 209만원 (해외 공개가 환산)",
-   "priceSource": "https://futurology.tech/products/unitree-dex-2-5-dexterous-hand-for-humanoid-robots",
    "research": [],
    "photo": {
     "src": "assets/img/hands/dex2-5-notion.webp",
@@ -2754,8 +3559,8 @@ window.HANDSLAB_DATA = {
     "h": 554,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.unitree.com/images/35429049b2514a229d2808332af0e092_1560x900.jpg",
-    "origin": "notion"
+    "creditName": "Unitree Robotics",
+    "creditUrl": "https://www.unitree.com/Dex2-5/"
    }
   },
   {
@@ -2771,6 +3576,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2782,10 +3588,23 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 3개",
+    "중지·약지·소지 연동"
+   ],
+   "sensors": [
+    "손가락 힘 센서 (옵션)"
+   ],
+   "io": [
+    "ROS",
+    "Gazebo"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "모터 3개, 중지·약지·소지 연동. ROS·Gazebo 지원, 손가락 힘 센서 옵션.",
    "source": "https://www.prensilia.com/mia-hand-research/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/mia-hand-r-d-notion.webp",
@@ -2793,8 +3612,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.prensilia.com/wp-content/uploads/2023/04/Mia-Hand-piattaforma-di-ricerca-prensilia.jpg",
-    "origin": "notion"
+    "creditName": "Prensilia",
+    "creditUrl": "https://www.prensilia.com/mia-hand-research/"
    }
   },
   {
@@ -2810,6 +3629,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -2821,10 +3641,20 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "공압 벨로즈"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "엄지·검지 옆 움직임",
+    "파지 학습 시연"
+   ],
    "specs": "공압 벨로즈로 손가락 굽힘. 엄지·검지 옆 움직임 및 파지 학습 시연.",
    "source": "https://www.festo.com/us/en/e/about-festo/research-and-development/bionic-learning-network/bionic-grippers-and-soft-robots/bionicsofthand-id_68106",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/bionicsofthand-notion.webp",
@@ -2832,8 +3662,8 @@ window.HANDSLAB_DATA = {
     "h": 693,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.therobotreport.com/wp-content/uploads/2019/02/190123_Festo_Bionic_SoftHand_0372_13x18_rgb.jpg",
-    "origin": "notion"
+    "creditName": "Festo",
+    "creditUrl": "https://www.festo.com/us/en/e/about-festo/research-and-development/bionic-learning-network/bionic-grippers-and-soft-robots/bionicsofthand-id_68106"
    }
   },
   {
@@ -2849,6 +3679,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 11,
    "dofStated": null,
    "joints": null,
@@ -2860,10 +3691,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 (옵션)"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손끝 교체 가능"
+   ],
    "specs": "능동 6·총 11자유도. 손끝 교체 가능, 촉각 센서 옵션.",
    "source": "https://en.dh-robotics.com/product/dh-5-6",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dh-5-6-notion.webp",
@@ -2871,8 +3711,8 @@ window.HANDSLAB_DATA = {
     "h": 400,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.gongboshi-robot.com/photo/pt215115868-five_finger_robot_gripper_dh_robotics_dh_5_6_multi_finger_robotic_ai_robot_hand.jpg",
-    "origin": "notion"
+    "creditName": "DH-Robotics",
+    "creditUrl": "https://en.dh-robotics.com/product/dh-5-6"
    }
   },
   {
@@ -2888,6 +3728,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 20,
    "dofStated": null,
    "joints": null,
@@ -2899,10 +3740,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.1 kg",
    "weightG": 1100,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손가락 모듈 개별 교체 가능"
+   ],
    "specs": "능동 16·총 20자유도, 약 1.1kg. 손가락 모듈 개별 교체 가능.",
    "source": "https://www.unitree.com/Dex5-1/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dex5-1-notion.webp",
@@ -2910,8 +3758,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://robostore.com/cdn/shop/files/unitree-dex5-1-robotic-hands-4377616.jpg?v=1764083171&width=2000",
-    "origin": "notion"
+    "creditName": "Unitree Robotics",
+    "creditUrl": "https://www.unitree.com/Dex5-1/"
    }
   },
   {
@@ -2927,6 +3775,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 13,
    "dofStated": null,
    "joints": null,
@@ -2938,10 +3787,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "관절 토크·위치 센서"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손가락당 3축 + 손바닥 1축"
+   ],
    "specs": "손가락당 3축에 손바닥 1축을 더해 총 13자유도. 관절 토크·위치 센서.",
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/hand-ii",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dlr-hand-ii-notion.webp",
@@ -2949,8 +3807,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.dlr.de/en/rm/images/roboter_und_systeme/hand/hand_ii/hand_2_greift_kolben_bg_black_3200x3200.jpg/@@images/image-1000-91f880d15491eee62be6b055577332ff.jpeg",
-    "origin": "notion"
+    "creditName": "DLR",
+    "creditUrl": "https://www.dlr.de/en/rm/research/robotic-systems/hands/hand-ii"
    }
   },
   {
@@ -2966,6 +3824,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 11,
    "dofStated": null,
    "joints": null,
@@ -2977,10 +3836,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 560 g",
    "weightG": 560,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "전원 차단 시 위치 유지"
+   ],
    "specs": "능동 6·총 11자유도, 약 560g. 전원 차단 시 위치 유지.",
    "source": "https://www.worldrobotconference.com/expo/company/706.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/adh-5-6-p1-notion.webp",
@@ -2988,8 +3854,8 @@ window.HANDSLAB_DATA = {
     "h": 773,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.worldrobotconference.com/profile/robot/download/2026/07/27/20260727142357000806_20260727142357A591.png",
-    "origin": "notion"
+    "creditName": "DH-Robotics",
+    "creditUrl": "https://www.worldrobotconference.com/expo/company/706.html"
    }
   },
   {
@@ -3005,6 +3871,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "16",
    "joints": null,
@@ -3016,10 +3883,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "접촉 위치·힘 감지 촉각 센서"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "Gen1 대비 엄지 1축 추가"
+   ],
    "specs": "16자유도, Gen1 대비 엄지 1축 추가. 접촉 위치와 힘을 감지하는 촉각 센서.",
    "source": "https://www.aidinrobotics.co.kr/robotic-hand",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/aidin-hand-gen2-notion.webp",
@@ -3027,8 +3903,8 @@ window.HANDSLAB_DATA = {
     "h": 540,
     "alpha": false,
     "bg": null,
-    "credit": "https://i.ytimg.com/vi/4TkrscF5Bbk/maxresdefault.jpg",
-    "origin": "notion"
+    "creditName": "에이딘로보틱스 (AIDIN Robotics)",
+    "creditUrl": "https://www.aidinrobotics.co.kr/robotic-hand"
    }
   },
   {
@@ -3044,6 +3920,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 12,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 19,
    "dofStated": null,
    "joints": null,
@@ -3055,10 +3932,15 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 12·총 19자유도, 손끝 힘 최대 20N으로 안내.",
    "source": "https://www.agibot.com/products/OmniHand_O12",
-   "price": "약 1,780~2,240만원 (해외 공개가 환산)",
-   "priceSource": "https://aifitlab.com/collections/agibot-robotic-hand/products/agibot-omnihand-pro-2025",
    "research": [],
    "photo": {
     "src": "assets/img/hands/omnihand-pro-2025-o12-notion.webp",
@@ -3066,8 +3948,8 @@ window.HANDSLAB_DATA = {
     "h": 934,
     "alpha": true,
     "bg": null,
-    "credit": "https://store.agibot.com/cdn/shop/files/AgiBot_OmniHand_Pro.png?v=1764049508&width=1200",
-    "origin": "notion"
+    "creditName": "AGIBOT",
+    "creditUrl": "https://www.agibot.com/products/OmniHand_O12"
    }
   },
   {
@@ -3083,6 +3965,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "19 (연동 구조)",
    "joints": null,
@@ -3094,10 +3977,20 @@ window.HANDSLAB_DATA = {
    "weight": "약 770 g",
    "weightG": 770,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 1개 연동 구동"
+   ],
+   "sensors": [],
+   "io": [
+    "USB",
+    "RS485"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "19자유도 구조를 모터 1개로 연동 구동. 약 770g, USB·RS485.",
    "source": "https://qbrobotics.com/product/qb-softhand-research/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/qb-softhand-research-notion.webp",
@@ -3105,8 +3998,8 @@ window.HANDSLAB_DATA = {
     "h": 640,
     "alpha": false,
     "bg": null,
-    "credit": "https://qbrobotics.com/wp-content/uploads/2021/07/qb_softhand_research_003.jpg",
-    "origin": "notion"
+    "creditName": "qbrobotics",
+    "creditUrl": "https://qbrobotics.com/product/qb-softhand-research/"
    }
   },
   {
@@ -3123,6 +4016,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 3,
    "activeDofNote": "손가락당",
+   "passiveDof": null,
    "totalDof": 15,
    "dofStated": null,
    "joints": null,
@@ -3134,10 +4028,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.5 kg",
    "weightG": 1500,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "모듈식 손가락"
+   ],
    "specs": "손가락당 능동 3축, 총 15자유도. 약 1.5kg, 모듈식 손가락.",
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand-ii",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/dlr-hit-hand-ii-notion.webp",
@@ -3145,8 +4046,8 @@ window.HANDSLAB_DATA = {
     "h": 638,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.automate.org/userAssets/Image/robotic_hands.jpg",
-    "origin": "notion"
+    "creditName": "DLR",
+    "creditUrl": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand-ii"
    }
   },
   {
@@ -3162,6 +4063,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 20,
    "dofStated": null,
    "joints": null,
@@ -3173,10 +4075,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "직접·텐던·링크 구동"
+   ],
+   "sensors": [
+    "3D 힘 감지 전자피부"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 16·총 20자유도로 소개. 직접·텐던·링크 구동 및 3D 힘 감지 전자피부.",
    "source": "https://www.joyson.com/index.php/esg/info/1426.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/telehand-pro-p20-notion.webp",
@@ -3184,8 +4095,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": true,
     "bg": null,
-    "credit": "https://humanoid.guide/wp-content/uploads/2026/09/TeleHand-robotic-hand-by-Joyson-Electronics-humanoid-guide.webp",
-    "origin": "notion"
+    "creditName": "Joyson Electronics",
+    "creditUrl": "https://www.joyson.com/index.php/esg/info/1426.html"
    }
   },
   {
@@ -3201,6 +4112,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3212,10 +4124,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 605 g",
    "weightG": 605,
    "rate": "1 kHz",
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "금속 골격"
+   ],
    "specs": "능동 6자유도, 약 605g, 금속 골격, 통신 1kHz.",
    "source": "https://en.inspire-robots.com/product/rh56f2/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/rh56f2-notion.webp",
@@ -3223,8 +4142,8 @@ window.HANDSLAB_DATA = {
     "h": 540,
     "alpha": true,
     "bg": null,
-    "credit": "https://en.inspire-robots.com/wp-content/uploads/2026/09/%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5_F2%E5%B0%BA%E5%AF%B8%E5%9B%BE.png",
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://en.inspire-robots.com/product/rh56f2/"
    }
   },
   {
@@ -3240,6 +4159,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "21",
    "joints": null,
@@ -3251,10 +4171,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "정밀 조립·연구용"
+   ],
    "specs": "제조사 표기 21자유도. 정밀 조립 및 연구용으로 소개.",
    "source": "https://www.futuretakt.com/sys-pd/30.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/fthand-21-notion.webp",
@@ -3262,8 +4189,8 @@ window.HANDSLAB_DATA = {
     "h": 540,
     "alpha": false,
     "bg": null,
-    "credit": "https://29912541.s21i.faiusr.com/2/ABUIABACGAAgyZK4zgYo5b7w-gMwgBA4-wg.jpg",
-    "origin": "notion"
+    "creditName": "FutureTakt",
+    "creditUrl": "https://www.futuretakt.com/sys-pd/30.html"
    }
   },
   {
@@ -3279,6 +4206,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": 16,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3290,10 +4218,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "전류 제어 가능 모터 모듈"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 16자유도, 전류 제어가 가능한 모터 모듈.",
    "source": "https://www.allegrohand.com/sub/product/p.php?idx=1",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://arxiv.org/pdf/2503.07989"
    ],
@@ -3303,8 +4238,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.knoxlabs.com/cdn/shop/files/wonik-robotics-allegro-hand-v4-featured-white-square_e97d5e59-2384-4f45-9d6d-b07c320de01a.webp?v=1786689864&width=1200",
-    "origin": "notion"
+    "creditName": "원익로보틱스 (Wonik Robotics)",
+    "creditUrl": "https://www.allegrohand.com/sub/product/p.php?idx=1"
    }
   },
   {
@@ -3320,6 +4255,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "22 (손목 통합)",
    "joints": null,
@@ -3331,10 +4267,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "이중 텐던 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "주요 16축 · 연동 4축 · 손목 2축"
+   ],
    "specs": "손목 통합 22자유도. 주요 16축·연동 4축·손목 2축, 이중 텐던 구동.",
    "source": "https://www.dex-robot.com/en/dexhand021Pro",
-   "price": "약 7,980만원 (해외 공개가 환산)",
-   "priceSource": "https://aifitlab.com/products/dexrobot-dexhand021-pro",
    "research": [],
    "photo": {
     "src": "assets/img/hands/dexhand021-pro-notion.webp",
@@ -3342,8 +4287,8 @@ window.HANDSLAB_DATA = {
     "h": 601,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.worldrobotconference.com/profile/robot/download/2026/07/24/20260724193814000438_20260724193814A299.jpg",
-    "origin": "notion"
+    "creditName": "DexRobot",
+    "creditUrl": "https://www.dex-robot.com/en/dexhand021Pro"
    }
   },
   {
@@ -3359,6 +4304,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "16",
    "joints": 20,
@@ -3370,10 +4316,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "손가락 내장 서보모터"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "파지·조작 연구 플랫폼"
+   ],
    "specs": "16자유도·20관절, 손가락에 서보모터 내장. 파지·조작 연구 플랫폼.",
    "source": "https://www1.gifu-u.ac.jp/~kawalab/research/research_hand.html",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.jstage.jst.go.jp/article/kikaic1979/71/705/71_705_1646/_article/-char/ja"
    ],
@@ -3383,8 +4338,8 @@ window.HANDSLAB_DATA = {
     "h": 203,
     "alpha": false,
     "bg": null,
-    "credit": "https://www1.gifu-u.ac.jp/~kawalab/research/Hand/gifuhand3.PNG",
-    "origin": "notion"
+    "creditName": "기후대학교",
+    "creditUrl": "https://www1.gifu-u.ac.jp/~kawalab/research/research_hand.html"
    }
   },
   {
@@ -3400,6 +4355,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "15",
    "joints": null,
@@ -3411,10 +4367,21 @@ window.HANDSLAB_DATA = {
    "weight": "약 305 g",
    "weightG": 305,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [
+    "ROS",
+    "Python"
+   ],
+   "control": [],
+   "notes": [
+    "소형 휴머노이드용",
+    "대향 엄지"
+   ],
    "specs": "소형 휴머노이드용. 15자유도, 약 305g, 대향 엄지, ROS·Python 지원.",
    "source": "https://www.seedrobotics.com/rh5d-rh7d-childsize-robot-hand",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/rh6d-notion.webp",
@@ -3422,8 +4389,8 @@ window.HANDSLAB_DATA = {
     "h": 510,
     "alpha": true,
     "bg": null,
-    "credit": "https://images.squarespace-cdn.com/content/v1/5db846da1bb60d0407fed0ac/1622567103659-RSA8SAF045YYEEX8DOWQ/childs-hand1.png?format=2500w",
-    "origin": "notion"
+    "creditName": "Seed Robotics",
+    "creditUrl": "https://www.seedrobotics.com/rh5d-rh7d-childsize-robot-hand"
    }
   },
   {
@@ -3439,6 +4406,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 13,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": 18,
@@ -3450,10 +4418,15 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 13자유도·18개 가동 관절. 제조사 표기 손끝 파지력 20N.",
    "source": "https://en.inspire-robots.com/product/rh5dg2/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/rh5dg2-notion.webp",
@@ -3461,8 +4434,8 @@ window.HANDSLAB_DATA = {
     "h": 800,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.mybotshop.de/media/image/product/8959/lg/inspire-robots-dexterous-hand-rh5dg2.jpg",
-    "origin": "notion"
+    "creditName": "INSPIRE ROBOTS",
+    "creditUrl": "https://en.inspire-robots.com/product/rh5dg2/"
    }
   },
   {
@@ -3479,6 +4452,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 21,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3490,10 +4464,22 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각 센서 미포함 (Basic)"
+   ],
+   "io": [],
+   "control": [
+    "위치",
+    "힘 제어"
+   ],
+   "notes": [
+    "독립 구동"
+   ],
    "specs": "독립 구동 21자유도, 위치·힘 제어 지원. Basic은 촉각 센서 미포함.",
    "source": "https://www.brainco.cn/en-US/products/revo3",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/revo-3-basic-notion.webp",
@@ -3501,8 +4487,8 @@ window.HANDSLAB_DATA = {
     "h": 900,
     "alpha": false,
     "bg": null,
-    "credit": "https://www.usrobotstore.com/cdn/shop/files/Untitleddesign-262.png?v=1779081282&width=900",
-    "origin": "notion"
+    "creditName": "BrainCo",
+    "creditUrl": "https://www.brainco.cn/en-US/products/revo3"
    }
   },
   {
@@ -3518,6 +4504,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3529,10 +4516,18 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": "개폐 약 0.8 s",
+   "drive": [
+    "무브러시 모터",
+    "웜기어 관절"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "능동 20자유도, 무브러시 모터와 웜기어 관절. 개폐 약 0.8초.",
    "source": "https://www.linkerhand.com/details/LinkerHandO30/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/linker-hand-o30-notion.webp",
@@ -3540,8 +4535,8 @@ window.HANDSLAB_DATA = {
     "h": 897,
     "alpha": true,
     "bg": null,
-    "credit": "https://botdata.oss-cn-beijing.aliyuncs.com/afterSales/linkerbot_img/products/linkerhand-o30/detail-2.png",
-    "origin": "notion"
+    "creditName": "Linkerbot",
+    "creditUrl": "https://www.linkerhand.com/details/LinkerHandO30/"
    }
   },
   {
@@ -3557,6 +4552,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 20,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3568,10 +4564,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손가락당 4축"
+   ],
    "specs": "손가락당 4축, 능동 20자유도. 제조사 표기 손끝 힘 15N.",
    "source": "https://docs.wuji.tech/docs/en/wuji-hand/v1/overview/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/wuji-hand-v1-notion.webp",
@@ -3579,8 +4582,8 @@ window.HANDSLAB_DATA = {
     "h": 428,
     "alpha": true,
     "bg": null,
-    "credit": "https://wuji.tech/assets/images/hand/C_2_6_03.webp",
-    "origin": "notion"
+    "creditName": "Wuji Technology",
+    "creditUrl": "https://docs.wuji.tech/docs/en/wuji-hand/v1/overview/"
    }
   },
   {
@@ -3596,6 +4599,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3607,10 +4611,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "손가락 움직임 제어로 집기·감싸기"
+   ],
    "specs": "손가락의 움직임을 제어해 물체를 집거나 감싸는 다관절 핸드.",
    "source": "https://j-d.co.jp/dhand-5finger.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/d-hand-5st-notion.webp",
@@ -3618,8 +4629,8 @@ window.HANDSLAB_DATA = {
     "h": 560,
     "alpha": false,
     "bg": null,
-    "credit": "https://image.mono.ipros.com/public/product/image/ef9/2000614336/IPROS25363202109332052972.png?w=560&h=560",
-    "origin": "notion"
+    "creditName": "Double Giken",
+    "creditUrl": "https://j-d.co.jp/dhand-5finger.html"
    }
   },
   {
@@ -3635,6 +4646,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "22",
    "joints": null,
@@ -3646,10 +4658,17 @@ window.HANDSLAB_DATA = {
    "weight": "약 1.2 kg",
    "weightG": 1200,
    "rate": null,
+   "stroke": null,
+   "speed": "개폐 약 0.2 s",
+   "drive": [
+    "텐던 구동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "제조사 표기 22자유도, 텐던 구동, 약 1.2kg, 개폐 약 0.2초.",
    "source": "https://www.linkerhand.com/details/LinkerHandL30/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/linker-hand-l30-pro-notion.webp",
@@ -3657,8 +4676,8 @@ window.HANDSLAB_DATA = {
     "h": 959,
     "alpha": true,
     "bg": null,
-    "credit": "https://botdata.oss-cn-beijing.aliyuncs.com/afterSales/linkerbot_img/products/linkerhand-l30pro/detail-2.png",
-    "origin": "notion"
+    "creditName": "Linkerbot",
+    "creditUrl": "https://www.linkerhand.com/details/LinkerHandL30/"
    }
   },
   {
@@ -3675,6 +4694,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "13",
    "joints": null,
@@ -3686,10 +4706,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "관절 위치·힘 감지"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "대향 엄지 추가 구동"
+   ],
    "specs": "13자유도. 네 손가락의 관절 위치·힘 감지, 대향 엄지 추가 구동.",
    "source": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://elib.dlr.de/55334/1/DLR-HIT-Hand-Liu-MeuselTransactions.pdf"
    ],
@@ -3699,8 +4728,8 @@ window.HANDSLAB_DATA = {
     "h": 298,
     "alpha": false,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "DLR",
+    "creditUrl": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand"
    }
   },
   {
@@ -3716,7 +4745,8 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
-   "totalDof": null,
+   "passiveDof": 5,
+   "totalDof": 11,
    "dofStated": null,
    "joints": null,
    "actuators": null,
@@ -3727,10 +4757,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "웜기어 기반"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "경량 적응 파지 모델"
+   ],
    "specs": "능동 6축·수동 5축, 웜기어 기반. 경량 적응 파지 모델.",
    "source": "https://www.linkerhand.com/details/LinkerHandO6/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/linker-hand-o6-notion.webp",
@@ -3738,8 +4777,8 @@ window.HANDSLAB_DATA = {
     "h": 521,
     "alpha": true,
     "bg": null,
-    "credit": "https://robotopian.com/cdn/shop/files/O6-main-1.png?v=1774237213&width=1214",
-    "origin": "notion"
+    "creditName": "Linkerbot",
+    "creditUrl": "https://www.linkerhand.com/details/LinkerHandO6/"
    }
   },
   {
@@ -3755,7 +4794,8 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
-   "totalDof": null,
+   "passiveDof": 6,
+   "totalDof": 12,
    "dofStated": null,
    "joints": null,
    "actuators": null,
@@ -3766,10 +4806,17 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "부품 파지·조립용"
+   ],
    "specs": "능동 6·수동 6자유도. 부품 파지와 조립용.",
    "source": "https://www.futuretakt.com/sys-pd/38.html",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/fthand-12-notion.webp",
@@ -3777,8 +4824,8 @@ window.HANDSLAB_DATA = {
     "h": 528,
     "alpha": false,
     "bg": null,
-    "credit": "https://29912541.s21i.faiusr.com/2/ABUIABACGAAgo-3t0QYowPHJlgcwoB84mBE.jpg.webp",
-    "origin": "notion"
+    "creditName": "FutureTakt",
+    "creditUrl": "https://www.futuretakt.com/sys-pd/38.html"
    }
   },
   {
@@ -3794,6 +4841,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": 6,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": 16,
    "dofStated": null,
    "joints": null,
@@ -3805,10 +4853,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손가락 3D 힘 센서 (구성 가능)"
+   ],
+   "io": [
+    "EtherCAT"
+   ],
+   "control": [],
+   "notes": [],
    "specs": "능동 6·총 16자유도, EtherCAT, 손가락 3D 힘 센서 구성 가능.",
    "source": "https://cobotglobal.com/product-detail/agile-hand-series/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/cdh-mo-5-16-e0-notion.webp",
@@ -3816,8 +4873,8 @@ window.HANDSLAB_DATA = {
     "h": 483,
     "alpha": false,
     "bg": null,
-    "credit": "https://cobotglobal.com/wp-content/uploads/2025/04/Agile-Hand-Series-Intelligent-bionic-five-finger-dexterous-hand.jpg",
-    "origin": "notion"
+    "creditName": "JODELL Robotics",
+    "creditUrl": "https://cobotglobal.com/product-detail/agile-hand-series/"
    }
   },
   {
@@ -3833,6 +4890,7 @@ window.HANDSLAB_DATA = {
    "fingers": 4,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3844,10 +4902,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "텐던 + 유연 관절 연동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "3D 프린팅 설계"
+   ],
    "specs": "모터 8개, 텐던과 유연 관절로 연동 구동. 3D 프린팅 설계.",
    "source": "https://v2.leaphand.com/",
-   "price": null,
-   "priceSource": null,
    "research": [
     "https://www.roboticsproceedings.org/rss21/p132.html"
    ],
@@ -3857,8 +4924,8 @@ window.HANDSLAB_DATA = {
     "h": 960,
     "alpha": false,
     "bg": null,
-    "credit": "https://v2.leaphand.com/static/figures/v2_anatomy.png",
-    "origin": "notion"
+    "creditName": "Carnegie Mellon University",
+    "creditUrl": "https://v2.leaphand.com/"
    }
   },
   {
@@ -3874,6 +4941,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": null,
    "joints": null,
@@ -3885,10 +4953,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "모터 1개 연동"
+   ],
+   "sensors": [],
+   "io": [],
+   "control": [],
+   "notes": [
+    "물체 형상에 맞춰 감싸 쥐는 구조"
+   ],
    "specs": "모터 1개로 손가락을 연동해 물체 형상에 맞춰 감싸 쥐는 구조.",
    "source": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/d-hand-5pt-notion.webp",
@@ -3896,8 +4973,8 @@ window.HANDSLAB_DATA = {
     "h": 640,
     "alpha": false,
     "bg": null,
-    "credit": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/img/08857312bc233d60513d6e66b9d33b821479de5f.jpg",
-    "origin": "notion"
+    "creditName": "Double Giken",
+    "creditUrl": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/"
    }
   },
   {
@@ -3913,6 +4990,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "28 (손 전체)",
    "joints": null,
@@ -3924,10 +5002,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "촉각·관절 상태 감지"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [
+    "강성·유연 구조 결합"
+   ],
    "specs": "손 부분 전체 28자유도로 표기. 촉각·관절 상태 감지, 강성과 유연 구조 결합.",
    "source": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/xiaoyao-dexterous-hand-notion.webp",
@@ -3935,8 +5022,8 @@ window.HANDSLAB_DATA = {
     "h": 403,
     "alpha": true,
     "bg": null,
-    "credit": null,
-    "origin": "notion"
+    "creditName": "Shenzhen FRD",
+    "creditUrl": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80"
    }
   },
   {
@@ -3952,6 +5039,7 @@ window.HANDSLAB_DATA = {
    "fingers": 5,
    "activeDof": null,
    "activeDofNote": null,
+   "passiveDof": null,
    "totalDof": null,
    "dofStated": "9",
    "joints": null,
@@ -3963,10 +5051,19 @@ window.HANDSLAB_DATA = {
    "weight": null,
    "weightG": null,
    "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [
+    "텐던 연동 (손가락·일부 벌림)"
+   ],
+   "sensors": [
+    "촉각 센서 없음"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [],
    "specs": "9자유도, 손가락과 일부 벌림 동작을 텐던으로 연동. 촉각 센서 없음.",
    "source": "https://www.orcahand.com/models/lite",
-   "price": null,
-   "priceSource": null,
    "research": [],
    "photo": {
     "src": "assets/img/hands/orcahand-lite-notion.webp",
@@ -3974,8 +5071,8 @@ window.HANDSLAB_DATA = {
     "h": 800,
     "alpha": true,
     "bg": null,
-    "credit": "https://www.orcahand.com/images/ability-hand-lite.png",
-    "origin": "notion"
+    "creditName": "ORCA Dexterity",
+    "creditUrl": "https://www.orcahand.com/models/lite"
    }
   }
  ]

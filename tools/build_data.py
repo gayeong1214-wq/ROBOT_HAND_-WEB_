@@ -8,6 +8,9 @@ src = json.load(open(os.path.join(ROOT, 'data/source/handslab-public-data.json')
 photos = json.load(open(os.path.join(ROOT, 'data/photos.json'), encoding='utf-8'))
 research_path = os.path.join(ROOT, 'data/research.json')
 research = json.load(open(research_path, encoding='utf-8')) if os.path.exists(research_path) else {}
+# 노션 '특징' 문장 중 표의 숫자 열에 들어가지 않는 내용을 항목별로 정리한 값(구동·센서·통신·제어·기타)
+features = json.load(open(os.path.join(ROOT, 'data/features.json'), encoding='utf-8'))
+features.pop('_doc', None)
 
 # 사양 문장에서 옮긴 값. j=관절, a=구동기, d=능동/총 구분 없이 적힌 자유도, w=무게,
 # tip=손끝 힘(N), grip=파지력(N), pay=가반·권장 하중(kg), f=유형이 불분명한 힘 표기, hz=제어·통신 주기, an=능동 DoF 주석
@@ -21,7 +24,6 @@ EXTRA = {
  "RH56DFX": dict(j=12, w="약 540 g", f="엄지 15 N / 기타 10 N"),
  "Allegro Hand V5 Plus": dict(w="약 1.024 kg"),
  "AIDIN-Hand (기존형)": dict(d="15", w="약 1.3 kg"),
- "ARTUS Lite": dict(w="약 1.4 kg"),
  "Aero Hand": dict(w="800 g 이하"),
  "DG-4F": dict(w="약 1.494 kg", hz="333 Hz"),
  "Gecko SP5": dict(pay="5 kg (최대)"),
@@ -133,20 +135,30 @@ for i, x in enumerate(src):
     specs = x['specs'].strip()
     for a, b in SPEC_FIX: specs = specs.replace(a, b)
     ph = photos.get(x['model'])
+    ft = features[x['model']]
+    passive = ft.get('p')
+    total = x['totalDof']
+    # '능동 13+수동 3'처럼 노션에 두 값이 함께 적힌 경우에만 합을 총 DoF로 둔다(추측 아님).
+    if total is None and passive is not None and x['activeDof'] is not None: total = x['activeDof'] + passive
+    source = clean_url(x['source'])
     hands.append({
         "id": slug, "model": x['model'], "maker": x['maker'].replace("Technologi es", "Technologies"),
         "makerGroup": maker_key(x['maker']), "location": x['location'], "countries": countries(x['location']),
         "kind": kind, "fingers": fingers, "activeDof": x['activeDof'], "activeDofNote": e.get('an'),
-        "totalDof": x['totalDof'], "dofStated": e.get('d'), "joints": e.get('j'), "actuators": e.get('a'),
+        "passiveDof": passive, "totalDof": total, "dofStated": e.get('d'), "joints": e.get('j'), "actuators": e.get('a'),
         "tipForce": e.get('tip'), "gripForce": e.get('grip'), "payload": e.get('pay'), "forceOther": e.get('f'),
         "weight": e.get('w'), "weightG": weight_g(e.get('w')), "rate": e.get('hz'),
-        "specs": specs, "source": clean_url(x['source']),
-        "price": x['price'] or None, "priceSource": clean_url(x['priceSource']) or None,
+        "stroke": ft.get('st'), "speed": ft.get('sp'),
+        "drive": ft.get('dr', []), "sensors": ft.get('se', []), "io": ft.get('io', []), "control": ft.get('ct', []), "notes": ft.get('ft', []),
+        "specs": specs, "source": source,
         "research": research.get(x['model'], []),
-        "photo": ({"src": ph['file'], "w": ph['w'], "h": ph['h'], "alpha": ph['alpha'], "bg": ph['bg'], "credit": ph['imageUrl'], "origin": ph.get('origin')} if ph else None),
+        # 사진 출처: 제조사(기관)명 + 노션 조사표의 대표 사이트(제조사 제품 페이지)
+        "photo": ({"src": ph['file'], "w": ph['w'], "h": ph['h'], "alpha": ph['alpha'], "bg": ph['bg'],
+                   "creditName": maker_key(x['maker']), "creditUrl": source} if ph else None),
     })
-missing = set(EXTRA) - {x['model'] for x in src}; assert not missing, missing
-missing = set(photos) - {x['model'] for x in src}; assert not missing, missing
+for name, table in (("EXTRA", EXTRA), ("photos", photos), ("features", features)):
+    missing = set(table) - {x['model'] for x in src}; assert not missing, (name, missing)
+missing = {x['model'] for x in src} - set(features); assert not missing, ("features 누락", missing)
 meta = {"basis": "HANDSLab 조사표(공개용) 기준", "count": len(hands),
         "makers": len({h['makerGroup'] for h in hands}), "countries": len({c for h in hands for c in h['countries']}),
         "photos": sum(1 for h in hands if h['photo'])}

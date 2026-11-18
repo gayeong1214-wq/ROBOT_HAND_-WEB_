@@ -152,15 +152,6 @@
   "imageUrl": "https://v2.leaphand.com/static/figures/v2_anatomy.png",
   "origin": "notion"
  },
- "ARTUS Lite": {
-  "file": "assets/img/hands/artus-lite-notion.webp",
-  "w": 354,
-  "h": 960,
-  "alpha": true,
-  "bg": null,
-  "imageUrl": "https://store.indrorobotics.com/cdn/shop/files/Artus_Lite_Robot_Hand_Back_View.png?v=1770654158&width=1946",
-  "origin": "notion"
- },
  "Aero Hand": {
   "file": "assets/img/hands/aero-hand-notion.webp",
   "w": 960,
