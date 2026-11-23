@@ -310,6 +310,29 @@
         }).join('')}
       </tr>`;
     }).join('');
+    renderWikiList(list);
+  }
+
+  /* 휴대폰용 목록: 사진 · 모델 · 제조사 · 핵심 사양 한 줄 */
+  function renderWikiList(list) {
+    const el = $('#wikiList');
+    if (!el) return;
+    el.innerHTML = list.map((h) => {
+      const on = S.cmp.includes(h.id);
+      const spec = [
+        h.fingers != null ? `${h.fingers}지` : '',
+        h.activeDof != null ? `DoF ${h.activeDof}` : '',
+        h.weight ? short(h.weight) : '',
+      ].filter(Boolean).map(esc).join(' · ');
+      const img = h.photo && h.photo.src ? `<img src="${esc(h.photo.src)}" alt="" loading="lazy" decoding="async">` : '';
+      return `<li>
+        <a class="wl-row" href="#/hand/${h.id}">
+          <span class="wl-thumb">${img}</span>
+          <span class="wl-text"><b>${esc(h.model)}</b><span>${esc(h.maker || '')}${h.countries.length ? ' · ' + esc(h.countries.join(', ')) : ''}</span>${spec ? `<span class="wl-spec">${spec}</span>` : ''}</span>
+        </a>
+        <label class="wl-cmp"><input type="checkbox" data-cmp="${h.id}"${on ? ' checked' : ''} aria-label="${esc(cmpLabel(h, on))}"><span aria-hidden="true">비교</span></label>
+      </li>`;
+    }).join('');
   }
 
   /* ── 비교 ─────────────────────────────────────────── */
