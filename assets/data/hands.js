@@ -6,7 +6,8 @@ window.HANDSLAB_DATA = {
   "makers": 50,
   "countries": 14,
   "photos": 99,
-  "webFilled": 377
+  "webFilled": 377,
+  "buyLinks": 84
  },
  "hands": [
   {
@@ -76,7 +77,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019",
+    "type": "quote",
+    "seller": "SCHUNK 견적 요청"
+   }
   },
   {
    "id": "shadow-hand-plus",
@@ -129,7 +135,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://shadowrobot.com/dexterous-hand-series/"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://shadowrobot.com/contact-us-2/",
+    "type": "quote",
+    "seller": "Shadow Robot 문의"
+   }
   },
   {
    "id": "dg-5f-s",
@@ -216,7 +227,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.tesollo.com/ko/products/grippers/dg-5f-s"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.tesollo.com/ko/contact",
+    "type": "quote",
+    "seller": "TESOLLO 견적 문의"
+   }
   },
   {
    "id": "sharpa-wave-w01",
@@ -309,7 +325,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.sharpa.com/pages/w01"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.sharpa.com/pages/w01",
+    "type": "quote",
+    "seller": "Sharpa Contact Sales"
+   }
   },
   {
    "id": "hx5-d20-mrt",
@@ -394,7 +415,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://docs.robotis.com/docs/systems/hx5_d20/specifications/hardware"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.robotis.com/shop/item.php?it_id=905-0058-000",
+    "type": "store",
+    "seller": "ROBOTIS Shop"
+   }
   },
   {
    "id": "dg-5f-m",
@@ -483,7 +509,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.tesollo.com/ko/products/grippers/dg-5f-m"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.tesollo.com/ko/contact",
+    "type": "quote",
+    "seller": "TESOLLO 견적 문의"
+   }
   },
   {
    "id": "3fg25",
@@ -566,7 +597,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://onrobot.com/storage/datasheets/3fg25/datasheet_3fg25_v1.3_en.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://onrobot.com/en/request-a-quote",
+    "type": "quote",
+    "seller": "OnRobot 견적 문의"
+   }
   },
   {
    "id": "svh",
@@ -638,7 +674,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/svh-linke-hand/p/000000000001545589"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/c/PGR_3161",
+    "type": "quote",
+    "seller": "SCHUNK 견적 요청"
+   }
   },
   {
    "id": "rh56dfx",
@@ -708,7 +749,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.inspire-robots.com/product/rh56dfx/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/product/rh56dfx/",
+    "type": "quote",
+    "seller": "INSPIRE ROBOTS 견적 문의"
+   }
   },
   {
    "id": "allegro-hand-v5-plus",
@@ -797,7 +843,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.allegrohand.com/sub/product/p.php?idx=4"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+    "type": "quote",
+    "seller": "Allegro Hand 문의"
+   }
   },
   {
    "id": "aidin-hand",
@@ -856,7 +907,12 @@ window.HANDSLAB_DATA = {
      "field": "drive",
      "url": "https://www.aidinrobotics.co.kr/robotic-hand"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.aidinrobotics.co.kr/contact",
+    "type": "quote",
+    "seller": "에이딘로보틱스 문의"
+   }
   },
   {
    "id": "aero-hand",
@@ -947,7 +1003,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://chestnut.bot/aero-hand.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://chestnut.bot/contact.html",
+    "type": "quote",
+    "seller": "Chestnut Robotics 문의"
+   }
   },
   {
    "id": "dg-4f",
@@ -1016,7 +1077,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.tesollo.com/ko/products/grippers/dg-4f"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.tesollo.com/ko/contact",
+    "type": "quote",
+    "seller": "TESOLLO 견적 문의"
+   }
   },
   {
    "id": "gecko-sp5",
@@ -1089,7 +1155,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://onrobot.com/storage/datasheets/gecko/datasheet_gecko_gripper_v1.5_en.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://onrobot.com/en/request-a-quote",
+    "type": "quote",
+    "seller": "OnRobot 견적 문의"
+   }
   },
   {
    "id": "sharpa-wave-w01-se",
@@ -1183,7 +1254,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.sharpa.com/pages/w01"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.sharpa.com/pages/w01",
+    "type": "quote",
+    "seller": "Sharpa Contact Sales"
+   }
   },
   {
    "id": "orcahand-touch",
@@ -1241,7 +1317,12 @@ window.HANDSLAB_DATA = {
      "field": "io",
      "url": "https://github.com/orcahand/orca_core"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.orcahand.com/configure",
+    "type": "store",
+    "seller": "ORCA Dexterity 공식 주문(Configure & Order)"
+   }
   },
   {
    "id": "vgp30",
@@ -1315,7 +1396,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://onrobot.com/en/products/vgp30-vacuum-gripper"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://onrobot.com/en/request-a-quote",
+    "type": "quote",
+    "seller": "OnRobot 견적 문의"
+   }
   },
   {
    "id": "agile-hand",
@@ -1389,7 +1475,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.agile-robots.com/en/products/agile-hand/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.agile-robots.com/en/lets-connect/",
+    "type": "quote",
+    "seller": "Agile Robots 견적 문의"
+   }
   },
   {
    "id": "mygripper-h100",
@@ -1457,7 +1548,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://docs.elephantrobotics.com/docs/acc-en/2-serialproduct/H100_Gripper/myhand_en.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://shop.elephantrobotics.com/products/mygripper-h100",
+    "type": "store",
+    "seller": "Elephant Robotics Shop"
+   }
   },
   {
    "id": "omnihand-3",
@@ -1537,7 +1633,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.agibot.com/products/OmniHand_O10"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://store.agibot.com/products/omnihand-2025-w-tactile",
+    "type": "store",
+    "seller": "AGIBOT Store"
+   }
   },
   {
    "id": "linker-hand-l20",
@@ -1619,7 +1720,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.linkerhand.com/details/LinkerHandL20/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.robotshop.com/products/robx-linker-hand-l20",
+    "type": "retailer",
+    "seller": "RobotShop"
+   }
   },
   {
    "id": "ctdh4f08d",
@@ -1697,7 +1803,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.changingtek.com/fuhe/257"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.changingtek.com/fuhe/257",
+    "type": "quote",
+    "seller": "ChangingTek 문의"
+   }
   },
   {
    "id": "dheb-22-e-u-s-l",
@@ -1771,7 +1882,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://ftp.festo.com/public/PNEUMATIC/SOFTWARE_SERVICE/DataSheet/EN_US/1320803.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.festo.com/nl/nl/a/1320803/",
+    "type": "store",
+    "seller": "Festo 온라인 스토어"
+   }
   },
   {
    "id": "mark-7",
@@ -1833,7 +1949,8 @@ window.HANDSLAB_DATA = {
      "field": "sensors",
      "url": "https://www.ot-world.com/exhibitors-products/product/otworld/7005/2860"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "cr-hand",
@@ -1906,7 +2023,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.curious-robotics.com/home-en"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.curious-robotics.com/home-en",
+    "type": "quote",
+    "seller": "Curious Robotics 주문 문의"
+   }
   },
   {
    "id": "dexh13-gen2",
@@ -1991,7 +2113,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.paxini.com/product/dex/gen2"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://mall.paxini.com/product/dex/66f27ea530cd11a8e9d1d5ff",
+    "type": "store",
+    "seller": "PaXini 공식 몰"
+   }
   },
   {
    "id": "dex3-1",
@@ -2076,7 +2203,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.unitree.com/mobile/Dex3-1/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.unitree.com/booking",
+    "type": "quote",
+    "seller": "Unitree 주문 문의(Order Form)"
+   }
   },
   {
    "id": "revo-2-basic",
@@ -2158,7 +2290,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.brainco-hz.com/docs/revolimb-hand/en/revo2/parameters.html"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "rh56e2",
@@ -2231,7 +2364,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.inspire-robots.com/product/rh56e2/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/contact-us/",
+    "type": "quote",
+    "seller": "INSPIRE ROBOTS 견적 문의"
+   }
   },
   {
    "id": "sng-v-6-1-5-v-hp-25",
@@ -2293,7 +2431,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568",
+    "type": "store",
+    "seller": "Schmalz 온라인 샵"
+   }
   },
   {
    "id": "rh8d",
@@ -2373,7 +2516,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.seedrobotics.com/rh8d-adult-robot-hand"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.seedrobotics.com/ordering",
+    "type": "quote",
+    "seller": "Seed Robotics 견적·주문"
+   }
   },
   {
    "id": "pxdex-iii",
@@ -2446,7 +2594,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://paxini.com/cn/ax/pxdex3"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://mall.paxini.com/product/Cap/6a29287fd969b7b2281c2696",
+    "type": "store",
+    "seller": "PaXini 官方商城"
+   }
   },
   {
    "id": "qb-softhand-industry",
@@ -2520,7 +2673,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://qbrobotics.com/product/qb-softhand-industry/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://shop.wiredworkers.io/en_GB/shop/qbrobotics-softhand-industry-102",
+    "type": "retailer",
+    "seller": "Wired Workers"
+   }
   },
   {
    "id": "roh-a002",
@@ -2600,7 +2758,12 @@ window.HANDSLAB_DATA = {
      "field": "forceOther",
      "url": "https://www.oymotion.com/product61/189"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.oymotion.com/product61/189",
+    "type": "quote",
+    "seller": "OYMotion 문의(留言)"
+   }
   },
   {
    "id": "rh56h1",
@@ -2677,7 +2840,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.inspire-robots.com/product/rh56h1/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/contact-us/",
+    "type": "quote",
+    "seller": "INSPIRE ROBOTS 견적 문의"
+   }
   },
   {
    "id": "2f-85",
@@ -2754,7 +2922,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://blog.robotiq.com/hubfs/Product-sheets/Adaptive%20Grippers/Product-sheet-Adaptive-Grippers-EN.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://robotiq.com/quote",
+    "type": "quote",
+    "seller": "Robotiq 견적 요청"
+   }
   },
   {
    "id": "aero-hand-open",
@@ -2841,7 +3014,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://docs.tetheria.ai/docs/mechanical_overview/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://chestnut.bot/contact.html?type=research",
+    "type": "quote",
+    "seller": "Chestnut Robotics 문의"
+   }
   },
   {
    "id": "ctmg3f60",
@@ -2930,7 +3108,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.changingtek.com/fuhe/176"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.changingtek.com/fuhe/176",
+    "type": "quote",
+    "seller": "ChangingTek 문의"
+   }
   },
   {
    "id": "dh116-l1",
@@ -3019,7 +3202,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.leadshine.com/robot-detail/DH116-L1.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://store.leadshine.com/products/dh116-l1-dexterous-hand",
+    "type": "store",
+    "seller": "Leadshine Store"
+   }
   },
   {
    "id": "wuji-hand-2",
@@ -3102,7 +3290,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.wuji.tech/en/hand2"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.wuji.tech/en/cooperation",
+    "type": "quote",
+    "seller": "Wuji Contact Sales"
+   }
   },
   {
    "id": "ehand-6",
@@ -3176,7 +3369,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.hitbot.cc/dexterous-hand/e-hand-6.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://rbtx.de/en-GB/components/humanoid/hitbot-dexterous-robotic-hand-ehand-6",
+    "type": "retailer",
+    "seller": "RBTX (igus)"
+   }
   },
   {
    "id": "roh-ap003",
@@ -3245,7 +3443,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://oymotion.com/en/product62/211"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://oymotion.com/en/product62/211",
+    "type": "quote",
+    "seller": "OYMotion 문의"
+   }
   },
   {
    "id": "rh-p12-rn",
@@ -3331,7 +3534,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.robotis.com/shop/item.php?it_id=905-0022-000"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.robotis.com/shop/item.php?it_id=905-0022-000",
+    "type": "store",
+    "seller": "ROBOTIS Shop"
+   }
   },
   {
    "id": "mg10",
@@ -3418,7 +3626,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://onrobot.com/storage/datasheets/mg10/datasheet_mg10_v1.5_en.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://onrobot.com/en/request-a-quote",
+    "type": "quote",
+    "seller": "OnRobot 견적 문의"
+   }
   },
   {
    "id": "mht2-32dz",
@@ -3493,7 +3706,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://content2.smcetech.com/pdf/MHT2-Z_EU.pdf"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "qb-softhand2-research",
@@ -3579,7 +3793,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://qbrobotics.com/product/qb-softhand-2-research/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://qbrobotics.com/get-a-quote/",
+    "type": "quote",
+    "seller": "qbrobotics 견적 요청"
+   }
   },
   {
    "id": "dex5-s",
@@ -3661,7 +3880,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.unitree.com/Dex5-S/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://shop.unitree.com/products/unitree-g1-%E5%89%AF%E6%9C%AC",
+    "type": "store",
+    "seller": "Unitree Shop"
+   }
   },
   {
    "id": "d-hand-5mt",
@@ -3714,7 +3938,8 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.j-d.co.jp/"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": null
   },
   {
    "id": "rh56bfx",
@@ -3787,7 +4012,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.inspire-robots.com/dexterous%20hands/rh56bfx-series/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/product/rh56bfx/",
+    "type": "quote",
+    "seller": "INSPIRE ROBOTS 견적 문의"
+   }
   },
   {
    "id": "covvi-robotic-hand",
@@ -3855,7 +4085,12 @@ window.HANDSLAB_DATA = {
      "field": "speed",
      "url": "https://www.covvi-robotics.com/robotic-hand/product-overview/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.covvi-robotics.com/contact/",
+    "type": "quote",
+    "seller": "COVVI Robotics 판매 문의"
+   }
   },
   {
    "id": "dexhand021-mass-production",
@@ -3944,7 +4179,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.dex-robot.com/en/productionDexhand"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.dex-robot.com/en/productionDexhand",
+    "type": "quote",
+    "seller": "DexRobot 구매 문의"
+   }
   },
   {
    "id": "barretthand-bh8-282",
@@ -4033,7 +4273,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://web.barrett.com/files/BH8-282_Datasheet.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://barrett.com/barretthand",
+    "type": "quote",
+    "seller": "Barrett 판매 문의"
+   }
   },
   {
    "id": "pisoftgrip-100-4",
@@ -4104,7 +4349,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.piab.com/globalassets/productimages/pisoftgripfamilyhandlingsensitiveanddifficulttopickobjects_gb.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.piab.com/en-us/suction-cups-and-soft-grippers/soft-grippers/pisoftgrip-vacuum-driven-soft-gripper-/sg.x",
+    "type": "store",
+    "seller": "Piab 공식 사이트(구성기)"
+   }
   },
   {
    "id": "linker-hand-l10",
@@ -4155,7 +4405,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://cdn.robotshop.com/rbm/790bbab7-d10c-4803-a563-eb90579ac7e8/d/d357702e-8a19-43d3-933f-8c36739eda03/db365cbe_l10-product-manual.pdf"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://uk.robotshop.com/products/linkerhand-linker-hand-l10-left-10-dof-high-performance-dexterous-hand-with-multi-sensor-suite-ethercat-can",
+    "type": "retailer",
+    "seller": "RobotShop UK"
+   }
   },
   {
    "id": "xhand-1",
@@ -4211,7 +4466,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.robotera.com/en/"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://www.robotshop.com/products/robotera-dexterous-hand-xhand1-right",
+    "type": "retailer",
+    "seller": "RobotShop"
+   }
   },
   {
    "id": "sandia-hand",
@@ -4305,7 +4565,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.sandia.gov/app/uploads/sites/156/2021/10/SandiaHand_Handout_Final.pdf"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "hey5",
@@ -4363,7 +4624,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://docs.pal-robotics.com/edge/hardware/end-effectors/end-effector-hey5"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "allegro-hand-v6-f",
@@ -4440,7 +4702,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.allegrohand.com/sub/product/p.php?idx=25"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+    "type": "quote",
+    "seller": "Allegro Hand 구매 문의"
+   }
   },
   {
    "id": "wsg-50-110",
@@ -4516,7 +4783,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://weiss-robotics.com/servo-electric/wsg-series/?cid=4248"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://weiss-robotics.com/en/servo-electric/wsg-series/?cid=4248",
+    "type": "quote",
+    "seller": "Weiss Robotics 제품 문의"
+   }
   },
   {
    "id": "dhef-20-a",
@@ -4606,7 +4878,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/EN_US/8092533.pdf"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.festo.com/us/en/a/8092533/",
+    "type": "store",
+    "seller": "Festo 온라인 스토어"
+   }
   },
   {
    "id": "ih2-azzurra",
@@ -4694,7 +4971,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.prensilia.com/ih2-azzurra-hand/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.prensilia.com/ih2-azzurra-hand/",
+    "type": "quote",
+    "seller": "Prensilia 문의"
+   }
   },
   {
    "id": "dh116-r1-m",
@@ -4778,7 +5060,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.leadshine.com/robot-detail/DH116-R1-M.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://store.leadshine.com/products/dh116-r1-m-dexterous-hand",
+    "type": "store",
+    "seller": "Leadshine Store"
+   }
   },
   {
    "id": "uhand",
@@ -4837,7 +5124,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.hiwonder.com/products/uhand?variant=32473888587863"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://www.hiwonder.com/products/uhand",
+    "type": "store",
+    "seller": "Hiwonder Store"
+   }
   },
   {
    "id": "allegro-hand-v6-v",
@@ -4914,7 +5206,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.allegrohand.com/sub/product/p.php?idx=26"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+    "type": "quote",
+    "seller": "Allegro Hand 구매 문의"
+   }
   },
   {
    "id": "shadow-dexterous-hand-lite",
@@ -5007,7 +5304,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://shadowrobot.com/dexterous-hand-series/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://shadowrobot.com/contact-us-2/",
+    "type": "quote",
+    "seller": "Shadow Robot 문의"
+   }
   },
   {
    "id": "roh-ap002",
@@ -5100,7 +5402,12 @@ window.HANDSLAB_DATA = {
      "field": "forceOther",
      "url": "https://www.oymotion.com/en/product62/200"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://oymotion.com/en/page42",
+    "type": "quote",
+    "seller": "OYMotion 문의"
+   }
   },
   {
    "id": "leap-hand-v1",
@@ -5187,7 +5494,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://arxiv.org/abs/2309.06440"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://v1.leaphand.com/purchase",
+    "type": "quote",
+    "seller": "LEAP Hand 구매 안내"
+   }
   },
   {
    "id": "dex2-5",
@@ -5278,7 +5590,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.unitree.com/Dex2-5/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.unitree.com/booking",
+    "type": "quote",
+    "seller": "Unitree 구매 문의"
+   }
   },
   {
    "id": "mia-hand-r-d",
@@ -5368,7 +5685,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.prensilia.com/mia-hand-research/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.prensilia.com/mia-hand-research/",
+    "type": "quote",
+    "seller": "Prensilia 문의"
+   }
   },
   {
    "id": "bionicsofthand",
@@ -5433,7 +5755,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.festo.com.cn/cn/en/e/about-festo/innovation-and-technology/bionic-learning-network/bionicsofthand-id_68106"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "dh-5-6",
@@ -5484,7 +5807,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://en.dh-robotics.com/product/dh-5-6"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://en.dh-robotics.com/product/dh-5-6",
+    "type": "quote",
+    "seller": "DH-Robotics 문의"
+   }
   },
   {
    "id": "dex5-1",
@@ -5585,7 +5913,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.unitree.com/Dex5-1/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.unitree.com/booking",
+    "type": "quote",
+    "seller": "Unitree 구매 문의"
+   }
   },
   {
    "id": "dlr-hand-ii",
@@ -5655,7 +5988,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.dlr.de/en/rm/research/robotic-systems/hands/hand-ii"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "adh-5-6-p1",
@@ -5704,7 +6038,8 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.worldrobotconference.com/expo/company/706.html"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": null
   },
   {
    "id": "aidin-hand-gen2",
@@ -5769,7 +6104,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.aidinrobotics.co.kr/robotic-hand"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.aidinrobotics.co.kr/contact",
+    "type": "quote",
+    "seller": "에이딘로보틱스 문의"
+   }
   },
   {
    "id": "omnihand-pro-2025-o12",
@@ -5868,7 +6208,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.agibot.com/products/OmniHand_O12"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://store.agibot.com/products/omnihand-pro-2025",
+    "type": "store",
+    "seller": "AGIBOT Store"
+   }
   },
   {
    "id": "qb-softhand-research",
@@ -5948,7 +6293,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://qbrobotics.com/product/qb-softhand-research/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://qbrobotics.com/get-a-quote/",
+    "type": "quote",
+    "seller": "qbrobotics 견적 요청"
+   }
   },
   {
    "id": "dlr-hit-hand-ii",
@@ -6022,7 +6372,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand-ii"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "telehand-pro-p20",
@@ -6073,7 +6424,8 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.joyson.com/index.php/esg/info/1426.html"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": null
   },
   {
    "id": "rh56f2",
@@ -6163,7 +6515,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.inspire-robots.com/product/rh56f2/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/product/rh56f2/",
+    "type": "quote",
+    "seller": "Inspire Robots 견적 문의"
+   }
   },
   {
    "id": "fthand-21",
@@ -6212,7 +6569,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.futuretakt.com/sys-pd/30.html"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://www.futuretakt.com/sys-pd/30.html",
+    "type": "quote",
+    "seller": "FutureTakt 구매 의향 문의"
+   }
   },
   {
    "id": "allegro-hand-v4",
@@ -6304,7 +6666,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.allegrohand.com/sub/product/p.php?idx=1"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+    "type": "quote",
+    "seller": "Allegro Hand 제품 문의"
+   }
   },
   {
    "id": "dexhand021-pro",
@@ -6355,7 +6722,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.dex-robot.com/en/dexhand021Pro"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://www.dex-robot.com/en/details?purchaseType=1",
+    "type": "quote",
+    "seller": "DexRobot 구매 문의"
+   }
   },
   {
    "id": "gifu-hand-iii",
@@ -6415,7 +6787,8 @@ window.HANDSLAB_DATA = {
      "field": "sensors",
      "url": "https://www1.gifu-u.ac.jp/~kawalab/research/research_hand.html"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "rh6d",
@@ -6500,7 +6873,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.seedrobotics.com/rh5d-rh7d-childsize-robot-hand"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.seedrobotics.com/contact-us",
+    "type": "quote",
+    "seller": "Seed Robotics 견적·주문 문의"
+   }
   },
   {
    "id": "rh5dg2",
@@ -6581,7 +6959,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://en.inspire-robots.com/product/rh5dg2/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://en.inspire-robots.com/product/rh5dg2/",
+    "type": "quote",
+    "seller": "Inspire Robots 견적 문의"
+   }
   },
   {
    "id": "revo-3-basic",
@@ -6636,7 +7019,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.brainco.cn/en-US/products/revo3"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://www.robotsasia.com/BrainCo-Revo-3.htm",
+    "type": "retailer",
+    "seller": "RobotsAsia"
+   }
   },
   {
    "id": "linker-hand-o30",
@@ -6724,7 +7112,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.linkerhand.com/details/LinkerHandO30/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.linkerhand.com/about/contact",
+    "type": "quote",
+    "seller": "Linkerbot 비즈니스 문의"
+   }
   },
   {
    "id": "wuji-hand-v1",
@@ -6826,7 +7219,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://docs.wuji.tech/docs/en/wuji-hand/v1/overview/"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "d-hand-5st",
@@ -6910,7 +7304,12 @@ window.HANDSLAB_DATA = {
      "field": "dofStated",
      "url": "https://j-d.co.jp/dhand-5finger.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://j-d.co.jp/dhand-5finger.html",
+    "type": "quote",
+    "seller": "ダブル技研 문의"
+   }
   },
   {
    "id": "linker-hand-l30-pro",
@@ -7005,7 +7404,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.linkerhand.com/details/LinkerHandL30/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.linkerhand.com/about/contact",
+    "type": "quote",
+    "seller": "Linkerbot 구매 문의"
+   }
   },
   {
    "id": "dlr-hit-hand-i-schunk-sah",
@@ -7080,7 +7484,8 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.dlr.de/en/rm/research/robotic-systems/hands/dlr-hit-hand"
     }
-   ]
+   ],
+   "buy": null
   },
   {
    "id": "linker-hand-o6",
@@ -7176,7 +7581,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.linkerhand.com/details/LinkerHandO6/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.robotshop.com/products/robx-linker-hand-o6-1",
+    "type": "retailer",
+    "seller": "RobotShop"
+   }
   },
   {
    "id": "fthand-12",
@@ -7275,7 +7685,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.futuretakt.com/sys-pd/38.html"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.futuretakt.com/sys-pd/38.html",
+    "type": "quote",
+    "seller": "FutureTakt 구매 문의"
+   }
   },
   {
    "id": "cdh-mo-5-16-e0",
@@ -7326,7 +7741,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://cobotglobal.com/product-detail/agile-hand-series/"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://cobotglobal.com/product-detail/agile-hand-series/",
+    "type": "retailer",
+    "seller": "CobotG 견적 문의"
+   }
   },
   {
    "id": "leap-hand-v2-standard",
@@ -7396,7 +7816,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://v2.leaphand.com/"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://v2.leaphand.com/purchase",
+    "type": "quote",
+    "seller": "LEAP Hand (CMU) 구매 안내"
+   }
   },
   {
    "id": "d-hand-5pt",
@@ -7447,7 +7872,12 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://webmagazine.nedo.go.jp/practical-realization/articles/202403DG/"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": {
+    "url": "https://j-d.co.jp/",
+    "type": "quote",
+    "seller": "ダブル技研 문의"
+   }
   },
   {
    "id": "xiaoyao-dexterous-hand",
@@ -7507,7 +7937,12 @@ window.HANDSLAB_DATA = {
      "field": "other",
      "url": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80"
     }
-   ]
+   ],
+   "buy": {
+    "url": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80",
+    "type": "quote",
+    "seller": "FRD(富瑞达) 구매 문의"
+   }
   },
   {
    "id": "orcahand-lite",
@@ -7558,7 +7993,8 @@ window.HANDSLAB_DATA = {
     "creditUrl": "https://www.orcahand.com/models/lite"
    },
    "other": [],
-   "web": []
+   "web": [],
+   "buy": null
   }
  ]
 };

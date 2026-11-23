@@ -1,0 +1,507 @@
+{
+ "_doc": "모델별 구매 링크(2026-11-23 수집). type: store=제조사 공식 스토어 상품 페이지, quote=제조사 공식 구매·견적 문의, retailer=공식/전문 판매처의 같은 모델 상품 페이지. 가격은 싣지 않는다. note는 확인 메모.",
+ "2F-85": {
+  "url": "https://robotiq.com/quote",
+  "type": "quote",
+  "seller": "Robotiq 견적 요청",
+  "note": "제품 페이지 'Request a Quote'/'Request pricing' 연결 주소. 공식 온라인 장바구니 확인 못 함"
+ },
+ "3FG25": {
+  "url": "https://onrobot.com/en/request-a-quote",
+  "type": "quote",
+  "seller": "OnRobot 견적 문의",
+  "note": "제품 페이지의 'Request a quote' 연결 주소"
+ },
+ "Aero Hand": {
+  "url": "https://chestnut.bot/contact.html",
+  "type": "quote",
+  "seller": "Chestnut Robotics 문의",
+  "note": "제품 페이지 'Contact us' 연결. 문의 폼에 Aero Hand 선택·Quote·구매 항목 있음 (shop.tetheria.ai는 별개 모델 Aero Hand Open용)"
+ },
+ "Aero Hand Open": {
+  "url": "https://chestnut.bot/contact.html?type=research",
+  "type": "quote",
+  "seller": "Chestnut Robotics 문의",
+  "note": "구 TetherIA 샵(shop.tetheria.ai)은 판매 중단 공지. 현재 연구 협업으로만 제공, 제품 페이지 'Register your interest' 연결 주소(문의 폼에 Hardware access/Purchase 항목)"
+ },
+ "Agile Hand": {
+  "url": "https://www.agile-robots.com/en/lets-connect/",
+  "type": "quote",
+  "seller": "Agile Robots 견적 문의",
+  "note": "제품 페이지 'Contact us' 버튼 대상, 폼 Subject에서 'Request a quote' 선택"
+ },
+ "AIDIN Hand Gen2": {
+  "url": "https://www.aidinrobotics.co.kr/contact",
+  "type": "quote",
+  "seller": "에이딘로보틱스 문의",
+  "note": "제품 페이지 '문의하기' 버튼 연결 페이지"
+ },
+ "AIDIN-Hand (기존형)": {
+  "url": "https://www.aidinrobotics.co.kr/contact",
+  "type": "quote",
+  "seller": "에이딘로보틱스 문의",
+  "note": "제품 페이지의 '문의하기' 버튼 연결 주소. 온라인 스토어 없음, 현재 Gen 2도 소개 중"
+ },
+ "Allegro Hand V4": {
+  "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+  "type": "quote",
+  "seller": "Allegro Hand 제품 문의",
+  "note": "제품 페이지 Contact us 버튼 연결 문의 폼(Product Inquiry)"
+ },
+ "Allegro Hand V5 Plus": {
+  "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+  "type": "quote",
+  "seller": "Allegro Hand 문의",
+  "note": "제품 페이지의 'Contact us' 버튼 연결 주소. 공식 온라인 스토어 없음"
+ },
+ "Allegro Hand V6 F": {
+  "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+  "type": "quote",
+  "seller": "Allegro Hand 구매 문의",
+  "note": "제품 페이지 Contact us 버튼 연결 문의 폼"
+ },
+ "Allegro Hand V6 V": {
+  "url": "https://www.allegrohand.com/sub/contact/inquiry.php",
+  "type": "quote",
+  "seller": "Allegro Hand 구매 문의",
+  "note": "제품 페이지 Contact us 버튼 연결 문의 폼(Product Inquiry 선택)"
+ },
+ "BarrettHand BH8-282": {
+  "url": "https://barrett.com/barretthand",
+  "type": "quote",
+  "seller": "Barrett 판매 문의",
+  "note": "BH8 시리즈 제품 페이지의 Contact Sales(sales@barrett.com) 버튼"
+ },
+ "CDH-MO-5-16-E0": {
+  "url": "https://cobotglobal.com/product-detail/agile-hand-series/",
+  "type": "retailer",
+  "seller": "CobotG 견적 문의",
+  "note": "CobotG는 JODELL의 전략 파트너(통합사). 사양표에 CDH-MO-5-16-E0 있음, 'Request Pricing' 폼이 같은 페이지. JODELL 공식(jodell.cn) 제품 페이지는 확인 못함"
+ },
+ "COVVI Robotic Hand": {
+  "url": "https://www.covvi-robotics.com/contact/",
+  "type": "quote",
+  "seller": "COVVI Robotics 판매 문의",
+  "note": "공식 문의 폼에서 'Sales Enquiry' 선택"
+ },
+ "CR Hand": {
+  "url": "https://www.curious-robotics.com/home-en",
+  "type": "quote",
+  "seller": "Curious Robotics 주문 문의",
+  "note": "장바구니 없음, 페이지에 견적·주문은 admin@curious-robotics.com 이메일로 안내"
+ },
+ "CTDH4F08D": {
+  "url": "https://en.changingtek.com/fuhe/257",
+  "type": "quote",
+  "seller": "ChangingTek 문의",
+  "note": "제품 페이지 내 문의 폼(Submit)"
+ },
+ "CTMG3F60": {
+  "url": "https://en.changingtek.com/fuhe/176",
+  "type": "quote",
+  "seller": "ChangingTek 문의",
+  "note": "제품 페이지 내 문의 폼(Submit). 별도 구매 버튼 없음, Alibaba 매장 링크는 회사 프로필만"
+ },
+ "D-Hand 5PT": {
+  "url": "https://j-d.co.jp/",
+  "type": "quote",
+  "seller": "ダブル技研 문의",
+  "note": "공식 사이트에 5PT 제품·구매 페이지 없음. 문의는 이메일(info@j-d.co.jp)/전화만"
+ },
+ "D-Hand 5ST": {
+  "url": "https://j-d.co.jp/dhand-5finger.html",
+  "type": "quote",
+  "seller": "ダブル技研 문의",
+  "note": "제품 페이지의 문의·5ST 데모 신청 안내(메일 info@j-d.co.jp)"
+ },
+ "Dex2/5": {
+  "url": "https://www.unitree.com/booking",
+  "type": "quote",
+  "seller": "Unitree 구매 문의",
+  "note": "제품 페이지 Store/Cooperate 링크. 공식 스토어(shop.unitree.com)에서 단품 확인 안 됨(열람 차단)"
+ },
+ "Dex3-1 (촉각형)": {
+  "url": "https://www.unitree.com/booking",
+  "type": "quote",
+  "seller": "Unitree 주문 문의(Order Form)",
+  "note": "제품 페이지 'Store / Cooperate' 링크 대상. shop.unitree.com에는 Dex3-1 상품 없음"
+ },
+ "Dex5-1": {
+  "url": "https://www.unitree.com/booking",
+  "type": "quote",
+  "seller": "Unitree 구매 문의",
+  "note": "제품 페이지 Store/Cooperate 링크. RobotShop 판매분은 H2용 교체 부품(H2와 함께 주문)"
+ },
+ "Dex5-S": {
+  "url": "https://shop.unitree.com/products/unitree-g1-%E5%89%AF%E6%9C%AC",
+  "type": "store",
+  "seller": "Unitree Shop",
+  "note": "공식 스토어 홈에서 'Unitree Dex5-S Dexterous Hand' 상품 링크로 확인(주소 슬러그가 g1-副本). 상품 페이지 자체는 열람 차단(429), 공식 스토어 주소"
+ },
+ "DexH13 Gen2": {
+  "url": "https://mall.paxini.com/product/dex/66f27ea530cd11a8e9d1d5ff",
+  "type": "store",
+  "seller": "PaXini 공식 몰",
+  "note": "상품명은 'DexH13'(16 DoF, 촉각 1140개, 8MP 카메라로 Gen2 사양과 일치), 좌/우 선택"
+ },
+ "DexHand021 (Mass Production)": {
+  "url": "https://www.dex-robot.com/en/productionDexhand",
+  "type": "quote",
+  "seller": "DexRobot 구매 문의",
+  "note": "공식 제품 페이지, 구매 문의는 이메일(info@dex-robot.com)만 제공·폼 없음"
+ },
+ "DexHand021 Pro": {
+  "url": "https://www.dex-robot.com/en/details?purchaseType=1",
+  "type": "quote",
+  "seller": "DexRobot 구매 문의",
+  "note": "제품 페이지 Order Now 버튼 연결, 모델 선택 가능한 구매/협력 문의 폼"
+ },
+ "DG-4F": {
+  "url": "https://www.tesollo.com/ko/contact",
+  "type": "quote",
+  "seller": "TESOLLO 견적 문의",
+  "note": "제품 페이지의 '영업 문의' 버튼 연결 주소"
+ },
+ "DG-5F-M": {
+  "url": "https://www.tesollo.com/ko/contact",
+  "type": "quote",
+  "seller": "TESOLLO 견적 문의",
+  "note": "제품 페이지의 '영업 문의' 버튼 연결 주소"
+ },
+ "DG-5F-S": {
+  "url": "https://www.tesollo.com/ko/contact",
+  "type": "quote",
+  "seller": "TESOLLO 견적 문의",
+  "note": "제품 페이지의 '영업 문의' 버튼 연결 주소"
+ },
+ "DH-5-6": {
+  "url": "https://en.dh-robotics.com/product/dh-5-6",
+  "type": "quote",
+  "seller": "DH-Robotics 문의",
+  "note": "열람 차단(403), 공식 제품 페이지 주소. 판매처 OpenELAB 등 존재"
+ },
+ "DH116-L1": {
+  "url": "https://store.leadshine.com/products/dh116-l1-dexterous-hand",
+  "type": "store",
+  "seller": "Leadshine Store",
+  "note": "열람 차단(429), 공식 스토어 주소. 검색 결과로 DH116-L1 단독 상품 페이지임 확인"
+ },
+ "DH116-R1-M": {
+  "url": "https://store.leadshine.com/products/dh116-r1-m-dexterous-hand",
+  "type": "store",
+  "seller": "Leadshine Store",
+  "note": "공식 제품 페이지의 Buy Now 링크. 스토어 페이지 자체는 열람 차단(429), 공식 스토어 주소"
+ },
+ "DHEB-22-E-U-S-L": {
+  "url": "https://www.festo.com/nl/nl/a/1320803/",
+  "type": "store",
+  "seller": "Festo 온라인 스토어",
+  "note": "열람 차단(403), 공식 스토어 주소 (부품번호 1320803)"
+ },
+ "DHEF-20-A": {
+  "url": "https://www.festo.com/us/en/a/8092533/",
+  "type": "store",
+  "seller": "Festo 온라인 스토어",
+  "note": "열람 차단(403), 공식 스토어 주소. 부품번호 8092533 = DHEF-20-A(데이터시트로 확인)"
+ },
+ "eHand-6": {
+  "url": "https://rbtx.de/en-GB/components/humanoid/hitbot-dexterous-robotic-hand-ehand-6",
+  "type": "retailer",
+  "seller": "RBTX (igus)",
+  "note": "제조사 제품 페이지에 구매/견적 버튼 없음(일반 연락처 폼만). RBTX에 HITBOT 파트너 상품으로 eHand-6 좌/우, 장바구니 있음"
+ },
+ "FTHand-12": {
+  "url": "https://www.futuretakt.com/sys-pd/38.html",
+  "type": "quote",
+  "seller": "FutureTakt 구매 문의",
+  "note": "제품 페이지 내 의향 제출 폼(提交)"
+ },
+ "FTHand-21": {
+  "url": "https://www.futuretakt.com/sys-pd/30.html",
+  "type": "quote",
+  "seller": "FutureTakt 구매 의향 문의",
+  "note": "제품 페이지 내 의향 정보 제출 폼"
+ },
+ "Gecko SP5": {
+  "url": "https://onrobot.com/en/request-a-quote",
+  "type": "quote",
+  "seller": "OnRobot 견적 문의",
+  "note": "Gecko 제품 페이지(SP1/SP3/SP5)의 'Request a quote' 연결 주소"
+ },
+ "HX5-D20-MRT": {
+  "url": "https://www.robotis.com/shop/item.php?it_id=905-0058-000",
+  "type": "store",
+  "seller": "ROBOTIS Shop",
+  "note": "오른손 모델, 장바구니 버튼 있음"
+ },
+ "IH2 Azzurra": {
+  "url": "https://www.prensilia.com/ih2-azzurra-hand/",
+  "type": "quote",
+  "seller": "Prensilia 문의",
+  "note": "제품 페이지 내 문의 폼(가격·구매 버튼 없음)"
+ },
+ "LEAP Hand v1": {
+  "url": "https://v1.leaphand.com/purchase",
+  "type": "quote",
+  "seller": "LEAP Hand 구매 안내",
+  "note": "contact@leaphand.com 으로 조립품/부품 키트 주문, 직접 제작도 가능"
+ },
+ "LEAP Hand v2 Standard": {
+  "url": "https://v2.leaphand.com/purchase",
+  "type": "quote",
+  "seller": "LEAP Hand (CMU) 구매 안내",
+  "note": "공식 사이트의 Purchase 메뉴 페이지. JS 렌더링이라 본문 내용 확인 불가. 오픈소스 DIY(부품 직접 구매) 성격"
+ },
+ "Linker Hand L10": {
+  "url": "https://uk.robotshop.com/products/linkerhand-linker-hand-l10-left-10-dof-high-performance-dexterous-hand-with-multi-sensor-suite-ethercat-can",
+  "type": "retailer",
+  "seller": "RobotShop UK",
+  "note": "판매자 Linkerbot, Special order. 왼손 상품(오른손은 별도 상품 페이지). 공식 사이트 판매 페이지 못 찾음"
+ },
+ "Linker Hand L20": {
+  "url": "https://www.robotshop.com/products/robx-linker-hand-l20",
+  "type": "retailer",
+  "seller": "RobotShop",
+  "note": "상품명 'Linker Hand L20'(16 능동/5 수동, 21 DoF) 일치. 공식 사이트엔 스토어·견적 버튼 없음(일반 연락처 business@linkerbot.cn만)"
+ },
+ "Linker Hand L30 Pro": {
+  "url": "https://www.linkerhand.com/about/contact",
+  "type": "quote",
+  "seller": "Linkerbot 구매 문의",
+  "note": "공식 연락처 페이지(business@linkerbot.cn, 전화, 위챗). 폼·스토어 없음. 제품 페이지(/details/LinkerHandL30)는 'L30 Pro'로 표기. 판매처들의 L30 상품은 Pro 여부 불명확해 쓰지 않음"
+ },
+ "Linker Hand O30": {
+  "url": "https://www.linkerhand.com/about/contact",
+  "type": "quote",
+  "seller": "Linkerbot 비즈니스 문의",
+  "note": "제품 페이지에 구매 버튼 없음. 일반 연락처 페이지(business@ 메일)"
+ },
+ "Linker Hand O6": {
+  "url": "https://www.robotshop.com/products/robx-linker-hand-o6-1",
+  "type": "retailer",
+  "seller": "RobotShop",
+  "note": "RobotShop(판매자 RobX) 정확히 Linker Hand O6, 장바구니 있음. 공식 사이트엔 스토어·제품별 견적 버튼 없음(일반 연락처 linkerhand.com/about/contact 만 있음)"
+ },
+ "MG10": {
+  "url": "https://onrobot.com/en/request-a-quote",
+  "type": "quote",
+  "seller": "OnRobot 견적 문의",
+  "note": "제품 페이지 'Request a quote' 연결 주소"
+ },
+ "Mia Hand R&D": {
+  "url": "https://www.prensilia.com/mia-hand-research/",
+  "type": "quote",
+  "seller": "Prensilia 문의",
+  "note": "제품 페이지 내 문의 폼(가격·구매 버튼 없음)"
+ },
+ "myGripper H100": {
+  "url": "https://shop.elephantrobotics.com/products/mygripper-h100",
+  "type": "store",
+  "seller": "Elephant Robotics Shop",
+  "note": "열람 차단(429), 공식 스토어 주소"
+ },
+ "OmniHand 3": {
+  "url": "https://store.agibot.com/products/omnihand-2025-w-tactile",
+  "type": "store",
+  "seller": "AGIBOT Store",
+  "note": "열람 차단(429), 공식 스토어 주소. 검색상 상품명은 'AGIBOT OmniHand 2025 (w.Tactile)'(10/16 DoF, 약 550 g)이며, AGILINK의 신형 'OmniHand 3'(510 g)와 다른 제품일 수 있어 모델명 확인 필요"
+ },
+ "OmniHand Pro 2025 (O12)": {
+  "url": "https://store.agibot.com/products/omnihand-pro-2025",
+  "type": "store",
+  "seller": "AGIBOT Store",
+  "note": "열람 차단(429), 공식 스토어 주소. 검색 결과상 상품명 OmniHand Pro 2025 확인"
+ },
+ "orcahand Touch": {
+  "url": "https://www.orcahand.com/configure",
+  "type": "store",
+  "seller": "ORCA Dexterity 공식 주문(Configure & Order)",
+  "note": "제품 페이지의 'configure & order' 버튼 대상(좌/우·수량 선택 후 결제). 사이트가 이미지/스크립트 렌더링이라 WebFetch로 본문 확인 불가, 검색 색인 내용으로 확인"
+ },
+ "PGN-plus-P 380-2": {
+  "url": "https://schunk.com/us/en/gripping-systems/parallel-gripper/pgn-plus-p/pgn-plus-p-380-2/p/000000000001378019",
+  "type": "quote",
+  "seller": "SCHUNK 견적 요청",
+  "note": "공식 제품 페이지(ID 1378019). 사이트 장바구니·'Your quote request' 기능이 있으나 정적 추출로 상품별 구매 버튼은 확인되지 않음"
+ },
+ "piSOFTGRIP 100-4": {
+  "url": "https://www.piab.com/en-us/suction-cups-and-soft-grippers/soft-grippers/pisoftgrip-vacuum-driven-soft-gripper-/sg.x",
+  "type": "store",
+  "seller": "Piab 공식 사이트(구성기)",
+  "note": "piSOFTGRIP 패밀리(SG.X) 구성기에서 사이즈 선택 후 가격·재고 확인/주문. 100-4 선택지 자체는 직접 확인 못함"
+ },
+ "PXDex III": {
+  "url": "https://mall.paxini.com/product/Cap/6a29287fd969b7b2281c2696",
+  "type": "store",
+  "seller": "PaXini 官方商城",
+  "note": "공식몰 '三指执行末端 PXDex III' 상품 페이지, 좌/우 선택 후 구매"
+ },
+ "qb SoftHand Industry": {
+  "url": "https://shop.wiredworkers.io/en_GB/shop/qbrobotics-softhand-industry-102",
+  "type": "retailer",
+  "seller": "Wired Workers",
+  "note": "제조사 스토어(store.qbrobotics.com) 404, 제품 페이지에 구매/견적 버튼 없음. 판매처 페이지에 장바구니·견적 요청 있음. 대안: Clearpath Store(store.clearpathrobotics.com/products/softhand-industry, 열람 차단 429)"
+ },
+ "qb SoftHand Research": {
+  "url": "https://qbrobotics.com/get-a-quote/",
+  "type": "quote",
+  "seller": "qbrobotics 견적 요청",
+  "note": "공식 store.qbrobotics.com은 404. 견적 요청 페이지(제품별 선택 없음)"
+ },
+ "qb SoftHand2 Research": {
+  "url": "https://qbrobotics.com/get-a-quote/",
+  "type": "quote",
+  "seller": "qbrobotics 견적 요청",
+  "note": "공식 견적 요청 페이지(제품 메뉴에 SoftHand2 Research 포함). store.qbrobotics.com 은 404, Clearpath 스토어 판매 페이지는 429로 확인 불가"
+ },
+ "Revo 3 Basic": {
+  "url": "https://www.robotsasia.com/BrainCo-Revo-3.htm",
+  "type": "retailer",
+  "seller": "RobotsAsia",
+  "note": "공식 사이트(brainco.tech)는 JS 렌더링으로 구매 경로 확인 불가. 'Revo 3-21 Basic' 상품명 일치 리셀러(널리 알려진 판매처는 아님)"
+ },
+ "RH-P12-RN": {
+  "url": "https://www.robotis.com/shop/item.php?it_id=905-0022-000",
+  "type": "store",
+  "seller": "ROBOTIS Shop",
+  "note": "장바구니 있음, 현재 지연 발송(준비 30일)"
+ },
+ "RH56BFX": {
+  "url": "https://en.inspire-robots.com/product/rh56bfx/",
+  "type": "quote",
+  "seller": "INSPIRE ROBOTS 견적 문의",
+  "note": "제품 페이지의 Get a Quote 폼"
+ },
+ "RH56DFX": {
+  "url": "https://en.inspire-robots.com/product/rh56dfx/",
+  "type": "quote",
+  "seller": "INSPIRE ROBOTS 견적 문의",
+  "note": "제품 페이지 하단 'Get a Quote' 견적 폼 (별도 문의 페이지: https://en.inspire-robots.com/contact-us/)"
+ },
+ "RH56E2": {
+  "url": "https://en.inspire-robots.com/contact-us/",
+  "type": "quote",
+  "seller": "INSPIRE ROBOTS 견적 문의",
+  "note": "제품 페이지 'Get a Quote' 버튼 대상"
+ },
+ "RH56F2": {
+  "url": "https://en.inspire-robots.com/product/rh56f2/",
+  "type": "quote",
+  "seller": "Inspire Robots 견적 문의",
+  "note": "제품 페이지 내 Get a Quote 폼(#quote)"
+ },
+ "RH56H1": {
+  "url": "https://en.inspire-robots.com/contact-us/",
+  "type": "quote",
+  "seller": "INSPIRE ROBOTS 견적 문의",
+  "note": "제품 페이지 'Get a Quote' 버튼 연결 주소"
+ },
+ "RH5DG2": {
+  "url": "https://en.inspire-robots.com/product/rh5dg2/",
+  "type": "quote",
+  "seller": "Inspire Robots 견적 문의",
+  "note": "제품 페이지 내 Get a Quote 폼(#quote)"
+ },
+ "RH6D": {
+  "url": "https://www.seedrobotics.com/contact-us",
+  "type": "quote",
+  "seller": "Seed Robotics 견적·주문 문의",
+  "note": "제품 페이지에 구매 버튼 없음. 연락처 페이지에 견적·주문 문의 창구(orders@) 안내"
+ },
+ "RH8D": {
+  "url": "https://www.seedrobotics.com/ordering",
+  "type": "quote",
+  "seller": "Seed Robotics 견적·주문",
+  "note": "제조사 'Request a Quotation and Place an Order' 페이지(RH8D 가격 기재, 이메일 견적). 제품 페이지에 장바구니 버튼 없음"
+ },
+ "ROH-A002": {
+  "url": "https://www.oymotion.com/product61/189",
+  "type": "quote",
+  "seller": "OYMotion 문의(留言)",
+  "note": "제품 페이지에 구매 버튼 없음, 페이지 내 '我要留言' 문의 폼 및 sales@oymotion.com. 공식 Taobao 매장(shop156971442.taobao.com)도 있으나 해당 모델 상품 페이지는 확인 못 함"
+ },
+ "ROH-AP002": {
+  "url": "https://oymotion.com/en/page42",
+  "type": "quote",
+  "seller": "OYMotion 문의",
+  "note": "공식 문의 페이지(Demand: Sales 선택). 제품 페이지에 구매 버튼 없음"
+ },
+ "ROH-AP003": {
+  "url": "https://oymotion.com/en/product62/211",
+  "type": "quote",
+  "seller": "OYMotion 문의",
+  "note": "ROH-AP003 제품 상세 페이지 내 'leave a message' 문의 폼(Demand 선택). 구매 버튼 없음"
+ },
+ "Shadow Dexterous Hand Lite": {
+  "url": "https://shadowrobot.com/contact-us-2/",
+  "type": "quote",
+  "seller": "Shadow Robot 문의",
+  "note": "시리즈 페이지의 'Contact us to discuss your project' 링크. 제품 문의 메일 hand@shadowrobot.com"
+ },
+ "Shadow Hand Plus": {
+  "url": "https://shadowrobot.com/contact-us-2/",
+  "type": "quote",
+  "seller": "Shadow Robot 문의",
+  "note": "공식 사이트에 'Shadow Hand Plus' 전용 페이지 없음. Dexterous Hand 시리즈 페이지의 데모·가격 문의 버튼이 이 문의 폼으로 연결됨"
+ },
+ "Sharpa Wave W01": {
+  "url": "https://www.sharpa.com/pages/w01",
+  "type": "quote",
+  "seller": "Sharpa Contact Sales",
+  "note": "제품 페이지 내 'Order your Sharpa W01 Today' 주문 문의 폼"
+ },
+ "Sharpa Wave W01 SE": {
+  "url": "https://www.sharpa.com/pages/w01",
+  "type": "quote",
+  "seller": "Sharpa Contact Sales",
+  "note": "W01 페이지에 SE 사양 병기(이미지명 W01-SE). 페이지 내 주문 문의 폼"
+ },
+ "SNG-V 6 1.5 V-HP-25": {
+  "url": "https://www.schmalz.com/en-ch/products/automation-743270/other-gripping-technologies-746237/needle-grippers-306131/needle-grippers-sng-v-306144/10.01.29.00568",
+  "type": "store",
+  "seller": "Schmalz 온라인 샵",
+  "note": "장바구니 버튼 있음, 가격은 로그인 필요 (부품번호 10.01.29.00568)"
+ },
+ "SVH": {
+  "url": "https://schunk.com/us/en/gripping-systems/special-gripper/svh/c/PGR_3161",
+  "type": "quote",
+  "seller": "SCHUNK 견적 요청",
+  "note": "공식 SVH 페이지. 사이트 'Your quote request' 기능 경유, 상품별 구매 버튼은 정적 추출로 확인되지 않음"
+ },
+ "uHand": {
+  "url": "https://www.hiwonder.com/products/uhand",
+  "type": "store",
+  "seller": "Hiwonder Store",
+  "note": ""
+ },
+ "VGP30": {
+  "url": "https://onrobot.com/en/request-a-quote",
+  "type": "quote",
+  "seller": "OnRobot 견적 문의",
+  "note": "VGP30 제품 페이지의 'Request a quote' 버튼 대상"
+ },
+ "WSG 50-110": {
+  "url": "https://weiss-robotics.com/en/servo-electric/wsg-series/?cid=4248",
+  "type": "quote",
+  "seller": "Weiss Robotics 제품 문의",
+  "note": "시리즈 페이지에서 WSG 50-110(Item 5120008)의 Product inquiry 버튼"
+ },
+ "Wuji Hand 2": {
+  "url": "https://www.wuji.tech/en/cooperation",
+  "type": "quote",
+  "seller": "Wuji Contact Sales",
+  "note": "제품 페이지 'Contact Sales' 연결 주소(sales@wuji.tech). 공식 스토어 없음"
+ },
+ "XHAND 1": {
+  "url": "https://www.robotshop.com/products/robotera-dexterous-hand-xhand1-right",
+  "type": "retailer",
+  "seller": "RobotShop",
+  "note": "Special order, 오른손(왼손 별도 페이지). 공식 사이트에 구매 페이지 확인 안 됨, 문의 xhand@robotera.com"
+ },
+ "Xiaoyao Dexterous Hand": {
+  "url": "https://www.frd.cn/prod_view.aspx?FId=t3%3A80%3A3&Id=206&TypeId=80",
+  "type": "quote",
+  "seller": "FRD(富瑞达) 구매 문의",
+  "note": "제품명 枭尧灵巧手, 제품 페이지 내 문의 폼"
+ }
+}

@@ -15,6 +15,10 @@ features.pop('_doc', None)
 web_path = os.path.join(ROOT, 'data/web_specs.json')
 web = json.load(open(web_path, encoding='utf-8')) if os.path.exists(web_path) else {}
 web.pop('_doc', None)
+# 모델별 구매 링크(제조사 스토어·구매 문의·판매처). 가격은 싣지 않는다.
+buy_path = os.path.join(ROOT, 'data/buy_links.json')
+buy = json.load(open(buy_path, encoding='utf-8')) if os.path.exists(buy_path) else {}
+buy.pop('_doc', None)
 WEB_FIELDS = {"fingers", "activeDof", "passiveDof", "totalDof", "dofStated", "joints", "actuators", "weight", "rate",
               "tipForce", "gripForce", "payload", "forceOther", "stroke", "speed", "sensors", "io", "drive", "other"}
 
@@ -162,6 +166,7 @@ for i, x in enumerate(src):
         "photo": ({"src": ph['file'], "w": ph['w'], "h": ph['h'], "alpha": ph['alpha'], "bg": ph['bg'],
                    "creditName": maker_key(x['maker']), "creditUrl": source} if ph else None),
         "other": [], "web": [],
+        "buy": ({k: buy[x['model']][k] for k in ('url', 'type', 'seller')} if x['model'] in buy else None),
     })
     # 제조사 페이지 보충: 노션 값이 비어 있는 칸만 채운다(노션 값은 덮어쓰지 않음).
     h = hands[-1]
@@ -174,12 +179,12 @@ for i, x in enumerate(src):
     h['weightG'] = weight_g(h['weight'])
     if h['totalDof'] is None and h['passiveDof'] is not None and h['activeDof'] is not None:
         h['totalDof'] = h['activeDof'] + h['passiveDof']
-for name, table in (("EXTRA", EXTRA), ("photos", photos), ("features", features), ("web_specs", web)):
+for name, table in (("EXTRA", EXTRA), ("photos", photos), ("features", features), ("web_specs", web), ("buy_links", buy)):
     missing = set(table) - {x['model'] for x in src}; assert not missing, (name, missing)
 missing = {x['model'] for x in src} - set(features); assert not missing, ("features 누락", missing)
 meta = {"basis": "HANDSLab 조사표(공개용) 기준", "count": len(hands),
         "makers": len({h['makerGroup'] for h in hands}), "countries": len({c for h in hands for c in h['countries']}),
-        "photos": sum(1 for h in hands if h['photo']), "webFilled": sum(len(h['web']) for h in hands)}
+        "photos": sum(1 for h in hands if h['photo']), "webFilled": sum(len(h['web']) for h in hands), "buyLinks": sum(1 for h in hands if h['buy'])}
 with open(os.path.join(ROOT, 'assets/data/hands.js'), 'w', encoding='utf-8') as f:
     f.write("/* tools/build_data.py 가 생성한 파일입니다. 직접 고치지 말고 원본과 스크립트를 수정하세요. */\n")
     f.write("window.HANDSLAB_DATA = " + json.dumps({"meta": meta, "hands": hands}, ensure_ascii=False, indent=1) + ";\n")

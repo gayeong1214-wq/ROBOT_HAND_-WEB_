@@ -25,6 +25,11 @@
     '무게': 'weight', '제어·통신 주기': 'rate', 'Tip force (N)': 'tipForce', 'Grip force (N)': 'gripForce', 'Payload (kg)': 'payload', '기타 힘 표기': 'forceOther',
     '스트로크·파지 범위': 'stroke', '동작 속도': 'speed', '구동 방식': 'drive', '센서': 'sensors', '통신·SW': 'io', '기타 사양': 'other' };
   const isWeb = (h, label) => FIELD_OF[label] && h.web.some((w) => w.field === FIELD_OF[label]);
+  // 구매 링크: 제조사 스토어 · 구매 문의 · 판매처. 판매처가 없는 연구용·단종 모델은 그렇게 적는다.
+  const BUY_TYPE = { store: '공식 스토어', quote: '구매 문의', retailer: '판매처' };
+  const buyLink = (h, compact) => (h.buy
+    ? `<a class="buy-link" href="${esc(h.buy.url)}" target="_blank" rel="noopener noreferrer">${esc(compact ? BUY_TYPE[h.buy.type] : (h.buy.seller || BUY_TYPE[h.buy.type]))} ↗<span class="sr-only"> (${esc(h.model)} 구매 링크, 새 창)</span></a>${compact ? '' : ` <small>${BUY_TYPE[h.buy.type]}</small>`}`
+    : '<span class="na">판매처 없음</span>');
   const creditHTML = (h, cls) => (h.photo ? `<p class="${cls}">사진 출처 · <a href="${esc(h.photo.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(h.photo.creditName)}<span class="sr-only"> 제조사 페이지, 새 창</span></a> <span class="host">${esc(host(h.photo.creditUrl))} ↗</span></p>` : '');
 
   /* ── 상태 ─────────────────────────────────────────── */
@@ -81,179 +86,61 @@
   }
   const hasFilters = () => S.q || S.kinds.size || S.country || S.maker;
 
-  /* ── 히어로 ───────────────────────────────────────── */
-  // 100개 모델 슬라이더. 검증된 사진은 그대로 쓰고 사진이 없는 모델은 정보 카드로 보여 준다.
-  // 끌거나(마우스) 밀어서(터치) 또는 이전/다음 버튼·좌우 화살표 키로 넘긴다. 자동으로 넘어가지 않는다.
-  const HERO_FEATURES = ['sharpa-wave-w01', 'allegro-hand-v6-f', 'qb-softhand-research', 'dex5-1', 'dex2-5', 'allegro-hand-v4'];
-  const STRIP_DEPTH = [0.42, 0.3, 0.5, 0.34, 0.46];           // 포인터를 따라 움직이는 정도(주제품은 1)
+  /* ── 히어로: 대표 이미지(천천히 바뀜) · 아카이브 규모 ── */
+  const HERO_FEATURES = ['allegro-hand-v6-f', 'sharpa-wave-w01', 'dex5-1', 'allegro-hand-v4', 'qb-softhand-research'];
   const two = (n) => String(n).padStart(2, '0');
-  const arrow = (d) => `<svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   function renderHero() {
-    const preferred = HERO_FEATURES.map((id) => byId.get(id)).filter(Boolean);
-    const rest = HANDS.filter((h) => !HERO_FEATURES.includes(h.id)).sort((a, b) =>
-      Number(Boolean(b.photo)) - Number(Boolean(a.photo)) || a.model.localeCompare(b.model, 'en', {numeric: true}));
-    const list = [...preferred, ...rest];
-    const n = list.length;
-    if (!n) return;
-    $('#heroFeature').innerHTML = `<div class="feature" id="feature" role="group" aria-roledescription="carousel" aria-label="대표 로봇핸드 ${n}종. 좌우로 넘겨 볼 수 있습니다.">
-      <a class="feature-link" id="featureLink" href="#/hand/${list[0].id}" draggable="false">
-        <span class="feature-photo" data-depth="1"><span class="feature-track" id="featureTrack">${list.map((h, i) =>
-          heroSlide(h, i)).join('')}</span></span>
-        <span class="sr-only" id="featureName"></span>
-      </a>
-      <div class="feature-bar">
-        <div class="feature-ctrl">
-          <button type="button" class="feature-nav" data-step="-1" aria-label="이전 로봇핸드">${arrow('M12 4 6 10l6 6')}</button>
-          <span class="feature-count" id="featureCount" aria-hidden="true"></span>
-          <button type="button" class="feature-nav" data-step="1" aria-label="다음 로봇핸드">${arrow('m8 4 6 6-6 6')}</button>
-        </div>
-        <a class="feature-cap" id="featureCap" href="#/hand/${list[0].id}"><span class="maker"></span><b></b><span class="go" aria-hidden="true">→</span></a>
-      </div>
-      <p class="feature-hint" aria-hidden="true">Drag to explore · ${n} models</p>
-      <p class="sr-only" aria-live="polite" id="featureLive"></p>
-    </div>`;
-    $('#heroStrip').innerHTML = list.slice(1, 6).map((h, i) => `<li class="strip-item" data-feature="${i + 1}"><a class="strip-link" href="#/hand/${h.id}">
-        <span class="strip-photo" data-depth="${STRIP_DEPTH[i % STRIP_DEPTH.length]}"><img src="${h.photo.src}" width="${h.photo.w}" height="${h.photo.h}" alt="" decoding="async"></span>
-        <span class="strip-cap"><span class="idx">${two(i + 2)}</span><span class="model">${esc(h.model)}</span><span class="maker">${esc(h.makerGroup.replace(/\s*\(.*\)$/, ''))}</span><span class="sr-only"> 상세 보기</span></span>
-      </a></li>`).join('') + `<li class="strip-more"><a href="#explore" data-view-link="wiki"><span>전체 ${DATA.meta.count}종 <span class="arrow" aria-hidden="true">↓</span></span><small>전체 목록에서 보기</small></a></li>`;
-    // 흐르는 띠: 모델명이 끊김 없이 이어지도록 같은 목록을 두 번 붙인다(장식용이라 화면낭독기에서는 숨김)
-    const run = HANDS.map((h) => `<span>${esc(h.model)}</span><i aria-hidden="true">✦</i>`).join('');
-    const ticker = $('#heroTicker');
-    if (ticker) ticker.innerHTML = `<div class="ticker-track">${run}${run}</div>`;
-    initCarousel(list);
-    initParallax();
-  }
-  function heroSlide(h, i) {
-    const media = h.photo
-      ? `<img src="${h.photo.src}" width="${h.photo.w}" height="${h.photo.h}" alt="${esc(h.model)}" draggable="false" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}>`
-      : `<span class="feature-missing"><span class="feature-missing-label">PHOTO NOT AVAILABLE</span><strong>${esc(h.model)}</strong><span>${esc(h.maker)}</span><span class="feature-missing-meta">${esc(h.kind)} · ${esc(h.location || h.countries.join(' · '))}</span><span class="feature-missing-note">확인된 제품 사진이 아직 없습니다.<br>클릭하면 사양과 제조사 출처를 볼 수 있습니다.</span></span>`;
-    return `<span class="feature-img feature-slide${i === 0 ? ' is-active' : ''}" data-surface="${h.photo && !h.photo.alpha ? 'photo' : 'clear'}" aria-hidden="${i !== 0}">${media}</span>`;
-  }
-  function initCarousel(list) {
-    const n = list.length, box = $('#feature'), link = $('#featureLink'), cap = $('#featureCap'), track = $('#featureTrack');
-    const imgs = $$('.feature-img', box);
-    let cur = 0;
-    function sync(announce) {
-      const h = list[cur], href = '#/hand/' + h.id;
-      link.setAttribute('href', href); cap.setAttribute('href', href);
-      $('#featureName').textContent = `${h.maker} ${h.model} 상세 보기`;
-      $('.maker', cap).textContent = h.maker; $('b', cap).textContent = h.model;
-      $('#featureCount').textContent = `${two(cur + 1)} / ${two(n)}`;
-      $$('#heroStrip .strip-item').forEach((li) => li.classList.toggle('is-current', +li.dataset.feature === cur));
-      if (announce) $('#featureLive').textContent = `${cur + 1} / ${n} · ${h.model}, ${h.maker}`;
+    $('#heroStats').innerHTML = [['Models', DATA.meta.count], ['Makers', DATA.meta.makers], ['Countries', DATA.meta.countries]]
+      .map(([k, v]) => `<div><dt>${k}</dt><dd data-count="${v}">${v}</dd></div>`).join('');
+    const list = HERO_FEATURES.map((id) => byId.get(id)).filter((h) => h && h.photo);
+    if (!list.length) return;
+    const box = $('#heroVisual');
+    box.innerHTML = `<a class="hv-frame" id="hvFrame" href="#/hand/${list[0].id}">${list.map((h, i) =>
+      `<span class="hv-slide ${photoKind(h.photo) === 'cut' ? 'cut' : 'blend'}${i === 0 ? ' is-on' : ''}" aria-hidden="${i !== 0}"><img src="${h.photo.src}" width="${h.photo.w}" height="${h.photo.h}" alt="" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}></span>`).join('')}
+      <span class="sr-only" id="hvName"></span></a>
+      <figcaption class="hv-cap"><span>Featured · <a id="hvCap" href="#/hand/${list[0].id}"></a></span>
+      <span class="hv-dots" role="group" aria-label="대표 이미지 고르기">${list.map((h, i) => `<button type="button" data-hv="${i}" aria-label="${esc(h.model)}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('')}</span></figcaption>`;
+    const slides = $$('.hv-slide', box), dots = $$('[data-hv]', box);
+    let cur = 0, timer = 0;
+    function show(i) {
+      cur = (i + list.length) % list.length;
+      const h = list[cur];
+      slides.forEach((s, k) => { s.classList.toggle('is-on', k === cur); s.setAttribute('aria-hidden', k !== cur); });
+      dots.forEach((d, k) => d.setAttribute('aria-current', k === cur ? 'true' : 'false'));
+      $('#hvFrame').setAttribute('href', '#/hand/' + h.id); $('#hvCap').setAttribute('href', '#/hand/' + h.id);
+      $('#hvCap').textContent = h.model; $('#hvName').textContent = `${h.maker} ${h.model} 상세 보기`;
     }
-    function show(i, dir) {
-      i = (i + n) % n;
-      if (i === cur) return;
-      const from = imgs[cur], to = imgs[i];
-      to.classList.add('no-anim'); to.style.setProperty('--off', dir * 44 + 'px'); void to.offsetWidth; to.classList.remove('no-anim');   // 들어올 쪽에 먼저 놓는다
-      from.style.setProperty('--off', -dir * 44 + 'px'); from.classList.remove('is-active'); from.setAttribute('aria-hidden', 'true');
-      to.style.setProperty('--off', '0px'); to.classList.add('is-active'); to.setAttribute('aria-hidden', 'false');
-      cur = i; sync(true);
-    }
-    box.addEventListener('click', (e) => { const b = e.target.closest('[data-step]'); if (b) show(cur + +b.dataset.step, +b.dataset.step); });
-    box.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') { e.preventDefault(); show(cur + 1, 1); }
-      else if (e.key === 'ArrowLeft') { e.preventDefault(); show(cur - 1, -1); }
-    });
-    // 끌기/밀기. 8px 넘게 가로로 움직였을 때만 끌기로 보고, 그 뒤의 클릭은 막아 상세 화면이 잘못 열리지 않게 한다.
-    let start = null, dragging = false, suppress = false;
-    link.addEventListener('pointerdown', (e) => { if (e.pointerType === 'mouse' && e.button !== 0) return; start = { x: e.clientX, y: e.clientY, id: e.pointerId }; dragging = false; });
-    link.addEventListener('pointermove', (e) => {
-      if (!start || e.pointerId !== start.id) return;
-      const dx = e.clientX - start.x, dy = e.clientY - start.y;
-      if (!dragging) {
-        if (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy)) return;
-        dragging = true; track.classList.add('dragging');
-        try { link.setPointerCapture(e.pointerId); } catch (err) { /* 지원하지 않는 환경 */ }
-      }
-      track.style.setProperty('--dx', (dx * 0.55).toFixed(1) + 'px');
-    });
-    const end = (e) => {
-      if (!start || e.pointerId !== start.id) return;
-      const dx = e.clientX - start.x, was = dragging;
-      start = null; dragging = false; track.classList.remove('dragging'); track.style.setProperty('--dx', '0px');
-      if (!was) return;
-      suppress = true; setTimeout(() => { suppress = false; }, 400);
-      if (e.type === 'pointerup' && Math.abs(dx) >= 36) show(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
-    };
-    link.addEventListener('pointerup', end);
-    link.addEventListener('pointercancel', end);
-    link.addEventListener('click', (e) => { if (suppress) { e.preventDefault(); e.stopPropagation(); suppress = false; } }, true);
-    link.addEventListener('dragstart', (e) => e.preventDefault());
-    sync(false);
-  }
-  function initParallax() {
-    const hero = $('#top');
-    const layers = $$('[data-depth]', hero);
-    const mq = window.matchMedia('(min-width: 1100px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
-    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
-    function frame() {
-      cx += (tx - cx) * 0.075; cy += (ty - cy) * 0.075;          // 목표 위치로 조금씩 따라간다
-      const sy = Math.min(window.scrollY, hero.offsetHeight);
-      layers.forEach((l) => {
-        const d = +l.dataset.depth;
-        l.style.setProperty('--px', (-cx * d * 26).toFixed(2) + 'px');
-        l.style.setProperty('--py', (-cy * d * 18 - sy * d * 0.09).toFixed(2) + 'px');
-      });
-      raf = Math.abs(tx - cx) > 0.0015 || Math.abs(ty - cy) > 0.0015 ? requestAnimationFrame(frame) : 0;
-    }
-    const kick = () => { if (!raf && mq.matches) raf = requestAnimationFrame(frame); };
-    hero.addEventListener('pointermove', (e) => {
-      if (!mq.matches || e.pointerType === 'touch') return;
-      const r = hero.getBoundingClientRect();
-      tx = ((e.clientX - r.left) / r.width) * 2 - 1;
-      ty = ((e.clientY - r.top) / r.height) * 2 - 1;
-      kick();
-    });
-    hero.addEventListener('pointerleave', () => { tx = 0; ty = 0; kick(); });
-    window.addEventListener('scroll', () => { if (window.scrollY < hero.offsetHeight) kick(); }, { passive: true });
-    const reset = () => { if (!mq.matches) { cancelAnimationFrame(raf); raf = 0; tx = ty = cx = cy = 0; layers.forEach((l) => { l.style.removeProperty('--px'); l.style.removeProperty('--py'); }); } };
-    mq.addEventListener ? mq.addEventListener('change', reset) : mq.addListener(reset);
+    const play = () => { clearInterval(timer); if (!reduceMotion.matches) timer = setInterval(() => { if (!document.hidden) show(cur + 1); }, 5200); };
+    box.addEventListener('click', (e) => { const d = e.target.closest('[data-hv]'); if (d) { show(+d.dataset.hv); play(); } });
+    box.addEventListener('pointerenter', () => clearInterval(timer));
+    box.addEventListener('pointerleave', play);
+    box.addEventListener('focusin', () => clearInterval(timer));
+    show(0); play();
   }
 
-  /* ── 스크롤 진행에 따른 배경 전환 ─────────────────── */
-  function initScrollTone() {
-    const root = document.documentElement, header = $('#siteHeader'), theme = $('meta[name="theme-color"]');
-    const hero = $('#top'), intro = $('#intro'), explore = $('#explore');
-    const COLORS = [[5, 11, 32], [35, 57, 91], [35, 57, 91], [211, 223, 234], [255, 255, 255]];   // #050B20 → 남색 → 밝은 블루그레이 → 흰색
-    let stops = [], ticking = false;
-    function measure() {
-      const vh = window.innerHeight, top = (el) => el.getBoundingClientRect().top + window.scrollY;
-      const it = top(intro), ih = intro.offsetHeight, et = top(explore);
-      const raw = [hero.offsetHeight * 0.3, it - vh * 0.5, it + ih * 0.55 - vh * 0.5, et - vh * 0.5, et - vh * 0.08];
-      stops = raw.map((v, i) => Math.max(v, 0));
-      for (let i = 1; i < stops.length; i++) if (stops[i] <= stops[i - 1]) stops[i] = stops[i - 1] + 1;
-      update();
+  /* ── 헤더: 스크롤 시 배경, 모바일 메뉴, 지금 보는 섹션 표시 ── */
+  function initHeader() {
+    const header = $('#siteHeader'), btn = $('#menuBtn'), nav = $('#siteNav');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    function setMenu(open) {
+      btn.setAttribute('aria-expanded', open);
+      $('.sr-only', btn).textContent = open ? '메뉴 닫기' : '메뉴 열기';
+      document.body.classList.toggle('menu-open', open);
+      if (open) { const a = $('a', nav); if (a) a.focus({ preventScroll: true }); }
     }
-    const lin = (c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
-    function update() {
-      ticking = false;
-      const y = window.scrollY;
-      let rgb = COLORS[COLORS.length - 1];
-      if (y <= stops[0]) rgb = COLORS[0];
-      else for (let i = 1; i < stops.length; i++) {
-        if (y <= stops[i]) {
-          const t = (y - stops[i - 1]) / (stops[i] - stops[i - 1]);
-          const e = t * t * (3 - 2 * t);
-          rgb = COLORS[i].map((c, k) => Math.round(COLORS[i - 1][k] + (c - COLORS[i - 1][k]) * e));
-          break;
-        }
-      }
-      const css = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
-      root.style.setProperty('--page-bg', css);
-      // 배경 밝기에 맞춰 대비가 더 큰 쪽(밝은 글자/어두운 글자)을 고른다
-      const L = 0.2126 * lin(rgb[0]) + 0.7152 * lin(rgb[1]) + 0.0722 * lin(rgb[2]);
-      const tone = 1.05 / (L + 0.05) >= (L + 0.05) / 0.0607 ? 'dark' : 'light';
-      if (root.dataset.tone !== tone) root.dataset.tone = tone;
-      if (theme) theme.setAttribute('content', css);
-      header.classList.toggle('scrolled', y > 8);
-    }
-    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-    window.addEventListener('resize', measure);
-    window.addEventListener('load', measure);
-    if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
-    measure();
+    btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) { setMenu(false); btn.focus(); } });
+    window.matchMedia('(min-width: 860px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+    if (!('IntersectionObserver' in window)) return;
+    const links = $$('a[href^="#"]', nav), seen = new Map();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => seen.set(en.target.id, en.isIntersecting));
+      const on = links.map((a) => a.getAttribute('href').slice(1)).find((id) => seen.get(id));
+      links.forEach((a) => a.setAttribute('aria-current', a.getAttribute('href') === '#' + on ? 'true' : 'false'));
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach((a) => { const s = document.getElementById(a.getAttribute('href').slice(1)); if (s) io.observe(s); });
   }
 
   /* ── 도구 막대 ────────────────────────────────────── */
@@ -263,9 +150,8 @@
       .map(([k, v]) => `<div><dt>${k}</dt><dd data-count="${v}">${v}</dd></div>`).join('');
     // 전체 수와 사진 수를 탭·버튼에 그대로 적어, 사진 갤러리만 보고 전체로 오해하지 않게 한다
     $('#tab-wiki').textContent = `전체 목록 · ${DATA.meta.count}`;
-    $('#tab-cards').textContent = `Graphical Explorer · ${DATA.meta.count}`;
-    $('#ctaAll').textContent = `전체 ${DATA.meta.count}개 보기`;
-    $('#ctaPhoto').textContent = `갤러리 보기 · ${DATA.meta.count}종`;
+    $('#tab-cards').textContent = `사진 카드 · ${DATA.meta.count}`;
+    $('#ctaAll').textContent = `전체 ${DATA.meta.count}개 목록`;
     const kc = new Map(count((h) => h.kind));
     $('#kindChips').innerHTML = KINDS.map((k) => `<button type="button" class="chip" data-kind="${k}" aria-pressed="false">${k.replace(' 로봇핸드', '')}<span class="n">${kc.get(k) || 0}</span></button>`).join('');
     $('#fCountry').insertAdjacentHTML('beforeend', count((h) => h.countries).map(([k, n]) => `<option value="${esc(k)}">${esc(k)} (${n})</option>`).join(''));
@@ -383,7 +269,8 @@
     [null, '제어', 'tc', (h) => tags(h.control)],
     [null, '주요 특징', 'tc wide', (h) => tags(h.notes)],
     [null, '기타 사양', 'tc wide', (h) => tags(h.other)],
-    [null, '출처', 'nw', (h) => `<a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}<span class="sr-only"> (${esc(h.model)} 사양 출처, 새 창)</span></a>`],
+    [null, '제품 링크', 'nw', (h) => `<a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}<span class="sr-only"> (${esc(h.model)} 제품 페이지, 새 창)</span></a>`],
+    [null, '구매 링크', 'nw', (h) => buyLink(h, true)],
   ];
   function renderWiki(list) {
     const th = (key, label, cls) => {
@@ -444,7 +331,8 @@
       const differs = !isList && list.length > 1 && new Set(vals.map((v) => String(v))).size > 1 && label !== '소재지';
       return `<tr><th scope="row">${label}</th>${vals.map((v) => `<td${differs && v != null ? ' class="diff"' : ''}>${Array.isArray(v) ? tags(v) : val(v)}</td>`).join('')}</tr>`;
     }).join('');
-    const src = `<tr><th scope="row">출처</th>${list.map((h) => `<td><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></td>`).join('')}</tr>`;
+    const src = `<tr><th scope="row">제품 링크</th>${list.map((h) => `<td><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></td>`).join('')}</tr>`
+      + `<tr><th scope="row">구매 링크</th>${list.map((h) => `<td>${buyLink(h, false)}</td>`).join('')}</tr>`;
     return `<div class="compare" style="--cols:${list.length}"><h2 id="sheetTitle">모델 비교</h2>
       <p>${list.length < 2 ? '한 개 더 담으면 나란히 비교할 수 있습니다. ' : '값이 서로 다른 항목은 옅게 표시됩니다. '}조사표 기준이며 없는 값은 미확인입니다.</p>
       <div class="compare-wrap" tabindex="0" role="region" aria-label="비교 표"><table><colgroup><col class="lab">${list.map(() => '<col>').join('')}</colgroup>
@@ -478,16 +366,16 @@
         <p class="detail-loc">${esc(h.location)} · ${esc(h.kind)}</p>
         <div class="detail-actions">
           <button type="button" class="btn" data-cmp="${h.id}" aria-pressed="${on}">${on ? '비교 목록에 담김' : '비교에 추가'}</button>
-          <a class="btn" href="${esc(h.source)}" target="_blank" rel="noopener">제조사 자료 열기 ↗</a>
+          <a class="btn" href="${esc(h.source)}" target="_blank" rel="noopener">제품 페이지 ↗</a>
+          ${h.buy ? `<a class="btn solid" href="${esc(h.buy.url)}" target="_blank" rel="noopener noreferrer">구매 링크 ↗</a>` : ''}
         </div>
         <dl class="spec-grid">${specs.map(([k, v, note]) => `<div><dt>${k}</dt><dd>${val(v)}${note && v != null ? `<small>${note}</small>` : ''}</dd></div>`).join('')}</dl>
         ${groups.length ? `<h3>특징 정리</h3><dl class="feat-list">${groups.map(([key, label]) => `<div><dt>${label}</dt><dd>${tags(h[key])}</dd></div>`).join('')}</dl>` : ''}
         <details class="raw"><summary>노션 조사표 원문 보기</summary><p class="detail-specs">${esc(h.specs)}</p></details>
-        <h3>출처</h3>
+        <h3>링크</h3>
         <ul class="src-list">
-          <li><span>사양</span><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></li>
-          ${[...new Set(h.web.map((w) => w.url))].map((url) => `<li><span>보충 사양</span><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(host(url))}</a> <small>${h.web.filter((w) => w.url === url).map((w) => esc(Object.keys(FIELD_OF).find((k) => FIELD_OF[k] === w.field) || w.field)).join(' · ')}</small></li>`).join('')}
-          ${p ? `<li><span>사진</span><a href="${esc(p.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(p.creditName)} · ${esc(host(p.creditUrl))}</a></li>` : ''}
+          <li><span>제품 링크</span><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></li>
+          <li><span>구매 링크</span><span class="buy">${buyLink(h, false)}</span></li>
           ${(h.research || []).map(url => `<li><span>관련 연구</span><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(host(url))}</a></li>`).join('')}
         </ul>
         ${siblings.length ? `<h3>같은 제조사의 다른 모델</h3><div class="rel-list">${siblings.map((x) => `<a href="#/hand/${x.id}">${esc(x.model)}</a>`).join('')}</div>` : ''}
@@ -496,7 +384,7 @@
           ${h.countries.map((c) => `<a href="#explore" data-set="country" data-value="${esc(c)}">${esc(c)} 모델 모두 보기</a>`).join('')}
           <a href="#explore" data-set="maker" data-value="${esc(h.makerGroup)}">이 제조사만 보기</a>
         </div>
-        <p class="detail-foot">조사표 기준이며, 조사표에 없던 값은 제조사 제품 페이지에서 보충했습니다(출처의 ‘보충 사양’). 어디에도 없는 값은 미확인입니다. 구매·설계 전에는 제조사 최신 자료를 확인해 주세요.</p>
+        <p class="detail-foot">HANDSLab 조사표 기준이며, 조사표에 없던 값은 제조사 제품 페이지에서 보충했습니다. 어디에도 없는 값은 미확인입니다. 구매·설계 전에는 제조사 최신 자료를 확인해 주세요.</p>
       </div>
     </article>`;
   }
@@ -740,12 +628,12 @@
 
   /* ── 시작 ─────────────────────────────────────────── */
   readUrl();
-  renderHero();
+  initHeader();
   initToolbar();
+  renderHero();
   initGraphEvents();
   $('#q').value = S.q;
   apply();
-  initScrollTone();
   revealIn(document);
   route();
 })();
