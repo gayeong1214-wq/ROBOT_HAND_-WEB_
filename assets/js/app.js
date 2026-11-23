@@ -302,7 +302,12 @@
       const on = S.cmp.includes(h.id);
       return `<tr>
         <th scope="row"><div class="row-head"><input type="checkbox" data-cmp="${h.id}"${on ? ' checked' : ''} aria-label="${esc(cmpLabel(h, on))}"><a class="model-link" href="#/hand/${h.id}">${esc(h.model)}</a></div></th>
-        ${COLS.map(([, label, cls, get]) => { const c = [cls, isWeb(h, label) ? 'web' : ''].filter(Boolean).join(' '); return `<td${c ? ` class="${c}"` : ''}${isWeb(h, label) ? ' title="제조사 제품 페이지에서 보충한 값"' : ''}>${get(h)}</td>`; }).join('')}
+        ${COLS.map(([, label, cls, get]) => {
+          // 태그·긴 글 칸은 한 줄(긴 글은 두 줄)까지만 보여 행 높이를 고르게 한다. 전체 내용은 마우스를 올리면(title) · 상세 화면에서
+          const html = get(h), clip = /\b(tc|wrap)\b/.test(cls);
+          const full = clip ? html.replace(/<\/li><li>/g, ', ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim() : '';
+          return `<td${cls ? ` class="${cls}"` : ''}${clip && full && full !== '미확인' ? ` title="${esc(full)}"` : ''}>${clip ? `<div class="clip">${html}</div>` : html}</td>`;
+        }).join('')}
       </tr>`;
     }).join('');
   }
