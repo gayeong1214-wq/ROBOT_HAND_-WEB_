@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-tone="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>HANDSLab — A world of robotic hands</title>
   <meta name="description" content="영남대학교 HANDS Lab의 로봇핸드 아카이브. 전 세계 로봇핸드를 한곳에서 조사하고 비교할 수 있습니다.">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#050B20">
   <meta property="og:title" content="HANDSLab — A world of robotic hands">
   <meta property="og:description" content="전 세계 로봇핸드를 한곳에서 조사하고 비교할 수 있습니다.">
   <meta property="og:type" content="website">
@@ -19,11 +19,11 @@
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="HANDSLab 처음으로">
-      <img src="assets/img/handslab-logo.png" width="974" height="187" alt="HANDSLab">
+      <img class="brand-dark" src="assets/img/handslab-logo-on-dark.png" width="974" height="187" alt="">
+      <img class="brand-light" src="assets/img/handslab-logo.png" width="974" height="187" alt="HANDSLab">
     </a>
     <nav class="site-nav" id="siteNav" aria-label="주요 메뉴">
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
+      <a href="#top">Gallery</a>
       <a href="#research">Research</a>
       <a href="#explore">Robot Hands</a>
       <a href="#contact">Contact</a>
@@ -34,47 +34,25 @@
   </header>
 
   <main>
-    <!-- Hero: 큰 타이포그래피 + 대표 로봇핸드 이미지 -->
-    <section class="hero" id="top" aria-labelledby="heroTitle">
-      <div class="hero-copy">
-        <p class="eyebrow" data-reveal>HANDS Lab · Yeungnam University</p>
-        <h1 id="heroTitle"><span class="line"><span>A world of</span></span> <span class="line"><span>robotic hands.</span></span></h1>
-        <p class="hero-sub" data-reveal><span class="nb">전 세계 로봇핸드를</span> <span class="nb">한곳에서 조사하고</span> <span class="nb">비교할 수 있습니다.</span></p>
-        <div class="hero-actions" data-reveal>
-          <a class="btn-solid" href="#gallery">갤러리 둘러보기</a>
-          <a class="btn-line" href="#explore" data-view-link="wiki" id="ctaAll">전체 목록 보기</a>
-        </div>
-        <dl class="hero-stats" id="heroStats" data-reveal aria-label="아카이브 규모"></dl>
-      </div>
-      <figure class="hero-visual" id="heroVisual" data-reveal></figure>
-    </section>
-
-    <!-- Interactive Gallery: 곡면 격자 3D 갤러리 (assets/js/gallery.js) -->
-    <section class="gx-section" id="gallery" aria-labelledby="galleryTitle">
-      <div class="gx-head">
-        <div>
-          <p class="section-label" data-reveal>Interactive Gallery</p>
-          <h2 id="galleryTitle" data-reveal lang="en"><span class="nb">Every hand,</span> <span class="nb">one view.</span></h2>
-        </div>
-        <div class="gx-side" data-reveal>
-          <div class="gx-filter" id="gxFilter" role="group" aria-label="갤러리 분류" hidden></div>
-          <p class="gx-hint" id="gxHint">끌어서 둘러보고, 사진을 누르면 크게 볼 수 있습니다.</p>
-        </div>
-      </div>
+    <!-- 첫 화면: 곡면 격자 3D 갤러리 (assets/js/gallery.js) + 큰 제목 -->
+    <section class="gx-section" id="top" aria-labelledby="heroTitle">
       <div class="gx" id="gx" tabindex="0" role="region" aria-roledescription="3D 갤러리" aria-label="로봇핸드 사진 갤러리. 끌거나 화살표 키로 움직이고, 사진을 누르면 크게 볼 수 있습니다." aria-describedby="gxHint">
         <div class="gx-stage"><div class="gx-plane" id="gxPlane"></div></div>
-        <p class="gx-count" id="gxCount" aria-hidden="true"></p>
+        <div class="gx-shade" aria-hidden="true"></div>
       </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about" aria-labelledby="aboutTitle">
-      <p class="section-label" data-reveal>About</p>
-      <div class="about-body">
-        <h2 id="aboutTitle" data-reveal><span class="nb">사람의 가능성을 넓히는,</span> <span class="nb">차세대 로봇 지능.</span></h2>
-        <p data-reveal>HANDS Lab은 영남대학교 로봇공학과의 <span lang="en">Human&#8209;centered AI &amp; Next&#8209;Generation Dexterous System Lab</span>입니다. 로봇핸드와 적응형 그리퍼, Physical AI, 웨어러블·소프트 로보틱스를 연구하며 기계 설계와 체화된 인공지능을 연결합니다.</p>
-        <p data-reveal>이 사이트는 연구실이 조사한 전 세계 로봇핸드를 사진과 사양으로 정리한 아카이브입니다. 제품마다 자유도·무게·힘·센서·통신 방식을 같은 기준으로 나눠, 서로 다른 손을 나란히 비교할 수 있게 했습니다.</p>
-        <a class="text-link" data-reveal href="https://sites.google.com/view/handslab/home" target="_blank" rel="noopener noreferrer">HANDS Lab 홈페이지 <span aria-hidden="true">↗</span><span class="sr-only"> 새 창</span></a>
+      <div class="gx-intro">
+        <p class="eyebrow">HANDS Lab · Yeungnam University</p>
+        <h1 id="heroTitle"><span class="line"><span>A world of</span></span> <span class="line"><span>robotic hands.</span></span></h1>
+        <p class="hero-sub"><span class="nb">전 세계 로봇핸드를</span> <span class="nb">한곳에서 조사하고</span> <span class="nb">비교할 수 있습니다.</span></p>
+        <div class="hero-actions">
+          <a class="btn-solid" href="#explore" data-view-link="wiki" id="ctaAll">전체 목록 보기</a>
+          <a class="btn-line" href="#research">Research</a>
+        </div>
+      </div>
+      <div class="gx-meta">
+        <dl class="hero-stats" id="heroStats" aria-label="아카이브 규모"></dl>
+        <div class="gx-filter" id="gxFilter" role="group" aria-label="갤러리 분류" hidden></div>
+        <p class="gx-hint" id="gxHint">끌어서 둘러보고, 사진을 누르면 크게 볼 수 있습니다.</p>
       </div>
     </section>
 
@@ -82,7 +60,7 @@
     <section class="research" id="research" aria-labelledby="researchTitle">
       <div class="research-head">
         <p class="section-label" data-reveal>Research</p>
-        <h2 id="researchTitle" data-reveal><span class="nb">손에서 시작해</span> <span class="nb">몸 전체로.</span></h2>
+        <h2 id="researchTitle" data-reveal lang="en"><span class="nb">From the hand</span> <span class="nb">to the whole body.</span></h2>
       </div>
       <ol class="areas">
         <li data-reveal>
@@ -112,7 +90,7 @@
         </li>
       </ol>
       <div class="projects" data-reveal>
-        <h3>진행 중인 과제</h3>
+        <h3 lang="en">Ongoing projects</h3>
         <ul>
           <li><time>2026.09</time><span>AI 스타펠로우십: 제조특화 휴머노이드 사업단 <span lang="en">(Humanoid Manufacturing AI Nexus : HuMAN)</span></span></li>
           <li><time>2026.09</time><span>지능형 유연 관절 구조체 기반 semi-Physical AI 글로브 개발 및 인간모방 텔레오퍼레이션 기술 연구</span></li>
@@ -129,7 +107,7 @@
       <div class="explore-head">
         <div>
           <p class="section-label">Robot Hands</p>
-          <h2 id="exploreTitle">로봇핸드 제품과 기술</h2>
+          <h2 id="exploreTitle" lang="en">Robot hands, side by side.</h2>
           <dl class="catalog-facts" id="catalogFacts" aria-label="카탈로그 규모"></dl>
         </div>
         <div class="view-switch" role="tablist" aria-label="보기 방식">
@@ -219,7 +197,7 @@
     <div class="contact-top">
       <div class="contact-lead">
         <p class="section-label" data-reveal>Contact</p>
-        <h2 id="contactTitle" data-reveal><span class="nb">함께 만들</span> <span class="nb">다음 손을 찾습니다.</span></h2>
+        <h2 id="contactTitle" data-reveal lang="en"><span class="nb">Let’s build</span> <span class="nb">the next hand.</span></h2>
         <a class="contact-mail" data-reveal href="mailto:jmyang@yu.ac.kr">jmyang@yu.ac.kr <span aria-hidden="true">↗</span></a>
         <p class="contact-recruit" data-reveal>석사과정·학부연구생 모집 중</p>
       </div>

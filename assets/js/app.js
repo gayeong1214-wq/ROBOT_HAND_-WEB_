@@ -86,36 +86,54 @@
   }
   const hasFilters = () => S.q || S.kinds.size || S.country || S.maker;
 
-  /* ── 히어로: 대표 이미지(천천히 바뀜) · 아카이브 규모 ── */
-  const HERO_FEATURES = ['allegro-hand-v6-f', 'sharpa-wave-w01', 'dex5-1', 'allegro-hand-v4', 'qb-softhand-research'];
+  /* ── 첫 화면: 아카이브 규모 ───────────────────────── */
   const two = (n) => String(n).padStart(2, '0');
   function renderHero() {
     $('#heroStats').innerHTML = [['Models', DATA.meta.count], ['Makers', DATA.meta.makers], ['Countries', DATA.meta.countries]]
-      .map(([k, v]) => `<div><dt>${k}</dt><dd data-count="${v}">${v}</dd></div>`).join('');
-    const list = HERO_FEATURES.map((id) => byId.get(id)).filter((h) => h && h.photo);
-    if (!list.length) return;
-    const box = $('#heroVisual');
-    box.innerHTML = `<a class="hv-frame" id="hvFrame" href="#/hand/${list[0].id}">${list.map((h, i) =>
-      `<span class="hv-slide ${photoKind(h.photo) === 'cut' ? 'cut' : 'blend'}${i === 0 ? ' is-on' : ''}" aria-hidden="${i !== 0}"><img src="${h.photo.src}" width="${h.photo.w}" height="${h.photo.h}" alt="" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}></span>`).join('')}
-      <span class="sr-only" id="hvName"></span></a>
-      <figcaption class="hv-cap"><span>Featured · <a id="hvCap" href="#/hand/${list[0].id}"></a></span>
-      <span class="hv-dots" role="group" aria-label="대표 이미지 고르기">${list.map((h, i) => `<button type="button" data-hv="${i}" aria-label="${esc(h.model)}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('')}</span></figcaption>`;
-    const slides = $$('.hv-slide', box), dots = $$('[data-hv]', box);
-    let cur = 0, timer = 0;
-    function show(i) {
-      cur = (i + list.length) % list.length;
-      const h = list[cur];
-      slides.forEach((s, k) => { s.classList.toggle('is-on', k === cur); s.setAttribute('aria-hidden', k !== cur); });
-      dots.forEach((d, k) => d.setAttribute('aria-current', k === cur ? 'true' : 'false'));
-      $('#hvFrame').setAttribute('href', '#/hand/' + h.id); $('#hvCap').setAttribute('href', '#/hand/' + h.id);
-      $('#hvCap').textContent = h.model; $('#hvName').textContent = `${h.maker} ${h.model} 상세 보기`;
+      .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+  }
+
+  /* ── 스크롤 진행에 따라 배경을 남색 → 흰색으로 ─────── */
+  // 첫 화면(갤러리)은 남색, Research 를 지나며 밝아지고, Robot Hands 부터는 흰색.
+  // 배경 밝기에 맞춰 글자 톤(data-tone)도 바꾼다.
+  function initScrollTone() {
+    const root = document.documentElement, theme = $('meta[name="theme-color"]');
+    const top = $('#top'), research = $('#research'), explore = $('#explore');
+    const COLORS = [[5, 11, 32], [35, 57, 91], [35, 57, 91], [211, 223, 234], [255, 255, 255]];   // #050B20 → #23395B → 밝은 블루그레이 → 흰색
+    let stops = [], ticking = false;
+    function measure() {
+      const vh = window.innerHeight, at = (el) => el.getBoundingClientRect().top + window.scrollY;
+      const rt = at(research), rh = research.offsetHeight, et = at(explore);
+      const raw = [top.offsetHeight * 0.35, rt - vh * 0.45, rt + rh * 0.35 - vh * 0.5, et - vh * 0.55, et - vh * 0.12];
+      stops = raw.map((v) => Math.max(v, 0));
+      for (let i = 1; i < stops.length; i++) if (stops[i] <= stops[i - 1]) stops[i] = stops[i - 1] + 1;
+      update();
     }
-    const play = () => { clearInterval(timer); if (!reduceMotion.matches) timer = setInterval(() => { if (!document.hidden) show(cur + 1); }, 5200); };
-    box.addEventListener('click', (e) => { const d = e.target.closest('[data-hv]'); if (d) { show(+d.dataset.hv); play(); } });
-    box.addEventListener('pointerenter', () => clearInterval(timer));
-    box.addEventListener('pointerleave', play);
-    box.addEventListener('focusin', () => clearInterval(timer));
-    show(0); play();
+    const lin = (c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    function update() {
+      ticking = false;
+      const y = window.scrollY;
+      let rgb = COLORS[COLORS.length - 1];
+      if (y <= stops[0]) rgb = COLORS[0];
+      else for (let i = 1; i < stops.length; i++) {
+        if (y <= stops[i]) {
+          const t = (y - stops[i - 1]) / (stops[i] - stops[i - 1]), e = t * t * (3 - 2 * t);
+          rgb = COLORS[i].map((c, k) => Math.round(COLORS[i - 1][k] + (c - COLORS[i - 1][k]) * e));
+          break;
+        }
+      }
+      const css = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+      root.style.setProperty('--page-bg', css);
+      const L = 0.2126 * lin(rgb[0]) + 0.7152 * lin(rgb[1]) + 0.0722 * lin(rgb[2]);
+      const tone = 1.05 / (L + 0.05) >= (L + 0.05) / 0.0607 ? 'dark' : 'light';   // 대비가 더 큰 쪽 글자색
+      if (root.dataset.tone !== tone) root.dataset.tone = tone;
+      if (theme) theme.setAttribute('content', css);
+    }
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    if ('ResizeObserver' in window) new ResizeObserver(measure).observe(document.body);
+    measure();
   }
 
   /* ── 헤더: 스크롤 시 배경, 모바일 메뉴, 지금 보는 섹션 표시 ── */
@@ -634,6 +652,7 @@
   initGraphEvents();
   $('#q').value = S.q;
   apply();
+  initScrollTone();
   revealIn(document);
   route();
 })();

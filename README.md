@@ -10,10 +10,8 @@ HANDSLab 노션 조사표(「지구상의 로봇핸드 조사」, 99건)를 옮�
 
 | 영역 | 내용 |
 | --- | --- |
-| Header | 로고와 간결한 메뉴(Gallery · About · Research · Robot Hands · Contact). 지금 보는 섹션에 점 표시. 860px 미만에서는 햄버거 메뉴. |
-| Hero | 큰 타이포그래피, 대표 로봇핸드 이미지(5초마다 천천히 바뀜), 모델·제조사·국가 수. |
-| Interactive Gallery | **곡면 격자 3D 갤러리.** 끝없이 이어지는 격자를 완만한 구면 위에 놓았습니다. 끌기 · 관성 · 마우스 3D 패럴랙스 · 확대 효과 · 크게 보기(상세 정보, 제품/구매 링크). |
-| About | 연구실 소개와 이 아카이브의 목적. |
+| Header | 로고와 간결한 메뉴(Gallery · Research · Robot Hands · Contact). 지금 보는 섹션에 점 표시. 860px 미만에서는 햄버거 메뉴. |
+| 첫 화면 · Interactive Gallery | **곡면 격자 3D 갤러리**가 화면 전체를 채우고, 왼쪽 아래에 큰 제목 "A world of robotic hands."와 버튼, 오른쪽 아래에 모델·제조사·국가 수. 끌기 · 관성 · 마우스 3D 패럴랙스 · 확대 효과 · 크게 보기(상세 정보, 제품/구매 링크). |
 | Research | HANDS Lab 연구 분야 5개와 진행 중인 과제(연구실 홈페이지 Research areas · Projects 기준). |
 | Robot Hands | 기존 탐색 기능: 전체 목록 표 / 사진 카드, 검색·필터·정렬, 최대 4개 비교, 상세 화면. |
 | Contact | 책임교수, 위치(지도 링크), 전화, 연구실 링크, 저작권 표기. |
@@ -22,7 +20,8 @@ HANDSLab 노션 조사표(「지구상의 로봇핸드 조사」, 99건)를 옮�
 
 ## 디자인
 
-- 흰 바탕, 검은 글자, 포인트 색 하나(`#0B7A6B`, 로고의 청록을 어둡게). 테두리·그림자·장식은 최소로.
+- 배경은 스크롤에 따라 **남색(#050B20) → 흰색**으로 서서히 바뀝니다(첫 화면 남색, Research를 지나며 밝아지고 Robot Hands부터 흰색). 배경 밝기에 맞춰 글자색도 바뀝니다.
+- 큰 제목은 영어, 본문은 한국어. 포인트 색 하나(흰 바탕 `#0B7A6B`, 남색 바탕 `#7FE0CC`). 테두리·그림자·장식은 최소로.
 - 글꼴: [SUIT Variable](https://github.com/sun-typeface/SUIT) (SIL OFL 1.1) — jsDelivr에서 불러옵니다.
 - 참고: Framer Marketplace의 'Gallery X' 컴포넌트에서 **곡면 격자 · 끌기 · 관성** 같은 상호작용 원리만 참고했고, 코드와 디자인은 외부 라이브러리 없이 이 프로젝트에서 새로 만들었습니다(CSS 3D transform + JavaScript).
 

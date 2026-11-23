@@ -111,7 +111,7 @@
     plane.innerHTML = n ? cells.map((cl) => tileHTML(items[cl.item], cl.k)).join('') : '';
     tiles = $$('.gx-tile', plane).map((el, k) => ({ el, img: $('img', el), shown: false, loaded: false, cell: cells[k] }));
     const kinds = filter === 'all' ? `${hands.length} hands${extra.length ? ` · ${extra.length} stories` : ''}` : `${items.length} ${filter === 'hand' ? 'hands' : 'photos'}`;
-    $('#gxCount').textContent = (finePointer.matches ? 'Drag to explore · ' : 'Swipe to explore · ') + kinds;
+    const cnt = $('#gxCount'); if (cnt) cnt.textContent = (finePointer.matches ? 'Drag to explore · ' : 'Swipe to explore · ') + kinds;
     layout();
   }
 
