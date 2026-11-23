@@ -34,6 +34,7 @@ EXTRA = {
  "RH56DFX": dict(j=12, w="약 540 g", tip="엄지 15 N / 기타 10 N"),   # 제조사 페이지에서 손끝 힘(fingertip)으로 확인
  "Allegro Hand V5 Plus": dict(w="약 1.024 kg"),
  "AIDIN-Hand (기존형)": dict(d="15", w="약 1.3 kg"),
+ "ARTUS Lite": dict(w="약 1.4 kg"),
  "Aero Hand": dict(w="800 g 이하"),
  "DG-4F": dict(w="약 1.494 kg", hz="333 Hz"),
  "Gecko SP5": dict(pay="5 kg (최대)"),

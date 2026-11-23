@@ -132,6 +132,18 @@
     "research": []
   },
   {
+    "model": "ARTUS Lite",
+    "maker": "Sarcomere Dynamics",
+    "location": "캐나다·앨버타주 세인트앨버트",
+    "category": "",
+    "fingers": 5,
+    "activeDof": 16,
+    "totalDof": 20,
+    "specs": "능동 16자유도·총 20자유도, 약 1.4kg. 손가락 위치·힘 감지.",
+    "source": "https://sarcomeredynamics.com/",
+    "research": []
+  },
+  {
     "model": "Aero Hand",
     "maker": "Chestnut Robotics (구 TetherIA)",
     "location": "미국·캘리포니아주 산타클라라",

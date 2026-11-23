@@ -66,6 +66,12 @@
   "seller": "Allegro Hand 구매 문의",
   "note": "제품 페이지 Contact us 버튼 연결 문의 폼(Product Inquiry 선택)"
  },
+ "ARTUS Lite": {
+  "url": "https://store.indrorobotics.com/products/artus-lite",
+  "type": "retailer",
+  "seller": "InDro Robotics Store",
+  "note": "스토어 검색에서 같은 모델 상품 페이지 확인(2026-11-23)"
+ },
  "BarrettHand BH8-282": {
   "url": "https://barrett.com/barretthand",
   "type": "quote",

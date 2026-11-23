@@ -2,12 +2,12 @@
 window.HANDSLAB_DATA = {
  "meta": {
   "basis": "HANDSLab 조사표(공개용) 기준",
-  "count": 99,
-  "makers": 50,
+  "count": 100,
+  "makers": 51,
   "countries": 14,
-  "photos": 99,
+  "photos": 100,
   "webFilled": 377,
-  "buyLinks": 84
+  "buyLinks": 85
  },
  "hands": [
   {
@@ -912,6 +912,61 @@ window.HANDSLAB_DATA = {
     "url": "https://www.aidinrobotics.co.kr/contact",
     "type": "quote",
     "seller": "에이딘로보틱스 문의"
+   }
+  },
+  {
+   "id": "artus-lite",
+   "model": "ARTUS Lite",
+   "maker": "Sarcomere Dynamics",
+   "makerGroup": "Sarcomere Dynamics",
+   "location": "캐나다·앨버타주 세인트앨버트",
+   "countries": [
+    "캐나다"
+   ],
+   "kind": "5지형 로봇핸드",
+   "fingers": 5,
+   "activeDof": 16,
+   "activeDofNote": null,
+   "passiveDof": 4,
+   "totalDof": 20,
+   "dofStated": null,
+   "joints": null,
+   "actuators": null,
+   "tipForce": null,
+   "gripForce": null,
+   "payload": null,
+   "forceOther": null,
+   "weight": "약 1.4 kg",
+   "weightG": 1400,
+   "rate": null,
+   "stroke": null,
+   "speed": null,
+   "drive": [],
+   "sensors": [
+    "손가락 위치 감지",
+    "힘 감지"
+   ],
+   "io": [],
+   "control": [],
+   "notes": [],
+   "specs": "능동 16자유도·총 20자유도, 약 1.4kg. 손가락 위치·힘 감지.",
+   "source": "https://sarcomeredynamics.com/",
+   "research": [],
+   "photo": {
+    "src": "assets/img/hands/artus-lite-notion.webp",
+    "w": 354,
+    "h": 960,
+    "alpha": true,
+    "bg": null,
+    "creditName": "Sarcomere Dynamics",
+    "creditUrl": "https://sarcomeredynamics.com/"
+   },
+   "other": [],
+   "web": [],
+   "buy": {
+    "url": "https://store.indrorobotics.com/products/artus-lite",
+    "type": "retailer",
+    "seller": "InDro Robotics Store"
    }
   },
   {

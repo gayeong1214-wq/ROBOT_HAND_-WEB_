@@ -91,14 +91,15 @@
   function renderHero() {
     $('#heroStats').innerHTML = [['Models', DATA.meta.count], ['Makers', DATA.meta.makers], ['Countries', DATA.meta.countries]]
       .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+    $$('[data-meta]').forEach((el) => { if (DATA.meta[el.dataset.meta] != null) el.textContent = DATA.meta[el.dataset.meta]; });   // 웹사이트 설명의 숫자도 데이터에서
   }
 
   /* ── 스크롤 진행에 따라 배경을 남색 → 흰색으로 ─────── */
-  // 첫 화면(갤러리)은 남색, Research 를 지나며 밝아지고, Robot Hands 부터는 흰색.
+  // 첫 화면(갤러리)은 남색, 웹사이트 설명을 지나며 밝아지고, 로봇핸드 목록부터는 흰색.
   // 배경 밝기에 맞춰 글자 톤(data-tone)도 바꾼다.
   function initScrollTone() {
     const root = document.documentElement, theme = $('meta[name="theme-color"]');
-    const top = $('#top'), research = $('#research'), explore = $('#explore');
+    const top = $('#top'), research = $('#overview'), explore = $('#explore');
     const COLORS = [[5, 11, 32], [35, 57, 91], [35, 57, 91], [211, 223, 234], [255, 255, 255]];   // #050B20 → #23395B → 밝은 블루그레이 → 흰색
     let stops = [], ticking = false;
     function measure() {
@@ -156,7 +157,8 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => seen.set(en.target.id, en.isIntersecting));
       const on = links.map((a) => a.getAttribute('href').slice(1)).find((id) => seen.get(id));
-      links.forEach((a) => a.setAttribute('aria-current', a.getAttribute('href') === '#' + on ? 'true' : 'false'));
+      // Wiki · Graphical 은 같은 목록 섹션이므로 지금 보기 방식과 맞는 쪽만 표시한다
+      links.forEach((a) => a.setAttribute('aria-current', a.getAttribute('href') === '#' + on && (!a.dataset.viewLink || a.dataset.viewLink === S.view) ? 'true' : 'false'));
     }, { rootMargin: '-45% 0px -50% 0px' });
     links.forEach((a) => { const s = document.getElementById(a.getAttribute('href').slice(1)); if (s) io.observe(s); });
   }
@@ -389,7 +391,6 @@
         </div>
         <dl class="spec-grid">${specs.map(([k, v, note]) => `<div><dt>${k}</dt><dd>${val(v)}${note && v != null ? `<small>${note}</small>` : ''}</dd></div>`).join('')}</dl>
         ${groups.length ? `<h3>특징 정리</h3><dl class="feat-list">${groups.map(([key, label]) => `<div><dt>${label}</dt><dd>${tags(h[key])}</dd></div>`).join('')}</dl>` : ''}
-        <details class="raw"><summary>노션 조사표 원문 보기</summary><p class="detail-specs">${esc(h.specs)}</p></details>
         <h3>링크</h3>
         <ul class="src-list">
           <li><span>제품 링크</span><a href="${esc(h.source)}" target="_blank" rel="noopener">${esc(host(h.source))}</a></li>

@@ -889,5 +889,14 @@
   "bg": null,
   "imageUrl": "https://www.prensilia.com/wp-content/uploads/2023/03/ih2-azzurra-hand-prensilia.jpg",
   "origin": "notion"
+ },
+ "ARTUS Lite": {
+  "file": "assets/img/hands/artus-lite-notion.webp",
+  "w": 354,
+  "h": 960,
+  "alpha": true,
+  "bg": null,
+  "imageUrl": "https://store.indrorobotics.com/cdn/shop/files/Artus_Lite_Robot_Hand_Back_View.png",
+  "origin": "notion"
  }
 }
