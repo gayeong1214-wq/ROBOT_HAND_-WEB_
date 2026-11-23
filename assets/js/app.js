@@ -265,7 +265,7 @@
   // 표 열: [정렬 키, 제목, 칸 종류(num=숫자, wrap=줄바꿈 허용, tags=태그 목록), 값]
   // 노션 '특징' 문장에 있던 자유도·무게·주기·힘·하중·범위·속도는 각자의 열로, 나머지는 구동·센서·통신·제어·주요 특징 태그로 나눈다.
   const COLS = [
-    ['maker', '제조사', '', (h) => val(h.maker)],
+    ['maker', '제조사', 'wrap', (h) => val(h.maker)],
     ['country', '국가', 'nw', (h) => esc(h.countries.join(', '))],
     ['kind', '유형', 'nw', (h) => esc(h.kind.replace(' 로봇핸드', ''))],
     ['fingers', '손가락', 'num', (h) => val(h.fingers)],
@@ -301,7 +301,7 @@
     $('#wikiBody').innerHTML = list.map((h) => {
       const on = S.cmp.includes(h.id);
       return `<tr>
-        <th scope="row"><div class="row-head"><input type="checkbox" data-cmp="${h.id}"${on ? ' checked' : ''} aria-label="${esc(cmpLabel(h, on))}"><a class="model-link" href="#/hand/${h.id}">${esc(h.model)}</a></div></th>
+        <th scope="row"><div class="row-head"><input type="checkbox" data-cmp="${h.id}"${on ? ' checked' : ''} aria-label="${esc(cmpLabel(h, on))}"><a class="model-link" href="#/hand/${h.id}" title="${esc(h.model)}">${esc(h.model)}</a></div></th>
         ${COLS.map(([, label, cls, get]) => {
           // 태그·긴 글 칸은 한 줄(긴 글은 두 줄)까지만 보여 행 높이를 고르게 한다. 전체 내용은 마우스를 올리면(title) · 상세 화면에서
           const html = get(h), clip = /\b(tc|wrap)\b/.test(cls);
